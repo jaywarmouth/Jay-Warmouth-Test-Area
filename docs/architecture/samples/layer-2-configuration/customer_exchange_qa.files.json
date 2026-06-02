@@ -1,0 +1,1254 @@
+[{
+  "_id": {
+    "$oid": "662a6dafcfe80c9b2b701461"
+  },
+  "name": "10mb (2).csv",
+  "type": "text/csv",
+  "customerId": "cust_master.100786",
+  "s3Prefix": "cust_master.100786/",
+  "source": "web",
+  "size": 10000008,
+  "versionId": "lUSYhqcnKEYgj2u7.f4k6u_afKT0Ya29",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-04-25T14:50:23.505Z"
+  },
+  "createdBy": "admin@pbmcentral.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "662a6dd2cfe80c9b2b701464"
+  },
+  "name": "1ds.csv",
+  "type": "text/csv",
+  "customerId": "cust_pbm.system.112413",
+  "s3Prefix": "cust_pbm.system.112413/",
+  "source": "web",
+  "size": 10000008,
+  "versionId": "OHgTanWbbaqT8Y0A_rdF7FZhAKQkGmTT",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-04-25T14:50:58.184Z"
+  },
+  "createdBy": "admin@pbmcentral.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "662a6de5cfe80c9b2b701467"
+  },
+  "name": "82bc9a8b-27ef-449a-a539-23957.txt",
+  "type": "text/plain",
+  "customerId": "cust_pbm.system.112413",
+  "s3Prefix": "cust_pbm.system.112413/",
+  "source": "web",
+  "size": 335,
+  "versionId": "zfBhcHWiCdNOKG_8OqYj2XUXmIl3x8uT",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-04-25T14:51:17.443Z"
+  },
+  "createdBy": "admin@pbmcentral.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "662a6f8b04c83964b84ec1ad"
+  },
+  "name": "GoodRx File Tracking Tables.xlsx",
+  "type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  "customerId": "cust_master.158689",
+  "s3Prefix": "cust_master.158689/Test 1/",
+  "source": "web",
+  "size": 17888,
+  "versionId": "6CBdkPf3acms.P.FanmMQMMRQziK0DNE",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-04-25T14:58:19.250Z"
+  },
+  "createdBy": "aganesan@pdmi.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "662a6f9804c83964b84ec1b0"
+  },
+  "name": "Last modified 2 years back lambda.xlsx",
+  "type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  "customerId": "cust_master.158689",
+  "s3Prefix": "cust_master.158689/Test 1/",
+  "source": "web",
+  "size": 30112,
+  "versionId": "5iKe0KUSEF0CruamNirspWujPgEcEDs5",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-04-25T14:58:32.364Z"
+  },
+  "createdBy": "aganesan@pdmi.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "662a6fa604c83964b84ec1b3"
+  },
+  "name": "my claim set 3.csv",
+  "type": "text/csv",
+  "customerId": "cust_master.158689",
+  "s3Prefix": "cust_master.158689/Test 1/",
+  "source": "web",
+  "size": 9555,
+  "versionId": "RpvjbWN1BE0zHwEX7I77LRaN0SopaPIY",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-04-25T14:58:46.144Z"
+  },
+  "createdBy": "aganesan@pdmi.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "662a6fb504c83964b84ec1b6"
+  },
+  "name": "Pending Items on Pharmacy Portal.xlsx",
+  "type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  "customerId": "cust_master.158689",
+  "s3Prefix": "cust_master.158689/Test 1/",
+  "source": "web",
+  "size": 10601,
+  "versionId": "RNOmWWDQchGLjBu8PJCq43sllliyoHgK",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-04-25T14:59:01.251Z"
+  },
+  "createdBy": "aganesan@pdmi.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "662a6fca04c83964b84ec1b9"
+  },
+  "name": "Timings - After merging all to one.xlsx",
+  "type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  "customerId": "cust_master.158689",
+  "s3Prefix": "cust_master.158689/Test 2/",
+  "source": "web",
+  "size": 20585,
+  "versionId": "pw5yLpHB2WZF0wtOfB0KhhnZCjZFduEg",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-04-25T14:59:22.670Z"
+  },
+  "createdBy": "aganesan@pdmi.com",
+  "isActive": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "662a6fca04c83964b84ec1bc"
+  },
+  "name": "Bug fixing Assigned Teams.docx",
+  "type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  "customerId": "cust_master.100786",
+  "s3Prefix": "cust_master.100786/test/",
+  "source": "web",
+  "size": 14135,
+  "versionId": "KmlJdjOU0tcgATIhxiB20npbji8GAbYd",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-04-25T14:59:22.867Z"
+  },
+  "createdBy": "admin@pbmcentral.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "662a6fd504c83964b84ec1bf"
+  },
+  "name": "Rest OF APIs.docx",
+  "type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  "customerId": "cust_master.158689",
+  "s3Prefix": "cust_master.158689/Test 2/",
+  "source": "web",
+  "size": 18807,
+  "versionId": "aizXy0ZgisR_t9HlyZgqovhIATWaq.yj",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-04-25T14:59:33.623Z"
+  },
+  "createdBy": "aganesan@pdmi.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "662a6fdf04c83964b84ec1c2"
+  },
+  "name": "uploadBelow5MB.txt",
+  "type": "text/plain",
+  "customerId": "cust_master.100786",
+  "s3Prefix": "cust_master.100786/test/",
+  "source": "web",
+  "size": 4979775,
+  "versionId": "P__HlYvIJ4Kp2OJBsuY.xs_vDDd01_Wp",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-04-25T14:59:43.605Z"
+  },
+  "createdBy": "admin@pbmcentral.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "662a6fed04c83964b84ec1c5"
+  },
+  "name": "UI UX changes for PBM Portal 3.docx",
+  "type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  "customerId": "cust_master.158689",
+  "s3Prefix": "cust_master.158689/Test 3/",
+  "source": "web",
+  "size": 186420,
+  "versionId": "s_4gzRpFFpZ3ZJaNxbE.DewL6ufhqVRg",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-04-25T14:59:57.794Z"
+  },
+  "createdBy": "aganesan@pdmi.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "662a6ff704c83964b84ec1c8"
+  },
+  "name": "BIN-PCN-SYSTEM.xlsx",
+  "type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  "customerId": "cust_master.158689",
+  "s3Prefix": "cust_master.158689/Test 4/",
+  "source": "web",
+  "size": 62173,
+  "versionId": "YiRmt9ttQ6_UtRJrurmqzRIGwxqCDNcX",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-04-25T15:00:07.275Z"
+  },
+  "createdBy": "admin@pbmcentral.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "662a700c04c83964b84ec1cb"
+  },
+  "name": "GRX_TrialCard_to_PDMI_99994144.txt",
+  "type": "text/plain",
+  "customerId": "cust_master.158689",
+  "s3Prefix": "cust_master.158689/Test 3/",
+  "source": "web",
+  "size": 15256025,
+  "versionId": "OQ30_H9FyNJiFJxv1R1jarqUNKBeMR51",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-04-25T15:00:28.720Z"
+  },
+  "createdBy": "aganesan@pdmi.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "662a701f04c83964b84ec1ce"
+  },
+  "name": "BIN-PCN-SYSTEM.xlsx",
+  "type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  "customerId": "cust_master.158689",
+  "s3Prefix": "cust_master.158689/Test 3/",
+  "source": "web",
+  "size": 62173,
+  "versionId": "Okf9YW0rvF77I3M6YsuKPmrqwxFupZAa",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-04-25T15:00:47.415Z"
+  },
+  "createdBy": "aganesan@pdmi.com",
+  "isActive": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "662a703104c83964b84ec1d1"
+  },
+  "name": "testing files.xlsx",
+  "type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  "customerId": "cust_pbm.system.112413",
+  "s3Prefix": "cust_pbm.system.112413/sk-test/",
+  "source": "web",
+  "size": 62173,
+  "versionId": "4SvcLUfiJZc4xi3HOwGk9HXL7ymsUYpR",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-04-25T15:01:05.517Z"
+  },
+  "createdBy": "admin@pbmcentral.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "662a706a04c83964b84ec1d4"
+  },
+  "name": "uploadBelow5MB.txt",
+  "type": "text/plain",
+  "customerId": "cust_pbm.system.112413",
+  "s3Prefix": "cust_pbm.system.112413/sk-test/child-test/",
+  "source": "web",
+  "size": 4979775,
+  "versionId": "i6N8_KOJajR24.r_BLyAWfqDbY_EgJjR",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-04-25T15:02:02.972Z"
+  },
+  "createdBy": "admin@pbmcentral.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "662a709004c83964b84ec1d7"
+  },
+  "name": "200mb-example-dummy-file_1.txt",
+  "type": "text/plain",
+  "customerId": "cust_master.158689",
+  "s3Prefix": "cust_master.158689/Test 4/",
+  "source": "web",
+  "size": 209715205,
+  "versionId": "Bwuzqt9r0Z.eqtHA8VQBQqkLPrQ7mDlg",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-04-25T15:02:40.614Z"
+  },
+  "createdBy": "aganesan@pdmi.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "662b93b48c05380ee68adee9"
+  },
+  "name": "Test case Doc - PB-4941 - CE - Folder Creation.xlsx",
+  "type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  "customerId": "cust_master.158689",
+  "s3Prefix": "cust_master.158689/Test 1/",
+  "source": "web",
+  "size": 13976,
+  "versionId": "sympPQw33x3mfs0R83DjbUmQjvuf9a3Y",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-04-26T11:44:52.730Z"
+  },
+  "createdBy": "ndixit@pdmi.com",
+  "isActive": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "662bbfe77b39fd4574a48950"
+  },
+  "name": "Goodrx file.csv",
+  "type": "text/csv",
+  "customerId": "cust_master.158689",
+  "s3Prefix": "cust_master.158689/Test 1/",
+  "source": "web",
+  "size": 57443154,
+  "versionId": "qNNFTIViJmUjfBzG54tq1goVaKBxXVvh",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-04-26T14:53:27.879Z"
+  },
+  "createdBy": "nantony@pdmi.com",
+  "isActive": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66322ca9f855f8e50abec38f"
+  },
+  "name": "Archive 2 (1).zip",
+  "type": "application/zip",
+  "customerId": "cust_master.158689",
+  "s3Prefix": "cust_master.158689/",
+  "source": "web",
+  "size": 27403,
+  "versionId": "H6oUR9T.ZZv8188phYUqordlqQEkWaE6",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-01T11:51:05.870Z"
+  },
+  "createdBy": "mkrishna@pdmi.com",
+  "isActive": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "663372ab3c5d8a253d87de0d"
+  },
+  "name": "Legacy_Claimsets.csv",
+  "type": "text/csv",
+  "customerId": "cust_master.158689",
+  "s3Prefix": "cust_master.158689/Test 1/",
+  "source": "web",
+  "size": 3120,
+  "versionId": "LfOlboY1Gul6dwHXNZ9rTAs2pUbJOBHi",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-02T11:02:03.445Z"
+  },
+  "createdBy": "admin@pbmcentral.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "663372db3c5d8a253d87de10"
+  },
+  "name": "Goodrx file.csv",
+  "type": "text/csv",
+  "customerId": "cust_master.158689",
+  "s3Prefix": "cust_master.158689/Test 1/",
+  "source": "web",
+  "size": 57443154,
+  "versionId": "xAir8fT4MuiQDnnlu0MsZUj7AtRCrXHD",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-02T11:02:51.582Z"
+  },
+  "createdBy": "mkrishna@pdmi.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6633a5eb9f0d64ca104edd69"
+  },
+  "name": "PdmiPortal_Help.docx",
+  "type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  "customerId": "cust_pbm.system.112413",
+  "s3Prefix": "cust_pbm.system.112413/",
+  "source": "web",
+  "size": 97325,
+  "versionId": "PmXqSLAT1BQ0atCvgYKjLaN8OXGcW77P",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-02T14:40:43.458Z"
+  },
+  "createdBy": "admin@pbmcentral.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6633a64f9f0d64ca104edd6c"
+  },
+  "name": "PDMIPortal_UserGuide.pdf",
+  "type": "application/pdf",
+  "customerId": "cust_master.158689",
+  "s3Prefix": "cust_master.158689/",
+  "source": "web",
+  "size": 499694,
+  "versionId": "sNUDaMBQnZGW2wbEuApOFWdi1mcSZ9GF",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-02T14:42:23.597Z"
+  },
+  "createdBy": "admin@pbmcentral.com",
+  "isActive": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6633a6ce9f0d64ca104edd6f"
+  },
+  "name": "BusinessRequirementsWhiteLabeling_2.0.docx",
+  "type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  "customerId": "cust_master.100786",
+  "s3Prefix": "cust_master.100786/test/",
+  "source": "web",
+  "size": 11644168,
+  "versionId": "Ls6TylWObrZvLUfzVM5tkln4T7wTgiaK",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-02T14:44:30.234Z"
+  },
+  "createdBy": "admin@pbmcentral.com",
+  "isActive": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6633a73c9f0d64ca104edd72"
+  },
+  "name": "BusinessRequirementsWhiteLabeling_1.0.4.docx",
+  "type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  "customerId": "cust_master.100786",
+  "s3Prefix": "cust_master.100786/test/",
+  "source": "web",
+  "size": 11644101,
+  "versionId": "dIfkojzLpWVaqn0XzFxzsg27W5QYOahg",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-02T14:46:20.549Z"
+  },
+  "createdBy": "admin@pbmcentral.com",
+  "isActive": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6633a9204ff0016519feb304"
+  },
+  "name": "BusinessRequirementsWhiteLabeling_1.0.4.docx",
+  "type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  "customerId": "cust_master.100786",
+  "s3Prefix": "cust_master.100786/test/",
+  "source": "web",
+  "size": 11644101,
+  "versionId": "c18zMtNrvDALFK3NK9NX6_nVvRBRRSxM",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-02T14:54:24.165Z"
+  },
+  "createdBy": "admin@pbmcentral.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6633aa82654e92c3ba99e4de"
+  },
+  "name": "NCPDPflatfile.pdf",
+  "type": "application/pdf",
+  "customerId": "cust_master.100786",
+  "s3Prefix": "cust_master.100786/test/nidhi/",
+  "source": "web",
+  "size": 5422220,
+  "versionId": "ijiwbOwpVXO2_huL6lKrkieE23s3q9eV",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-02T15:00:17.994Z"
+  },
+  "createdBy": "admin@pbmcentral.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6633aef843da185c5ac395aa"
+  },
+  "name": "UI UX changes discussion for PBM Portal 12.docx",
+  "type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  "customerId": "cust_master.158689",
+  "s3Prefix": "cust_master.158689/Test 1/",
+  "source": "web",
+  "size": 3141288,
+  "versionId": "KW0fczNuhSFd.jDRToCQmN9C.cE1Yk5R",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-02T15:19:20.105Z"
+  },
+  "createdBy": "admin@pbmcentral.com",
+  "isActive": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6633af2143da185c5ac395ad"
+  },
+  "name": "UI UX changes discussion for PBM Portal 12.docx",
+  "type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  "customerId": "cust_master.158689",
+  "s3Prefix": "cust_master.158689/Test 1/",
+  "source": "web",
+  "size": 3141288,
+  "versionId": "tP4pEpkKEE4ynTeccg4MBZrVpoxoSWKh",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-02T15:20:01.959Z"
+  },
+  "createdBy": "admin@pbmcentral.com",
+  "isActive": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6633b15a798caaf4bd7214ab"
+  },
+  "name": "BusinessRequirementsWhiteLabeling_2.0.docx",
+  "type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  "customerId": "cust_master.158689",
+  "s3Prefix": "cust_master.158689/Test 1/test1_sub1/",
+  "source": "web",
+  "size": 11644168,
+  "versionId": "GJzgZjcsMsNK58PuwiylijT3nNhR1A.4",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-02T15:29:30.207Z"
+  },
+  "createdBy": "admin@pbmcentral.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6634c475c676b45e0789211e"
+  },
+  "name": "GoodRx File Tracking.xlsx",
+  "type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  "customerId": "cust_pbm.system.110446",
+  "s3Prefix": "cust_pbm.system.110446/",
+  "source": "web",
+  "size": 17888,
+  "versionId": "0LcaaM4Js_62SRwuAaWIs5HiZx4ICnPE",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-03T11:03:17.232Z"
+  },
+  "createdBy": "testsys6@pdmi.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6634f758da127309db0a3023"
+  },
+  "name": "Legacy_Claimsets.csv",
+  "type": "text/csv",
+  "customerId": "cust_test",
+  "s3Prefix": "cust_test/",
+  "source": "web",
+  "size": 3120,
+  "versionId": "htMzkCU3HqvvtBf5_MsoCTmtlZ3_gF8Z",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-03T14:40:24.997Z"
+  },
+  "createdBy": "admin@pbmcentral.com",
+  "isActive": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6634f87bda127309db0a3026"
+  },
+  "name": "GRX_1.txt",
+  "type": "text/plain",
+  "customerId": "cust_master.158689",
+  "s3Prefix": "cust_master.158689/Test 2/",
+  "source": "web",
+  "size": 58132434,
+  "versionId": "Ue.oFMqxhIaQITi7EKkXYE5MwAq.JqkT",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-03T14:45:15.357Z"
+  },
+  "createdBy": "mkrishna@pdmi.com",
+  "isActive": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6634f8b3da127309db0a3029"
+  },
+  "name": "GRX_1.txt",
+  "type": "text/plain",
+  "customerId": "cust_master.158689",
+  "s3Prefix": "cust_master.158689/Test 1/",
+  "source": "web",
+  "size": 58132434,
+  "versionId": "eeKIBaU271dMJgHJcaT_VvRDZCPLXiAs",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-03T14:46:11.115Z"
+  },
+  "createdBy": "mkrishna@pdmi.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6634f8e3da127309db0a302c"
+  },
+  "name": "Goodrx file (2).csv",
+  "type": "text/csv",
+  "customerId": "cust_master.158689",
+  "s3Prefix": "cust_master.158689/Test 1/",
+  "source": "web",
+  "size": 57443154,
+  "versionId": "YkRDIF3BiNrr6fsfqnhgmC5llqzSxH1Z",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-03T14:46:59.707Z"
+  },
+  "createdBy": "mkrishna@pdmi.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6634f8f9da127309db0a302f"
+  },
+  "name": "GRX_TrialCard_to_PDMI_99994144_GoodRx_Pharmacy.txt",
+  "type": "text/plain",
+  "customerId": "cust_master.158689",
+  "s3Prefix": "cust_master.158689/Test 1/",
+  "source": "web",
+  "size": 58132434,
+  "versionId": "x3rb3dqG5qHe0VG7Gzhh1QJ0A9tanIBr",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-03T14:47:21.984Z"
+  },
+  "createdBy": "mkrishna@pdmi.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6634f920da127309db0a3032"
+  },
+  "name": "GRX_TrialCard_to_PDMI.txt",
+  "type": "text/plain",
+  "customerId": "cust_master.158689",
+  "s3Prefix": "cust_master.158689/Test 1/",
+  "source": "web",
+  "size": 58132434,
+  "versionId": "NGIhPEKOOSf.dbZ0H4xscCjK5vGFRpqr",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-03T14:48:00.943Z"
+  },
+  "createdBy": "mkrishna@pdmi.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6634f92eda127309db0a3035"
+  },
+  "name": "BusinessRequirementsWhiteLabeling_2.0.docx",
+  "type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  "customerId": "cust_master.158689",
+  "s3Prefix": "cust_master.158689/Test 1/",
+  "source": "web",
+  "size": 11644168,
+  "versionId": "uVlU_8xz3qKLpo.8LHaRxpSdI3SMMURa",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-03T14:48:14.244Z"
+  },
+  "createdBy": "mkrishna@pdmi.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6634f9ceda127309db0a3038"
+  },
+  "name": "GRX_1.txt",
+  "type": "text/plain",
+  "customerId": "cust_master.158689",
+  "s3Prefix": "cust_master.158689/Test 6/",
+  "source": "web",
+  "size": 58132434,
+  "versionId": "y3Cgf16y99X9beQiJK3MonWuBkS2FI1i",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-03T14:50:54.875Z"
+  },
+  "createdBy": "mkrishna@pdmi.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66350565fc019199f465010d"
+  },
+  "name": "Legacy_Claimsets (1).csv",
+  "type": "text/csv",
+  "customerId": "cust_master.158689",
+  "s3Prefix": "cust_master.158689/Test 1/",
+  "source": "web",
+  "size": 3120,
+  "versionId": "SUwhe5PHtfoVpmNSaxY7xV8YHeQYoqTu",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-03T15:40:21.183Z"
+  },
+  "createdBy": "mkrishna@pdmi.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6639f55a41e1c5db4e488522"
+  },
+  "name": "Test Plan - DPT.xlsx",
+  "type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  "customerId": "cust_master.100786",
+  "s3Prefix": "cust_master.100786/test/",
+  "source": "web",
+  "size": 10471,
+  "versionId": "IKYwRpG6P5hOrHXwvGsYK1RkfLNX7MKP",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-07T09:33:14.678Z"
+  },
+  "createdBy": "admin@pbmcentral.com",
+  "isActive": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "663a1f8fe471f51ed241a203"
+  },
+  "name": "Test File.docx",
+  "type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  "customerId": "cust_test",
+  "s3Prefix": "cust_test/",
+  "source": "web",
+  "size": 13084,
+  "versionId": "EeE3xDGbXrC8tnXdurEhBDt.a6GPZA9M",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-07T12:33:19.088Z"
+  },
+  "createdBy": "admin@pbmcentral.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "663b2ab9e1697074423776c9"
+  },
+  "name": "10mb file.xlsx",
+  "type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  "customerId": "cust_test",
+  "s3Prefix": "cust_test/",
+  "source": "web",
+  "size": 10727329,
+  "versionId": "Lolv7.eVn05PhhmnYk4eLsmliHU5TgpD",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-08T07:33:13.118Z"
+  },
+  "createdBy": "admin@pbmcentral.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "663b2ad7e1697074423776cc"
+  },
+  "name": "Sample CSV.csv",
+  "type": "text/csv",
+  "customerId": "cust_test",
+  "s3Prefix": "cust_test/",
+  "source": "web",
+  "size": 369,
+  "versionId": "naYieBMG1Vz6RMK4gKKM2P75_44EWoIx",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-08T07:33:43.223Z"
+  },
+  "createdBy": "admin@pbmcentral.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "663b2aeae1697074423776cf"
+  },
+  "name": "Sample doc.doc",
+  "type": "application/msword",
+  "customerId": "cust_test",
+  "s3Prefix": "cust_test/",
+  "source": "web",
+  "size": 978432,
+  "versionId": "wij0KarIdsnSe7VyPe7dafPh1WtYkDOJ",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-08T07:34:02.178Z"
+  },
+  "createdBy": "admin@pbmcentral.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "663b2afae1697074423776d2"
+  },
+  "name": "Sample docx.docx",
+  "type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  "customerId": "cust_test",
+  "s3Prefix": "cust_test/",
+  "source": "web",
+  "size": 1106336,
+  "versionId": "SvGPJUJmcR89Oyq4U8KQKmPYTyKqWy7M",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-08T07:34:18.038Z"
+  },
+  "createdBy": "admin@pbmcentral.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "663b2b07e1697074423776d5"
+  },
+  "name": "Sample pdf.pdf",
+  "type": "application/pdf",
+  "customerId": "cust_test",
+  "s3Prefix": "cust_test/",
+  "source": "web",
+  "size": 5695853,
+  "versionId": "DAr5ocvdhecrE6K79dFJKVDS6uGbJsFe",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-08T07:34:31.784Z"
+  },
+  "createdBy": "admin@pbmcentral.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "663b2b16e1697074423776d8"
+  },
+  "name": "Sample txt.txt",
+  "type": "text/plain",
+  "customerId": "cust_test",
+  "s3Prefix": "cust_test/",
+  "source": "web",
+  "size": 428,
+  "versionId": "FGUz5tR0eixMhlAa.HNbOl3OzUUZP8P2",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-08T07:34:46.150Z"
+  },
+  "createdBy": "admin@pbmcentral.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "663b2b24e1697074423776db"
+  },
+  "name": "Sample xls.xls",
+  "type": "application/vnd.ms-excel",
+  "customerId": "cust_test",
+  "s3Prefix": "cust_test/",
+  "source": "web",
+  "size": 43520,
+  "versionId": "BQzSxtyDcqaIbpx.TYFaKSEgb2sshTbJ",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-08T07:35:00.748Z"
+  },
+  "createdBy": "admin@pbmcentral.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "663b2b33e1697074423776de"
+  },
+  "name": "Sample xlsx.xlsx",
+  "type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  "customerId": "cust_test",
+  "s3Prefix": "cust_test/",
+  "source": "web",
+  "size": 10727329,
+  "versionId": "YDQl164stHvnMAL0_.8V8zGEQcgWvsCe",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-08T07:35:15.759Z"
+  },
+  "createdBy": "admin@pbmcentral.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "663b39bef4fdb5817ab77251"
+  },
+  "name": "GRX_1.txt",
+  "type": "text/plain",
+  "customerId": "cust_master.158689",
+  "s3Prefix": "cust_master.158689/Test 1/Test 1/",
+  "source": "web",
+  "size": 58132434,
+  "versionId": "xCzmqGZka0so7lv2Or5ukk6qMVibrzAD",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-08T08:37:18.760Z"
+  },
+  "createdBy": "mkrishna@pdmi.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "663b48bacede247f3e0eef1f"
+  },
+  "name": "GRX_1.txt",
+  "type": "text/plain",
+  "customerId": "cust_master.158689",
+  "s3Prefix": "cust_master.158689/Test 1/test1_sub1/",
+  "source": "web",
+  "size": 58132434,
+  "versionId": "_PBWdU7afe.9xbPr8SeIeY8ox0h5Oygm",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-08T09:41:14.832Z"
+  },
+  "createdBy": "mkrishna@pdmi.com",
+  "isActive": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "663b4990cede247f3e0eef22"
+  },
+  "name": "Legacy_Claimsets.csv",
+  "type": "text/csv",
+  "customerId": "cust_test",
+  "s3Prefix": "cust_test/",
+  "source": "web",
+  "size": 3120,
+  "versionId": "aLByI68uZ0JaER2M_YlLTw9tn3ZdUshJ",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-08T09:44:48.894Z"
+  },
+  "createdBy": "admin@pbmcentral.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "663b4f983691aeb574de68df"
+  },
+  "name": "Goodrx file.csv",
+  "type": "text/csv",
+  "customerId": "cust_master.158689",
+  "s3Prefix": "cust_master.158689/Test 1/Test 1/",
+  "source": "web",
+  "size": 57443154,
+  "versionId": "lDnHYztgZTHWMCka188OBr_AwkQohjAu",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-08T10:10:32.058Z"
+  },
+  "createdBy": "mkrishna@pdmi.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "663e0b2e774cea9e199f699c"
+  },
+  "name": "BIN-PCN-SYSTEM.xlsx",
+  "type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  "customerId": "cust_master.158689",
+  "s3Prefix": "cust_master.158689/Test 3/",
+  "source": "web",
+  "size": 8824,
+  "versionId": "b3zwWrPoCGeUPjdA0YPgu1hnBNn8ttEK",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-10T11:55:26.675Z"
+  },
+  "createdBy": "mkrishna@pdmi.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "663e0c02774cea9e199f699f"
+  },
+  "name": "UI UX changes for PBM Portal 3.xlsx",
+  "type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  "customerId": "cust_master.158689",
+  "s3Prefix": "cust_master.158689/Test 3/",
+  "source": "web",
+  "size": 8833,
+  "versionId": "8GmMyQvsWN9RLLngucXalP1bLuaS_Fia",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-10T11:58:58.548Z"
+  },
+  "createdBy": "mkrishna@pdmi.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "663e0cf7774cea9e199f69a2"
+  },
+  "name": "GRX_1.txt",
+  "type": "text/plain",
+  "customerId": "cust_master.158689",
+  "s3Prefix": "cust_master.158689/Test 2/",
+  "source": "web",
+  "size": 58132434,
+  "versionId": "EFcdCRVPWDaLV8pBCxSKAcqtKP9qiKqa",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-10T12:03:03.617Z"
+  },
+  "createdBy": "mkrishna@pdmi.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66437addff20bd12b6d040b6"
+  },
+  "name": "Test Plan - DPT.xlsx",
+  "type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  "customerId": "cust_master.100786",
+  "s3Prefix": "cust_master.100786/test/",
+  "source": "web",
+  "size": 8890,
+  "versionId": "UikKjQOnZVaTo_MW2mcHaJUUx7kNFukT",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-14T14:53:17.071Z"
+  },
+  "createdBy": "admin@pbmcentral.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6643814e5025f7f534e2a27c"
+  },
+  "name": "Test Plan - DPT.xlsx",
+  "type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  "customerId": "cust_master.158689",
+  "s3Prefix": "cust_master.158689/Test 1/",
+  "source": "web",
+  "size": 8890,
+  "versionId": "vPneJpQaY1p4H7bNphodZQXWd0aJgRgm",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-05-14T15:20:46.601Z"
+  },
+  "createdBy": "admin@pbmcentral.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6666db4bc2662eec0847315c"
+  },
+  "name": "B1Prescription_001.txt",
+  "type": "text/plain",
+  "customerId": "cust_test folder",
+  "s3Prefix": "cust_test folder/",
+  "source": "web",
+  "size": 666,
+  "versionId": "8HlyUFWjpoDMyrx.6w7_lXYPC0fZqXhF",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-06-10T10:54:03.256Z"
+  },
+  "createdBy": "admin@pbmcentral.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66cf0cce53477807b03d4ba0"
+  },
+  "name": "testing.csv",
+  "type": "text/csv",
+  "customerId": "cust_340b.e.157666",
+  "s3Prefix": "cust_340b.e.157666/sk-test-migration/",
+  "source": "web",
+  "size": 5,
+  "versionId": "rrx_KjDTnlSxe.v5YiBV1YV0qGzfAr4l",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-08-28T11:41:02.993Z"
+  },
+  "createdBy": "admin@pbmcentral.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66cf0cd953477807b03d4ba3"
+  },
+  "name": "testing.xlsx",
+  "type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  "customerId": "cust_340b.e.157666",
+  "s3Prefix": "cust_340b.e.157666/sk-test-migration/",
+  "source": "web",
+  "size": 6196,
+  "versionId": "XnBMToar1OY240vP.0ZNfgiyaL111CFb",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-08-28T11:41:13.497Z"
+  },
+  "createdBy": "admin@pbmcentral.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66cf0cf253477807b03d4ba6"
+  },
+  "name": "testing-sk-test.xlsx",
+  "type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  "customerId": "cust_340b.e.157666",
+  "s3Prefix": "cust_340b.e.157666/sk-test-migration/",
+  "source": "web",
+  "size": 6196,
+  "versionId": "EZ5uLgAimBpnGfZBLkiIX7qs23kB_h9Z",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-08-28T11:41:38.894Z"
+  },
+  "createdBy": "admin@pbmcentral.com",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66cf0d1653477807b03d4ba9"
+  },
+  "name": "testing-sk-test2.csv",
+  "type": "text/csv",
+  "customerId": "cust_340b.e.157666",
+  "s3Prefix": "cust_340b.e.157666/sk-test-migration/",
+  "source": "web",
+  "size": 5,
+  "versionId": "xerYpRK._mCg.3n6PNiHKwvDkcjXykSk",
+  "uploadType": 1,
+  "createdAt": {
+    "$date": "2024-08-28T11:42:14.414Z"
+  },
+  "createdBy": "admin@pbmcentral.com",
+  "isActive": false,
+  "__v": 0
+}]
