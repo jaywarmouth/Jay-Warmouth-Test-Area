@@ -40,21 +40,23 @@ The Export Center is hosted on **our infrastructure** and embedded into client p
 | **UI Framework** | **React** | Widely adopted, easy to embed, strong ecosystem |
 | **Component Library** | **MUI (Material UI)** or **Ant Design** | Enterprise-ready; data tables, forms, date pickers built-in |
 | **API Layer** | **REST API** (Node.js / Express or .NET) | Simple, well-understood, easy to secure |
-| **Authentication** | **SSO (existing) + JWT** | Integrates with client portal SSO (e.g. mypbmportal.com); no separate login |
+| **Authentication** | **Amazon Cognito + MFA** | Already established on mypbmportal.com |
+| **Identity Broker (Consideration)** | **KeyCloak** | Under evaluation for federated identity management across portals |
 | **Hosting** | **AWS S3 + CloudFront** | Static React app, fast and cost-efficient |
 
 ---
 
-## Authentication — SSO Integration
+## Authentication — Amazon Cognito + MFA
 
-Client portals (e.g. `mypbmportal.com`) have **SSO already established**. The Export Center integrates with it — users never see a separate login.
+Client portals (e.g. `mypbmportal.com`) use **Amazon Cognito with MFA already established**. The Export Center integrates with it — users authenticate through Cognito as they normally would on the portal.
 
 **Flow:**
 ```
-User logs into mypbmportal.com via SSO
-  → Portal passes SSO token to embedded Export Center on load
-  → Export Center validates token and exchanges it for a scoped JWT
-  → JWT carries user identity + metadata-driven entitlements
+User logs into mypbmportal.com via Amazon Cognito (with MFA)
+  → Cognito issues tokens (ID token + Access token)
+  → Portal passes Cognito ID token to embedded Export Center on load
+  → Export Center validates the Cognito token
+  → Export Center issues a scoped JWT with metadata-driven entitlements
   → UI renders based on entitlements; API enforces them on every call
 ```
 
@@ -73,6 +75,22 @@ The scoped JWT includes:
 }
 ```
 
+### KeyCloak Consideration
+
+**KeyCloak** is under evaluation as a federated identity broker. It would sit between the client portal identity providers and the Export Center, normalizing tokens across different portals and enabling:
+
+- Centralized identity management across multiple client portals
+- Protocol bridging (SAML, OIDC, OAuth 2.0) if portals vary
+- Fine-grained role and attribute mapping before token reaches the Export Center
+- Easier onboarding of future portals with different identity providers
+
+| Option | Pros | Cons |
+|---|---|---|
+| **Cognito only** | Already in place, AWS-native, low ops overhead | Per-portal config, limited protocol flexibility |
+| **KeyCloak** | Centralized, protocol-agnostic, powerful role mapping | Additional infrastructure to manage |
+
+> ⚠️ **Decision Pending** — KeyCloak vs. Cognito-only to be confirmed before implementation begins.
+
 ---
 
 ## Security & Access Control Model
@@ -85,6 +103,7 @@ Security operates at **two levels** — UI and API. The API always enforces enti
 | **Section Visibility** | UI sections shown/hidden based on metadata-configured roles |
 | **API Enforcement** | Backend validates JWT claims on every request — UI entitlements are never trusted alone |
 | **Client Isolation** | `client_id` ensures users only see data and reports belonging to their portal |
+| **MFA** | Enforced at Cognito layer — Export Center inherits MFA compliance from portal login |
 
 ### Role Definitions (Draft)
 
@@ -161,16 +180,17 @@ All UI elements are driven by **metadata configured by the Ops team** in Layer 2
 
 ## Decisions Locked
 
-- ✅ **SSO** — Integrates with existing client portal SSO; no separate auth to build
+- ✅ **Authentication** — Amazon Cognito with MFA, already established on mypbmportal.com
 - ✅ **Entitlement management** — Ops-managed config process; no admin UI needed
 - ✅ **UI is fully metadata-driven** — report lists, forms, sections all from Layer 2 config
 - ✅ **Phase 1 hosting** — iFrame embed via S3 + CloudFront
 
 ## Open Questions / Decisions
 
+- [ ] **KeyCloak vs. Cognito-only** — confirm identity broker strategy before implementation
 - [ ] iFrame vs. micro-frontend — confirm Phase 1 approach with client portal teams
-- [ ] What SSO protocol does mypbmportal.com use? (SAML, OIDC, OAuth 2.0?)
 - [ ] Should the UI support bulk request submission?
 - [ ] What does the file naming token system look like? (e.g. `{client}_{report}_{date}`)
 - [ ] Mobile / responsive requirements?
 - [ ] How are new clients onboarded — what does the Ops config process look like end-to-end?
+- [ ] Do all future client portals use Cognito, or will other identity providers need to be supported?
