@@ -1,0 +1,339 @@
+# cloud_data_warehouse.plan_data
+
+> **Schema:** cloud_data_warehouse | **Columns:** 327
+
+## Overview
+
+_Add business description here._
+
+## Columns
+
+| # | Column | Data Type | Nullable | Default | Notes |
+|---|--------|-----------|----------|---------|-------|
+| 1 | meta_surr_key | VARCHAR(1000) | YES |  |  |
+| 2 | meta_hash_key | VARCHAR(1000) | YES |  |  |
+| 3 | meta_src_sys_nm | VARCHAR(80) | YES |  |  |
+| 4 | meta_iud_flg | VARCHAR(1) | YES |  |  |
+| 5 | meta_eff_strt_dt | TIMESTAMP | YES |  |  |
+| 6 | meta_eff_end_dt | TIMESTAMP | YES |  |  |
+| 7 | meta_curr_ind | VARCHAR(3) | YES |  |  |
+| 8 | plan_key | VARCHAR(16) | YES |  |  |
+| 9 | plan_number | VARCHAR(8) | YES |  |  |
+| 10 | plan_description | VARCHAR(30) | YES |  |  |
+| 11 | plan_max_single | NUMERIC(18, 2) | YES |  |  |
+| 12 | plan_max_family | NUMERIC(18, 2) | YES |  |  |
+| 13 | plan_ded_single | NUMERIC(18, 2) | YES |  |  |
+| 14 | plan_ded_family | NUMERIC(18, 2) | YES |  |  |
+| 15 | bc_cov | VARCHAR(1) | YES |  |  |
+| 16 | needle_cov | VARCHAR(1) | YES |  |  |
+| 17 | insulin_cov | VARCHAR(1) | YES |  |  |
+| 18 | copay_ndl_cov | VARCHAR(1) | YES |  |  |
+| 19 | max_days | BIGINT | YES |  |  |
+| 20 | stand_days | BIGINT | YES |  |  |
+| 21 | inj_flag | VARCHAR(1) | YES |  |  |
+| 22 | compound_flag | VARCHAR(1) | YES |  |  |
+| 23 | ucr_flag | VARCHAR(1) | YES |  |  |
+| 24 | mail_order_cd | VARCHAR(1) | YES |  |  |
+| 25 | copay_month | VARCHAR(1) | YES |  |  |
+| 26 | active_option | VARCHAR(1) | YES |  |  |
+| 27 | max_claim_amt | NUMERIC(18, 2) | YES |  |  |
+| 28 | mail_limit | VARCHAR(1) | YES |  |  |
+| 29 | mand_mail_flag | VARCHAR(1) | YES |  |  |
+| 30 | mand_mail_fills | BIGINT | YES |  |  |
+| 31 | maint_lower_flag | VARCHAR(1) | YES |  |  |
+| 32 | maint_lower_fills | BIGINT | YES |  |  |
+| 33 | maint_medispan | VARCHAR(1) | YES |  |  |
+| 34 | days_cut_1 | BIGINT | YES |  |  |
+| 35 | days_cut_2 | BIGINT | YES |  |  |
+| 36 | days_cut_3 | BIGINT | YES |  |  |
+| 37 | exc_table_1 | VARCHAR(1) | YES |  |  |
+| 38 | drug_status_1 | VARCHAR(1) | YES |  |  |
+| 39 | exc_table_2 | VARCHAR(1) | YES |  |  |
+| 40 | drug_status_2 | VARCHAR(1) | YES |  |  |
+| 41 | exc_table_3 | VARCHAR(1) | YES |  |  |
+| 42 | drug_status_3 | VARCHAR(1) | YES |  |  |
+| 43 | exc_table_4 | VARCHAR(1) | YES |  |  |
+| 44 | drug_status_4 | VARCHAR(1) | YES |  |  |
+| 45 | exc_table_5 | VARCHAR(1) | YES |  |  |
+| 46 | drug_status_5 | VARCHAR(1) | YES |  |  |
+| 47 | exc_table_6 | VARCHAR(1) | YES |  |  |
+| 48 | drug_status_6 | VARCHAR(1) | YES |  |  |
+| 49 | exc_table_7 | VARCHAR(1) | YES |  |  |
+| 50 | drug_status_7 | VARCHAR(1) | YES |  |  |
+| 51 | exc_table_8 | VARCHAR(1) | YES |  |  |
+| 52 | drug_status_8 | VARCHAR(1) | YES |  |  |
+| 53 | exc_table_9 | VARCHAR(1) | YES |  |  |
+| 54 | drug_status_9 | VARCHAR(1) | YES |  |  |
+| 55 | exc_table_10 | VARCHAR(1) | YES |  |  |
+| 56 | drug_status_10 | VARCHAR(1) | YES |  |  |
+| 57 | exc_table_11 | VARCHAR(1) | YES |  |  |
+| 58 | drug_status_11 | VARCHAR(1) | YES |  |  |
+| 59 | exc_table_12 | VARCHAR(1) | YES |  |  |
+| 60 | drug_status_12 | VARCHAR(1) | YES |  |  |
+| 61 | exc_table_13 | VARCHAR(1) | YES |  |  |
+| 62 | drug_status_13 | VARCHAR(1) | YES |  |  |
+| 63 | exc_table_14 | VARCHAR(1) | YES |  |  |
+| 64 | drug_status_14 | VARCHAR(1) | YES |  |  |
+| 65 | exc_table_15 | VARCHAR(1) | YES |  |  |
+| 66 | drug_status_15 | VARCHAR(1) | YES |  |  |
+| 67 | cmsta_plan_type | VARCHAR(1) | YES |  |  |
+| 68 | troop_amount | NUMERIC(18, 2) | YES |  |  |
+| 69 | deduct_applies | VARCHAR(1) | YES |  |  |
+| 70 | coverage_gap_applies | VARCHAR(1) | YES |  |  |
+| 71 | medd_ben_code | VARCHAR(16) | YES |  |  |
+| 72 | drug_copay_1 | BIGINT | YES |  |  |
+| 73 | drug_copay_2 | BIGINT | YES |  |  |
+| 74 | drug_copay_3 | BIGINT | YES |  |  |
+| 75 | drug_copay_4 | BIGINT | YES |  |  |
+| 76 | drug_copay_5 | BIGINT | YES |  |  |
+| 77 | drug_copay_6 | BIGINT | YES |  |  |
+| 78 | drug_copay_7 | BIGINT | YES |  |  |
+| 79 | drug_copay_8 | BIGINT | YES |  |  |
+| 80 | drug_copay_9 | BIGINT | YES |  |  |
+| 81 | drug_copay_10 | BIGINT | YES |  |  |
+| 82 | drug_copay_11 | BIGINT | YES |  |  |
+| 83 | drug_copay_12 | BIGINT | YES |  |  |
+| 84 | drug_copay_13 | BIGINT | YES |  |  |
+| 85 | drug_copay_14 | BIGINT | YES |  |  |
+| 86 | drug_copay_15 | BIGINT | YES |  |  |
+| 87 | drug_copay_16 | BIGINT | YES |  |  |
+| 88 | drug_copay_17 | BIGINT | YES |  |  |
+| 89 | drug_copay_18 | BIGINT | YES |  |  |
+| 90 | drug_copay_19 | BIGINT | YES |  |  |
+| 91 | drug_copay_20 | BIGINT | YES |  |  |
+| 92 | exc_table_16 | VARCHAR(1) | YES |  |  |
+| 93 | exc_table_17 | VARCHAR(1) | YES |  |  |
+| 94 | exc_table_18 | VARCHAR(1) | YES |  |  |
+| 95 | exc_table_19 | VARCHAR(1) | YES |  |  |
+| 96 | exc_table_20 | VARCHAR(1) | YES |  |  |
+| 97 | drug_status_16 | VARCHAR(1) | YES |  |  |
+| 98 | drug_status_17 | VARCHAR(1) | YES |  |  |
+| 99 | drug_status_18 | VARCHAR(1) | YES |  |  |
+| 100 | drug_status_19 | VARCHAR(1) | YES |  |  |
+| 101 | drug_status_20 | VARCHAR(1) | YES |  |  |
+| 102 | kind_w_spec_options | VARCHAR(1) | YES |  |  |
+| 103 | drug_table_1 | BIGINT | YES |  |  |
+| 104 | drug_table_2 | BIGINT | YES |  |  |
+| 105 | drug_table_3 | BIGINT | YES |  |  |
+| 106 | drug_table_4 | BIGINT | YES |  |  |
+| 107 | drug_table_5 | BIGINT | YES |  |  |
+| 108 | drug_table_6 | BIGINT | YES |  |  |
+| 109 | drug_table_7 | BIGINT | YES |  |  |
+| 110 | drug_table_8 | BIGINT | YES |  |  |
+| 111 | drug_table_9 | BIGINT | YES |  |  |
+| 112 | drug_table_10 | BIGINT | YES |  |  |
+| 113 | drug_eff_date_1 | DATE | YES |  |  |
+| 114 | drug_eff_date_2 | DATE | YES |  |  |
+| 115 | drug_eff_date_3 | DATE | YES |  |  |
+| 116 | drug_eff_date_4 | DATE | YES |  |  |
+| 117 | drug_eff_date_5 | DATE | YES |  |  |
+| 118 | drug_eff_date_6 | DATE | YES |  |  |
+| 119 | drug_eff_date_7 | DATE | YES |  |  |
+| 120 | drug_eff_date_8 | DATE | YES |  |  |
+| 121 | drug_eff_date_9 | DATE | YES |  |  |
+| 122 | drug_eff_date_10 | DATE | YES |  |  |
+| 123 | drug_term_date_1 | DATE | YES |  |  |
+| 124 | drug_term_date_2 | DATE | YES |  |  |
+| 125 | drug_term_date_3 | DATE | YES |  |  |
+| 126 | drug_term_date_4 | DATE | YES |  |  |
+| 127 | drug_term_date_5 | DATE | YES |  |  |
+| 128 | drug_term_date_6 | DATE | YES |  |  |
+| 129 | drug_term_date_7 | DATE | YES |  |  |
+| 130 | drug_term_date_8 | DATE | YES |  |  |
+| 131 | drug_term_date_9 | DATE | YES |  |  |
+| 132 | drug_term_date_10 | DATE | YES |  |  |
+| 133 | otc_coverage_code_1 | VARCHAR(1) | YES |  |  |
+| 134 | otc_coverage_code_2 | VARCHAR(1) | YES |  |  |
+| 135 | otc_coverage_code_3 | VARCHAR(1) | YES |  |  |
+| 136 | otc_coverage_code_4 | VARCHAR(1) | YES |  |  |
+| 137 | otc_coverage_code_5 | VARCHAR(1) | YES |  |  |
+| 138 | otc_coverage_code_6 | VARCHAR(1) | YES |  |  |
+| 139 | otc_coverage_code_7 | VARCHAR(1) | YES |  |  |
+| 140 | otc_coverage_code_8 | VARCHAR(1) | YES |  |  |
+| 141 | otc_coverage_code_9 | VARCHAR(1) | YES |  |  |
+| 142 | otc_coverage_code_10 | VARCHAR(1) | YES |  |  |
+| 143 | generic_table_1 | BIGINT | YES |  |  |
+| 144 | generic_table_2 | BIGINT | YES |  |  |
+| 145 | generic_table_3 | BIGINT | YES |  |  |
+| 146 | generic_table_4 | BIGINT | YES |  |  |
+| 147 | generic_table_5 | BIGINT | YES |  |  |
+| 148 | generic_table_6 | BIGINT | YES |  |  |
+| 149 | generic_table_7 | BIGINT | YES |  |  |
+| 150 | generic_table_8 | BIGINT | YES |  |  |
+| 151 | generic_table_9 | BIGINT | YES |  |  |
+| 152 | generic_table_10 | BIGINT | YES |  |  |
+| 153 | generic_table_11 | BIGINT | YES |  |  |
+| 154 | generic_table_12 | BIGINT | YES |  |  |
+| 155 | generic_table_13 | BIGINT | YES |  |  |
+| 156 | generic_table_14 | BIGINT | YES |  |  |
+| 157 | generic_table_15 | BIGINT | YES |  |  |
+| 158 | generic_table_16 | BIGINT | YES |  |  |
+| 159 | generic_table_17 | BIGINT | YES |  |  |
+| 160 | generic_table_18 | BIGINT | YES |  |  |
+| 161 | generic_table_19 | BIGINT | YES |  |  |
+| 162 | generic_table_20 | BIGINT | YES |  |  |
+| 163 | gen_table_eff_date_1 | DATE | YES |  |  |
+| 164 | gen_table_eff_date_2 | DATE | YES |  |  |
+| 165 | gen_table_eff_date_3 | DATE | YES |  |  |
+| 166 | gen_table_eff_date_4 | DATE | YES |  |  |
+| 167 | gen_table_eff_date_5 | DATE | YES |  |  |
+| 168 | gen_table_eff_date_6 | DATE | YES |  |  |
+| 169 | gen_table_eff_date_7 | DATE | YES |  |  |
+| 170 | gen_table_eff_date_8 | DATE | YES |  |  |
+| 171 | gen_table_eff_date_9 | DATE | YES |  |  |
+| 172 | gen_table_eff_date_10 | DATE | YES |  |  |
+| 173 | gen_table_eff_date_11 | DATE | YES |  |  |
+| 174 | gen_table_eff_date_12 | DATE | YES |  |  |
+| 175 | gen_table_eff_date_13 | DATE | YES |  |  |
+| 176 | gen_table_eff_date_14 | DATE | YES |  |  |
+| 177 | gen_table_eff_date_15 | DATE | YES |  |  |
+| 178 | gen_table_eff_date_16 | DATE | YES |  |  |
+| 179 | gen_table_eff_date_17 | DATE | YES |  |  |
+| 180 | gen_table_eff_date_18 | DATE | YES |  |  |
+| 181 | gen_table_eff_date_19 | DATE | YES |  |  |
+| 182 | gen_table_eff_date_20 | DATE | YES |  |  |
+| 183 | gen_table_term_date_1 | DATE | YES |  |  |
+| 184 | gen_table_term_date_2 | DATE | YES |  |  |
+| 185 | gen_table_term_date_3 | DATE | YES |  |  |
+| 186 | gen_table_term_date_4 | DATE | YES |  |  |
+| 187 | gen_table_term_date_5 | DATE | YES |  |  |
+| 188 | gen_table_term_date_6 | DATE | YES |  |  |
+| 189 | gen_table_term_date_7 | DATE | YES |  |  |
+| 190 | gen_table_term_date_8 | DATE | YES |  |  |
+| 191 | gen_table_term_date_9 | DATE | YES |  |  |
+| 192 | gen_table_term_date_10 | DATE | YES |  |  |
+| 193 | gen_table_term_date_11 | DATE | YES |  |  |
+| 194 | gen_table_term_date_12 | DATE | YES |  |  |
+| 195 | gen_table_term_date_13 | DATE | YES |  |  |
+| 196 | gen_table_term_date_14 | DATE | YES |  |  |
+| 197 | gen_table_term_date_15 | DATE | YES |  |  |
+| 198 | gen_table_term_date_16 | DATE | YES |  |  |
+| 199 | gen_table_term_date_17 | DATE | YES |  |  |
+| 200 | gen_table_term_date_18 | DATE | YES |  |  |
+| 201 | gen_table_term_date_19 | DATE | YES |  |  |
+| 202 | gen_table_term_date_20 | DATE | YES |  |  |
+| 203 | daw_flag_1 | VARCHAR(1) | YES |  |  |
+| 204 | daw_flag_2 | VARCHAR(1) | YES |  |  |
+| 205 | daw_flag_3 | VARCHAR(1) | YES |  |  |
+| 206 | daw_flag_4 | VARCHAR(1) | YES |  |  |
+| 207 | daw_flag_5 | VARCHAR(1) | YES |  |  |
+| 208 | daw_flag_6 | VARCHAR(1) | YES |  |  |
+| 209 | daw_flag_7 | VARCHAR(1) | YES |  |  |
+| 210 | daw_flag_8 | VARCHAR(1) | YES |  |  |
+| 211 | daw_flag_9 | VARCHAR(1) | YES |  |  |
+| 212 | daw_flag_10 | VARCHAR(1) | YES |  |  |
+| 213 | daw_flag_11 | VARCHAR(1) | YES |  |  |
+| 214 | daw_flag_12 | VARCHAR(1) | YES |  |  |
+| 215 | daw_flag_13 | VARCHAR(1) | YES |  |  |
+| 216 | daw_flag_14 | VARCHAR(1) | YES |  |  |
+| 217 | daw_flag_15 | VARCHAR(1) | YES |  |  |
+| 218 | unit_dose | BIGINT | YES |  |  |
+| 219 | unit_dose_gl | VARCHAR(1) | YES |  |  |
+| 220 | unit_dose_flag | VARCHAR(1) | YES |  |  |
+| 221 | topical_limit | BIGINT | YES |  |  |
+| 222 | liquid_limit | BIGINT | YES |  |  |
+| 223 | form_gt_1 | BIGINT | YES |  |  |
+| 224 | form_gt_2 | BIGINT | YES |  |  |
+| 225 | form_gt_3 | BIGINT | YES |  |  |
+| 226 | form_date_1 | DATE | YES |  |  |
+| 227 | form_date_2 | DATE | YES |  |  |
+| 228 | form_date_3 | DATE | YES |  |  |
+| 229 | ndc_tc_1 | BIGINT | YES |  |  |
+| 230 | ndc_tc_2 | BIGINT | YES |  |  |
+| 231 | ndc_tc_3 | BIGINT | YES |  |  |
+| 232 | ndc_date_1 | DATE | YES |  |  |
+| 233 | ndc_date_2 | DATE | YES |  |  |
+| 234 | ndc_date_3 | DATE | YES |  |  |
+| 235 | step_number_1 | BIGINT | YES |  |  |
+| 236 | step_number_2 | BIGINT | YES |  |  |
+| 237 | step_number_3 | BIGINT | YES |  |  |
+| 238 | step_number_4 | BIGINT | YES |  |  |
+| 239 | step_number_5 | BIGINT | YES |  |  |
+| 240 | step_eff_date_1 | DATE | YES |  |  |
+| 241 | step_eff_date_2 | DATE | YES |  |  |
+| 242 | step_eff_date_3 | DATE | YES |  |  |
+| 243 | step_eff_date_4 | DATE | YES |  |  |
+| 244 | step_eff_date_5 | DATE | YES |  |  |
+| 245 | step_term_date_1 | DATE | YES |  |  |
+| 246 | step_term_date_2 | DATE | YES |  |  |
+| 247 | step_term_date_3 | DATE | YES |  |  |
+| 248 | step_term_date_4 | DATE | YES |  |  |
+| 249 | step_term_date_5 | DATE | YES |  |  |
+| 250 | description_1 | VARCHAR(40) | YES |  |  |
+| 251 | description_2 | VARCHAR(40) | YES |  |  |
+| 252 | description_3 | VARCHAR(40) | YES |  |  |
+| 253 | description_4 | VARCHAR(40) | YES |  |  |
+| 254 | dmr | VARCHAR(1) | YES |  |  |
+| 255 | dmr_limit | VARCHAR(1) | YES |  |  |
+| 256 | workers_comp | VARCHAR(1) | YES |  |  |
+| 257 | reject_369 | VARCHAR(1) | YES |  |  |
+| 258 | comp_max_amount | NUMERIC(18, 2) | YES |  |  |
+| 259 | tier_3_flag | VARCHAR(1) | YES |  |  |
+| 260 | mail_mandate_eff_date | DATE | YES |  |  |
+| 261 | diabetic_prg_type_code | BIGINT | YES |  |  |
+| 262 | deduct_preferred_amt | NUMERIC(18, 2) | YES |  |  |
+| 263 | deduct_nonpreferred_amt | NUMERIC(18, 2) | YES |  |  |
+| 264 | medicare_lim_mail | VARCHAR(1) | YES |  |  |
+| 265 | cob_type | VARCHAR(3) | YES |  |  |
+| 266 | penalty_applies | VARCHAR(1) | YES |  |  |
+| 267 | single_max | NUMERIC(18, 2) | YES |  |  |
+| 268 | family_max | NUMERIC(18, 2) | YES |  |  |
+| 269 | lifetime_max | NUMERIC(18, 2) | YES |  |  |
+| 270 | max_applies | VARCHAR(1) | YES |  |  |
+| 271 | incentive_max_days | BIGINT | YES |  |  |
+| 272 | step_trigger_table_1 | BIGINT | YES |  |  |
+| 273 | step_trigger_eff_date_1 | DATE | YES |  |  |
+| 274 | step_trigger_table_2 | BIGINT | YES |  |  |
+| 275 | step_trigger_eff_date_2 | DATE | YES |  |  |
+| 276 | step_trigger_table_3 | BIGINT | YES |  |  |
+| 277 | step_trigger_eff_date_3 | DATE | YES |  |  |
+| 278 | injectible_max_amount | NUMERIC(18, 2) | YES |  |  |
+| 279 | network_90_day_ds | BIGINT | YES |  |  |
+| 280 | mail_by_days_flag | VARCHAR(1) | YES |  |  |
+| 281 | max_copay_cap_amount | NUMERIC(18, 2) | YES |  |  |
+| 282 | preventative_gt | BIGINT | YES |  |  |
+| 283 | specialty_config_id | VARCHAR(8) | YES |  |  |
+| 284 | specialty_table_id | VARCHAR(8) | YES |  |  |
+| 285 | pharmacy_specialty_restrict_flag | VARCHAR(1) | YES |  |  |
+| 286 | maint_gt_1 | BIGINT | YES |  |  |
+| 287 | maint_date_1 | DATE | YES |  |  |
+| 288 | maint_gt_2 | BIGINT | YES |  |  |
+| 289 | maint_date_2 | DATE | YES |  |  |
+| 290 | maint_gt_3 | BIGINT | YES |  |  |
+| 291 | maint_date_3 | DATE | YES |  |  |
+| 292 | no_repack_ndc | VARCHAR(1) | YES |  |  |
+| 293 | pricing_flag_340b | VARCHAR(1) | YES |  |  |
+| 294 | include_deduct_oop | VARCHAR(1) | YES |  |  |
+| 295 | deduct_oop_family_flag | VARCHAR(1) | YES |  |  |
+| 296 | single_source_copay_flag | VARCHAR(1) | YES |  |  |
+| 297 | desi_drug_flag | VARCHAR(1) | YES |  |  |
+| 298 | carry_forward_oop | VARCHAR(2) | YES |  |  |
+| 299 | carry_forward_ded | VARCHAR(2) | YES |  |  |
+| 300 | safe_harbor_copay_cap | NUMERIC(18, 2) | YES |  |  |
+| 301 | pap_min_copay | NUMERIC(18, 2) | YES |  |  |
+| 302 | patient_safety_apap | VARCHAR(1) | YES |  |  |
+| 303 | patient_safety_opiod_soft | NUMERIC(18, 2) | YES |  |  |
+| 304 | patient_safety_opiod_hard | NUMERIC(18, 2) | YES |  |  |
+| 305 | alt_pricing_flag | VARCHAR(1) | YES |  |  |
+| 306 | alt_pricing_key | VARCHAR(4) | YES |  |  |
+| 307 | med_foods_flag | VARCHAR(1) | YES |  |  |
+| 308 | max_amt_mult | BIGINT | YES |  |  |
+| 309 | ndc_id | VARCHAR(8) | YES |  |  |
+| 310 | ndc_id_eff_date | DATE | YES |  |  |
+| 311 | ndc_id_term_date | DATE | YES |  |  |
+| 312 | qty_prescribed_flag | VARCHAR(1) | YES |  |  |
+| 313 | entry_date | DATE | YES |  |  |
+| 314 | change_date | DATE | YES |  |  |
+| 315 | lg_clm_amt_cap | NUMERIC(18, 2) | YES |  |  |
+| 316 | copay_calc_method | VARCHAR(1) | YES |  |  |
+| 317 | vac_admin_cap | NUMERIC(18, 2) | YES |  |  |
+| 318 | new_refill_only | VARCHAR(1) | YES |  |  |
+| 319 | ci_cov_flag | VARCHAR(3) | YES |  |  |
+| 320 | cii_cov_flag | VARCHAR(4) | YES |  |  |
+| 321 | ciii_cov_flag | VARCHAR(5) | YES |  |  |
+| 322 | civ_cov_flag | VARCHAR(4) | YES |  |  |
+| 323 | cv_cov_flag | VARCHAR(3) | YES |  |  |
+| 324 | cntrl_cov_flag | VARCHAR(3) | YES |  |  |
+| 325 | add_id | VARCHAR(15) | YES |  |  |
+| 326 | change_id | VARCHAR(15) | YES |  |  |
+| 327 | indiv_family_oop_max | NUMERIC(18, 2) | YES |  |  |

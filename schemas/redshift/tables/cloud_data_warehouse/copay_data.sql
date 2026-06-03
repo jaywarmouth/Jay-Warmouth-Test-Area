@@ -1,0 +1,50 @@
+-- =============================================
+-- Table: cloud_data_warehouse.copay_data
+-- Columns: 42
+-- Schema Source: Enterprise Data Warehouse Data Schema.csv
+-- =============================================
+
+CREATE TABLE cloud_data_warehouse.copay_data (
+    meta_surr_key VARCHAR(1000),
+    meta_hash_key VARCHAR(1000),
+    meta_src_sys_nm VARCHAR(80),
+    meta_iud_flg VARCHAR(1),
+    meta_eff_strt_dt TIMESTAMP,
+    meta_eff_end_dt TIMESTAMP,
+    meta_curr_ind VARCHAR(3),
+    system INTEGER,
+    sponsor INTEGER,
+    copay_number VARCHAR(4),
+    schedule_type VARCHAR(6),
+    copay_name VARCHAR(30),
+    type_code_1 INTEGER,
+    fixed_1 NUMERIC(18, 2),
+    percent_1 NUMERIC(18, 4),
+    minimum_1 NUMERIC(18, 2),
+    maximum_1 NUMERIC(18, 2),
+    dspayment_1 INTEGER,
+    type_code_2 INTEGER,
+    fixed_2 NUMERIC(18, 2),
+    percent_2 NUMERIC(18, 4),
+    minimum_2 NUMERIC(18, 2),
+    maximum_2 NUMERIC(18, 2),
+    dspayment_2 INTEGER,
+    type_code_3 INTEGER,
+    fixed_3 NUMERIC(18, 2),
+    percent_3 NUMERIC(18, 4),
+    minimum_3 NUMERIC(18, 2),
+    maximum_3 NUMERIC(18, 2),
+    dspayment_3 INTEGER,
+    card_line_1 VARCHAR(50),
+    card_line_2 VARCHAR(50),
+    activity VARCHAR(1),
+    type_of_copay VARCHAR(2),
+    plus_diff_amt_ret NUMERIC(18, 4),
+    plus_diff_amt_dmr_e NUMERIC(18, 4),
+    plus_diff_amt_dmr_n NUMERIC(18, 4),
+    copay_max_ben_1 NUMERIC(18, 2),
+    copay_max_ben_2 NUMERIC(18, 2),
+    copay_max_ben_3 NUMERIC(18, 2),
+    enter_date DATE,
+    change_date DATE
+);

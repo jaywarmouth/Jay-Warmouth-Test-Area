@@ -1,0 +1,53 @@
+-- =============================================
+-- Table: cloud_data_warehouse.differential
+-- Columns: 45
+-- Schema Source: Enterprise Data Warehouse Data Schema.csv
+-- =============================================
+
+CREATE TABLE cloud_data_warehouse.differential (
+    meta_surr_key VARCHAR(1000),
+    meta_hash_key VARCHAR(1000),
+    meta_src_sys_nm VARCHAR(80),
+    meta_iud_flg VARCHAR(1),
+    meta_eff_strt_dt TIMESTAMP,
+    meta_eff_end_dt TIMESTAMP,
+    meta_curr_ind VARCHAR(3),
+    system_link VARCHAR(5),
+    system INTEGER,
+    sponsor INTEGER,
+    group_number FLOAT8,
+    network_number INTEGER,
+    nabp INTEGER,
+    gpi VARCHAR(14),
+    ndc NUMERIC(11, 0),
+    claim_type VARCHAR(6),
+    diff_number INTEGER,
+    date_type VARCHAR(2),
+    sequence_number INTEGER,
+    message_eff_date TIMESTAMP,
+    message_term_date TIMESTAMP,
+    diff_percent NUMERIC(18, 4),
+    disp_fee NUMERIC(18, 2),
+    diff_description VARCHAR(30),
+    generic_add_on NUMERIC(18, 2),
+    otc_add_on NUMERIC(18, 2),
+    compound_add_on NUMERIC(18, 2),
+    brand_add_on NUMERIC(18, 2),
+    mac_table_number INTEGER,
+    state_tax_pct NUMERIC(18, 4),
+    hospice_disct_pct NUMERIC(18, 4),
+    overall_disct_pct NUMERIC(18, 4),
+    minimum_fee NUMERIC(18, 2),
+    admin_fee NUMERIC(18, 2),
+    dift_negative_diff VARCHAR(1),
+    gen_tb_gpi INTEGER,
+    awp_contract VARCHAR(1),
+    lessor_ucr VARCHAR(1),
+    network_neg_opt VARCHAR(1),
+    neg_apply_opt VARCHAR(1),
+    max_cap NUMERIC(18, 2),
+    add_id VARCHAR(15),
+    change_id VARCHAR(15),
+    add_date TIMESTAMP,
+    chg_date TIMESTAMP
+);
