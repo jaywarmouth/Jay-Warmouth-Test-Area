@@ -1,0 +1,80 @@
+[{
+  "_id": {
+    "$oid": "677fda86506bbb5653679204"
+  },
+  "user_id": "65b9198b-f1ee-4745-b475-4d4d18b26d1a",
+  "status": "completed",
+  "job_run_id": "jr_fe385ecab85aca85a4cce9ad4634bddcbd6c9a903bf66ebc180b7c1d11abc1c7",
+  "export_file_path": "65b9198b-f1ee-4745-b475-4d4d18b26d1a/client_compliance/2025/client_compliance_1736432261211.csv",
+  "application": "client_compliance",
+  "body": "{\"userName\":\"Karan\"}",
+  "reason": "",
+  "created_at": {
+    "$date": "2025-01-09T14:17:42.952Z"
+  },
+  "created_by": "kjain+1@pdmi.com",
+  "__v": 0,
+  "modified_at": {
+    "$date": "2025-01-09T14:18:26.356Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "677fdabf506bbb565367920a"
+  },
+  "user_id": "65b9198b-f1ee-4745-b475-4d4d18b26d1a",
+  "status": "completed",
+  "job_run_id": "jr_2a780778ce248bfa411bd115dfe80b2bbf2265ff03dfdf047bf485645335d8de",
+  "export_file_path": "65b9198b-f1ee-4745-b475-4d4d18b26d1a/client_compliance/2025/client_compliance_1736432319532.csv",
+  "application": "client_compliance",
+  "body": "{\"userName\":\"Karan\"}",
+  "reason": "",
+  "created_at": {
+    "$date": "2025-01-09T14:18:39.537Z"
+  },
+  "created_by": "kjain+1@pdmi.com",
+  "__v": 0,
+  "modified_at": {
+    "$date": "2025-01-09T14:18:54.152Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67adc8875b78e88057c64d12"
+  },
+  "user_id": "d6ceb9a0-c06c-465f-8cde-061bd7b86039",
+  "status": "completed",
+  "job_run_id": "jr_ae0445fa8f698f759d01d298723c9a35e480c81ddd53c658c072473206cc795a",
+  "export_file_path": "d6ceb9a0-c06c-465f-8cde-061bd7b86039/client_compliance/2025/client_compliance_1739442309393.csv",
+  "application": "client_compliance",
+  "body": "{\"userName\":\"Krishnaprakash\"}",
+  "reason": "",
+  "created_at": {
+    "$date": "2025-02-13T10:25:11.182Z"
+  },
+  "created_by": "kravi@pdmi.com",
+  "__v": 0,
+  "modified_at": {
+    "$date": "2025-02-13T10:25:53.351Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67adc8b65b78e88057c64d16"
+  },
+  "user_id": "d6ceb9a0-c06c-465f-8cde-061bd7b86039",
+  "status": "completed",
+  "job_run_id": "jr_9782bbef65b204e0d054d09658512e7b14ce7c75fae95060795f556a4a551b3f",
+  "export_file_path": "d6ceb9a0-c06c-465f-8cde-061bd7b86039/client_compliance/2025/client_compliance_1739442358131.csv",
+  "application": "client_compliance",
+  "body": "{\"userName\":\"Krishnaprakash\"}",
+  "reason": "",
+  "created_at": {
+    "$date": "2025-02-13T10:25:58.192Z"
+  },
+  "created_by": "kravi@pdmi.com",
+  "__v": 0,
+  "modified_at": {
+    "$date": "2025-02-13T10:26:14.992Z"
+  }
+}]
