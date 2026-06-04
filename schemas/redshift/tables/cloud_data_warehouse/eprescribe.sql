@@ -1,0 +1,53 @@
+-- =============================================
+-- Table: cloud_data_warehouse.eprescribe
+-- Columns: 45
+-- Schema Source: Enterprise Data Warehouse Data Schema.csv
+-- =============================================
+
+CREATE TABLE cloud_data_warehouse.eprescribe (
+    meta_surr_key VARCHAR(1000),
+    meta_hash_key VARCHAR(1000),
+    meta_src_sys_nm VARCHAR(80),
+    meta_iud_flg VARCHAR(1),
+    meta_eff_strt_dt TIMESTAMP,
+    meta_eff_end_dt TIMESTAMP,
+    meta_curr_ind VARCHAR(3),
+    system_number INTEGER,
+    sponsor_number INTEGER,
+    group_number FLOAT8,
+    cardholder_number CHAR(10),
+    member_number CHAR(2),
+    provider_npidea VARCHAR(14),
+    request_date_time TIMESTAMP,
+    system_date_time TIMESTAMP,
+    request_type CHAR(3),
+    request_dep_sent CHAR(1),
+    provider_type CHAR(3),
+    member_name VARCHAR(35),
+    plan_number CHAR(8),
+    birth_date TIMESTAMP,
+    eff_date TIMESTAMP,
+    term_date TIMESTAMP,
+    crd_manual_change_date TIMESTAMP,
+    crd_file_change_date TIMESTAMP,
+    clm_start_date TIMESTAMP,
+    clm_end_date TIMESTAMP,
+    gender CHAR(1),
+    cov_id VARCHAR(8),
+    copay_id VARCHAR(8),
+    formulary_id VARCHAR(12),
+    crd_rel_code CHAR(1),
+    cat_cardholder_number VARCHAR(20),
+    clm_count INTEGER,
+    clm_consent CHAR(1),
+    clm_status_reason VARCHAR(25),
+    bill_status CHAR(1),
+    bill_reason VARCHAR(25),
+    aaa_status_code VARCHAR(5),
+    request_file_name VARCHAR(25),
+    duplicate SMALLINT,
+    add_id VARCHAR(15),
+    change_id VARCHAR(15),
+    add_date TIMESTAMP,
+    change_date TIMESTAMP
+);

@@ -1,21 +1,33 @@
 # Redshift Schemas
 
-Contains DDL scripts for Amazon Redshift.
-
-## Conventions
-- Always specify `DISTKEY` and `SORTKEY` for large tables
-- Use `ENCODE` compression for columnar efficiency
-- Prefer `VARCHAR` over `CHAR` to save storage
-- Use `DISTSTYLE ALL` for small dimension/lookup tables
+Contains DDL scripts and documentation for Amazon Redshift schema assets.
 
 ## Schema
 
-All production tables live in the `cloud_data_warehouse` schema on the Enterprise Data Warehouse Redshift cluster.
+Primary warehouse schema in this repo: `cloud_data_warehouse`.
+
+## Folder Structure
+
+```
+schemas/redshift/
+├── README.md
+├── exports/
+├── tables/
+│   ├── README.md
+│   └── cloud_data_warehouse/
+├── views/
+│   ├── README.md
+│   └── cloud_data_warehouse/
+└── data-dictionary/
+    ├── README.md
+    └── cloud_data_warehouse/
+```
 
 ## Folders
 
 | Folder | Description |
 |---|---|
-| `tables/` | CREATE TABLE statements |
-| `views/` | CREATE VIEW statements |
 | `exports/` | Raw CSV schema exports from Redshift (`information_schema.columns`) |
+| `tables/` | Generated `CREATE TABLE` DDL grouped by schema |
+| `views/` | View DDL grouped by schema (currently placeholders) |
+| `data-dictionary/` | Generated table-level data dictionary markdown files |

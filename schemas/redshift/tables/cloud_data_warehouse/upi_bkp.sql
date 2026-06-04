@@ -1,0 +1,53 @@
+-- =============================================
+-- Table: cloud_data_warehouse.upi_bkp
+-- Columns: 45
+-- Schema Source: Enterprise Data Warehouse Data Schema.csv
+-- =============================================
+
+CREATE TABLE cloud_data_warehouse.upi_bkp (
+    meta_sur_key VARCHAR(256),
+    facilityid VARCHAR(25),
+    sourcesystemid VARCHAR(25),
+    personid CHAR(10),
+    enterprisepersonnumber CHAR(20),
+    patientsourceissuer INTEGER,
+    firstname CHAR(15),
+    middlename CHAR(1),
+    lastname CHAR(20),
+    namesuffix VARCHAR(25),
+    dob DATE,
+    ssn VARCHAR(25),
+    gender CHAR(1),
+    maritalstatus VARCHAR(25),
+    emailaddress VARCHAR(35),
+    addressline1 CHAR(40),
+    addressline2 CHAR(40),
+    city CHAR(20),
+    state CHAR(2),
+    country VARCHAR(25),
+    zipcode VARCHAR(5),
+    primaryindicator VARCHAR(25),
+    phonenumber VARCHAR(25),
+    mrn VARCHAR(25),
+    hic VARCHAR(25),
+    driverslicensenumber VARCHAR(25),
+    driverslicensestate VARCHAR(25),
+    patientinsurancememberid CHAR(10),
+    patientinsurancegroupid CHAR(20),
+    patientinsurancefamilysequence CHAR(2),
+    patientinsurancerelationshipcode VARCHAR(2),
+    insurancerxbinnumber VARCHAR(25),
+    additionalcpi1 VARCHAR(25),
+    additionalcpi2 VARCHAR(25),
+    additionalcpi3 VARCHAR(25),
+    additionalcpi4 VARCHAR(25),
+    additionalcpi5 VARCHAR(25),
+    upi VARCHAR(40),
+    lid VARCHAR(40),
+    matchscore VARCHAR(40),
+    pdmisubmitdate TIMESTAMP,
+    pdmisubmitfilename VARCHAR(100),
+    expreturndate TIMESTAMP,
+    expreturnfilename VARCHAR(100),
+    meta_eff_date TIMESTAMP
+);

@@ -1,0 +1,136 @@
+# cloud_data_warehouse.phdem
+
+> **Schema:** cloud_data_warehouse | **Columns:** 124
+
+## Overview
+
+_Add business description here._
+
+## Columns
+
+| # | Column | Data Type | Nullable | Default | Notes |
+|---|--------|-----------|----------|---------|-------|
+| 1 | meta_surr_key | VARCHAR(1000) | YES |  |  |
+| 2 | meta_hash_key | VARCHAR(1000) | YES |  |  |
+| 3 | meta_src_sys_nm | VARCHAR(80) | YES |  |  |
+| 4 | meta_iud_flg | VARCHAR(1) | YES |  |  |
+| 5 | meta_eff_strt_dt | TIMESTAMP | YES |  |  |
+| 6 | meta_eff_end_dt | TIMESTAMP | YES |  |  |
+| 7 | meta_curr_ind | VARCHAR(3) | YES |  |  |
+| 8 | nabp_number | BIGINT | YES |  |  |
+| 9 | system_number | BIGINT | YES |  |  |
+| 10 | pharmacy_name | VARCHAR(100) | YES |  |  |
+| 11 | street_1 | VARCHAR(35) | YES |  |  |
+| 12 | street_2 | VARCHAR(35) | YES |  |  |
+| 13 | city | VARCHAR(18) | YES |  |  |
+| 14 | state | VARCHAR(2) | YES |  |  |
+| 15 | zip | BIGINT | YES |  |  |
+| 16 | zip_4 | BIGINT | YES |  |  |
+| 17 | bill_street_1 | VARCHAR(35) | YES |  |  |
+| 18 | bill_street_2 | VARCHAR(35) | YES |  |  |
+| 19 | bill_city | VARCHAR(18) | YES |  |  |
+| 20 | bill_state | VARCHAR(2) | YES |  |  |
+| 21 | bill_zip | BIGINT | YES |  |  |
+| 22 | bill_zip_4 | BIGINT | YES |  |  |
+| 23 | phone | VARCHAR(10) | YES |  |  |
+| 24 | fax | VARCHAR(10) | YES |  |  |
+| 25 | pdm_chain_1 | BIGINT | YES |  |  |
+| 26 | primary_chain_number | VARCHAR(3) | YES |  |  |
+| 27 | tran_code_1 | VARCHAR(1) | YES |  |  |
+| 28 | seventh_digit | BIGINT | YES |  |  |
+| 29 | store_number | VARCHAR(10) | YES |  |  |
+| 30 | dispenser_class_code | BIGINT | YES |  |  |
+| 31 | dispenser_type_code | VARCHAR(3) | YES |  |  |
+| 32 | npi_number | VARCHAR(10) | YES |  |  |
+| 33 | version_nbr_1 | BIGINT | YES |  |  |
+| 34 | version_eff_date_1 | DATE | YES |  |  |
+| 35 | version_nbr_2 | BIGINT | YES |  |  |
+| 36 | version_eff_date_2 | DATE | YES |  |  |
+| 37 | version_nbr_3 | BIGINT | YES |  |  |
+| 38 | version_eff_date_3 | DATE | YES |  |  |
+| 39 | version_nbr_4 | BIGINT | YES |  |  |
+| 40 | version_eff_date_4 | DATE | YES |  |  |
+| 41 | version_nbr_5 | BIGINT | YES |  |  |
+| 42 | version_eff_date_5 | DATE | YES |  |  |
+| 43 | statement_detail | VARCHAR(1) | YES |  |  |
+| 44 | chain_number_1 | VARCHAR(3) | YES |  |  |
+| 45 | chain_number_2 | VARCHAR(3) | YES |  |  |
+| 46 | chain_number_3 | VARCHAR(3) | YES |  |  |
+| 47 | chain_number_4 | VARCHAR(3) | YES |  |  |
+| 48 | chain_number_5 | VARCHAR(3) | YES |  |  |
+| 49 | chain_eff_date_1 | DATE | YES |  |  |
+| 50 | chain_eff_date_2 | DATE | YES |  |  |
+| 51 | chain_eff_date_3 | DATE | YES |  |  |
+| 52 | chain_eff_date_4 | DATE | YES |  |  |
+| 53 | chain_eff_date_5 | DATE | YES |  |  |
+| 54 | payment_code_1 | VARCHAR(6) | YES |  |  |
+| 55 | payment_code_2 | VARCHAR(6) | YES |  |  |
+| 56 | payment_code_3 | VARCHAR(6) | YES |  |  |
+| 57 | payment_code_4 | VARCHAR(6) | YES |  |  |
+| 58 | payment_code_5 | VARCHAR(6) | YES |  |  |
+| 59 | pay_code_eff_date_1 | DATE | YES |  |  |
+| 60 | pay_code_eff_date_2 | DATE | YES |  |  |
+| 61 | pay_code_eff_date_3 | DATE | YES |  |  |
+| 62 | pay_code_eff_date_4 | DATE | YES |  |  |
+| 63 | pay_code_eff_date_5 | DATE | YES |  |  |
+| 64 | federal_license_number | VARCHAR(12) | YES |  |  |
+| 65 | federal_tax_id_number | VARCHAR(15) | YES |  |  |
+| 66 | state_license_number | VARCHAR(20) | YES |  |  |
+| 67 | state_tax_id_number | VARCHAR(15) | YES |  |  |
+| 68 | medicaid_id_number | VARCHAR(20) | YES |  |  |
+| 69 | flag_24hr_operation | VARCHAR(1) | YES |  |  |
+| 70 | pharmacy_hours | VARCHAR(35) | YES |  |  |
+| 71 | elect_fund_trans_route | VARCHAR(9) | YES |  |  |
+| 72 | seperate_check_flag | VARCHAR(1) | YES |  |  |
+| 73 | mail_facility | VARCHAR(1) | YES |  |  |
+| 74 | reused_flag | VARCHAR(1) | YES |  |  |
+| 75 | reused_term_date | DATE | YES |  |  |
+| 76 | reused_old_chain | BIGINT | YES |  |  |
+| 77 | mail_switch_number | BIGINT | YES |  |  |
+| 78 | old_nabp | BIGINT | YES |  |  |
+| 79 | new_nabp | BIGINT | YES |  |  |
+| 80 | patch_flag | VARCHAR(1) | YES |  |  |
+| 81 | associated_chain_flag | VARCHAR(1) | YES |  |  |
+| 82 | isa_id_qual | VARCHAR(2) | YES |  |  |
+| 83 | isa_id | VARCHAR(15) | YES |  |  |
+| 84 | indep_code | BIGINT | YES |  |  |
+| 85 | ind_eff | DATE | YES |  |  |
+| 86 | pdm_chain_number_2 | BIGINT | YES |  |  |
+| 87 | pdm_chain_number_3 | BIGINT | YES |  |  |
+| 88 | pdm_chain_number_4 | BIGINT | YES |  |  |
+| 89 | pdm_chain_number_5 | BIGINT | YES |  |  |
+| 90 | pdm_chain_number_6 | BIGINT | YES |  |  |
+| 91 | pdm_chain_number_7 | BIGINT | YES |  |  |
+| 92 | pdm_chain_number_8 | BIGINT | YES |  |  |
+| 93 | pdm_chain_number_9 | BIGINT | YES |  |  |
+| 94 | pdm_chain_number_10 | BIGINT | YES |  |  |
+| 95 | tran_code_2 | VARCHAR(1) | YES |  |  |
+| 96 | tran_code_3 | VARCHAR(1) | YES |  |  |
+| 97 | tran_code_4 | VARCHAR(1) | YES |  |  |
+| 98 | tran_code_5 | VARCHAR(1) | YES |  |  |
+| 99 | tran_date_1 | DATE | YES |  |  |
+| 100 | tran_date_2 | DATE | YES |  |  |
+| 101 | tran_date_3 | DATE | YES |  |  |
+| 102 | tran_date_4 | DATE | YES |  |  |
+| 103 | tran_date_5 | DATE | YES |  |  |
+| 104 | nabp_7 | VARCHAR(7) | YES |  |  |
+| 105 | notes_1 | VARCHAR(60) | YES |  |  |
+| 106 | notes_2 | VARCHAR(60) | YES |  |  |
+| 107 | eft_flag_1 | VARCHAR(1) | YES |  |  |
+| 108 | eft_eff_date_1 | DATE | YES |  |  |
+| 109 | eft_flag_2 | VARCHAR(1) | YES |  |  |
+| 110 | eft_eff_date_2 | DATE | YES |  |  |
+| 111 | eft_flag_3 | VARCHAR(1) | YES |  |  |
+| 112 | eft_eff_date_3 | DATE | YES |  |  |
+| 113 | rural_indicator | VARCHAR(1) | YES |  |  |
+| 114 | eprscribing_service_level | VARCHAR(4) | YES |  |  |
+| 115 | eprescribing_eff_date | DATE | YES |  |  |
+| 116 | eprescribing_term_date | DATE | YES |  |  |
+| 117 | longitude | FLOAT8 | YES |  |  |
+| 118 | latitude | FLOAT8 | YES |  |  |
+| 119 | geo_code_quality_code | VARCHAR(10) | YES |  |  |
+| 120 | address_hash | VARCHAR(64) | YES |  |  |
+| 121 | check_hold_flag | VARCHAR(3) | YES |  |  |
+| 122 | is_primary_flag | VARCHAR(1) | YES |  |  |
+| 123 | add_date | DATE | YES |  |  |
+| 124 | chg_date | DATE | YES |  |  |
