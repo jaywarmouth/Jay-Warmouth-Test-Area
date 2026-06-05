@@ -13,6 +13,7 @@ This document outlines a realistic delivery timeline across all 7 architecture l
 | Layer 2 — MongoDB config already exists | ✅ Saves ~3 weeks; read-only integration only |
 | Layer 1 — UI is AI-driven (Copilot / Cursor) | ✅ Saves ~2 weeks on scaffold and component generation |
 | Layer 6 — Delivery team has deep experience | ✅ Parallel track; minimal risk |
+| Layer 5 — 340B & PBM: prebuilt SQL queries + Redshift flat tables exist | ✅ Saves ~1–2 weeks on execution engine; data retrieval is pre-solved for these report types — worker executes existing queries directly, no query design required |
 | Layer 4 — RabbitMQ: limited team experience | ⚠️ +2 week buffer; use Amazon MQ (managed) to reduce ops burden |
 | Layer 5 — EKS: limited team experience | ⚠️ +2 week buffer; simplify node design, use KEDA for autoscaling |
 | Layer 3 — ODS: greenfield MySQL schema | Neutral — well-understood tech, needs upfront design completeness |
@@ -25,7 +26,7 @@ This document outlines a realistic delivery timeline across all 7 architecture l
 
 ```
 Layer                      W1  W2  W3  W4  W5  W6  W7  W8  W9  W10 W11 W12 W13 W14 W15 W16 W17 W18
-────────────────────────────────────────────────────────────────────────────────────────────────────
+───────────────────────────────────────────────────────────────────────────────────────────────────────
 Infra / DevOps             [===][===]
 L2 Config Read API              [===][===]
 L3 ODS Schema + Deploy     [===][===]
@@ -59,6 +60,7 @@ Hardening + Soft Launch                                                         
 - Provision: RDS MySQL (Layer 3), Amazon MQ — RabbitMQ (Layer 4), EKS cluster (Layer 5), S3 buckets (Layer 6)
 - Set up CI/CD pipeline: GitHub Actions → ECR → EKS
 - Confirm MongoDB read connectivity from application services
+- Confirm Redshift connectivity from application services (needed for 340B and PBM extract execution)
 - Establish secrets management: AWS Secrets Manager for DB credentials, SFTP keys, PGP keys
 - **Decide and lock:** EKS worker runtime language (Python or Node.js — decide by end of Week 1)
 
@@ -129,6 +131,8 @@ All queues → DLX: export.dlx  →  q.dead_letter  (exceeded retry limit)
 q.retry  (TTL-based delay → republish to original queue on expiry)
 ```
 
+> **Note:** 340B and PBM standard extracts use prebuilt Redshift flat tables, so even large-row-count jobs for these report types will be faster than greenfield queries. The `q.large` queue remains relevant for other report types and for any 340B/PBM extracts with unusually large date ranges.
+
 **Tasks:**
 - Deploy queue topology to Amazon MQ dev
 - Build submission API: Layer 1 POST → Layer 3 write → RabbitMQ publish
@@ -160,9 +164,13 @@ q.retry  (TTL-based delay → republish to original queue on expiry)
 
 #### Week 9–12: Execution Logic
 
+> ✅ **340B & PBM accelerator:** Prebuilt SQL queries and Redshift flat tables are already in place for 340B and PBM standard extracts. The data retrieval step for these report types requires no query design — the worker executes the existing SQL directly against Redshift and streams results. This eliminates the most time-consuming part of execution logic for the initial report set and could compress this phase by 1–2 weeks if 340B/PBM are the primary launch reports.
+
 **Processing pipeline (in order):**
 
-1. **Data retrieval** — connect to Redshift or MSSQL via connection pool; credentials from Secrets Manager
+1. **Data retrieval** — connect to Redshift via connection pool; credentials from Secrets Manager
+   - **340B & PBM standard extracts:** execute prebuilt SQL query against existing Redshift flat table; no query design or source-system join logic required
+   - **Other report types:** query design, source-system mapping, and testing required — plan ~3–5 days per new report type before pipeline integration
 2. **Transformation** — apply column mapping and field formatting from Layer 2 layout config
 3. **File generation** — produce output in requested format:
    - CSV / pipe-delimited: straightforward streaming write
@@ -316,13 +324,13 @@ Use GitHub Copilot / Cursor to generate:
 | L2 | Config Read API | 2–5 | 3 wks | MongoDB schema changes |
 | L3 | ODS Schema + APIs | 1–6 | 5 wks | Schema completeness upfront |
 | L4 | RabbitMQ Broker | 3–8 | 5 wks | ⚠️ Learning curve — DLQ/retry |
-| L5 | EKS Execution Engine | 5–14 | 9 wks | ⚠️ Learning curve — EKS + PDF |
+| L5 | EKS Execution Engine | 5–14 | 9 wks | ⚠️ Learning curve — EKS + PDF; data retrieval pre-solved for 340B/PBM |
 | L6 | Delivery & Archive | 2–14 | Parallel | Low — team has experience |
 | L1 | Ad Hoc UI | 9–14 | 5 wks | AI output quality review |
 | L7 | Monitoring | 11–16 | 5 wks | Alert threshold tuning |
 | — | Integration + Launch | 15–18 | 4 wks | Cross-layer integration gaps |
 
-**Total: 18 weeks**
+**Total: 18 weeks** *(conservative; 340B/PBM data product accelerator may compress L5 by 1–2 weeks if these are the primary launch report types)*
 
 ---
 
@@ -333,3 +341,5 @@ Use GitHub Copilot / Cursor to generate:
 - [ ] Are subscription (scheduled) exports in scope for Phase 1 or Phase 2?
 - [ ] What is the maximum expected file size for a single export? (Drives S3 multipart, streaming design)
 - [ ] Is there a compliance requirement for audit log retention duration?
+- [ ] Are the prebuilt 340B and PBM SQL queries parameterized (e.g., by date range, customer ID)? If so, confirm parameter names align with the Layer 2 config parameter schema.
+- [ ] Are additional report types beyond 340B and PBM in scope for Phase 1, or are they Phase 2? (Determines how much greenfield query design work lands in the initial execution engine build)
