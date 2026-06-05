@@ -13,7 +13,7 @@ This document outlines a realistic delivery timeline across all 7 architecture l
 | Layer 2 — MongoDB config already exists | ✅ Saves ~3 weeks; read-only integration only |
 | Layer 1 — UI is AI-driven (Copilot / Cursor) | ✅ Saves ~2 weeks on scaffold and component generation |
 | Layer 6 — Delivery team has deep experience | ✅ Parallel track; minimal risk |
-| Layer 5 — 340B & PBM: prebuilt SQL queries + Redshift flat tables exist | ✅ Saves ~1–2 weeks on execution engine; data retrieval is pre-solved for these report types — worker executes existing queries directly, no query design required |
+| Layer 5 — 340B & PBM: prebuilt SQL queries + Redshift flat tables exist | ✅ Saves ~1–2 weeks on execution engine; data retrieval is pre-solved for these report types — worker executes existing SQL against existing tables |
 | Layer 4 — RabbitMQ: limited team experience | ⚠️ +2 week buffer; use Amazon MQ (managed) to reduce ops burden |
 | Layer 5 — EKS: limited team experience | ⚠️ +2 week buffer; simplify node design, use KEDA for autoscaling |
 | Layer 3 — ODS: greenfield MySQL schema | Neutral — well-understood tech, needs upfront design completeness |
@@ -26,7 +26,7 @@ This document outlines a realistic delivery timeline across all 7 architecture l
 
 ```
 Layer                      W1  W2  W3  W4  W5  W6  W7  W8  W9  W10 W11 W12 W13 W14 W15 W16 W17 W18
-───────────────────────────────────────────────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 Infra / DevOps             [===][===]
 L2 Config Read API              [===][===]
 L3 ODS Schema + Deploy     [===][===]
@@ -131,7 +131,7 @@ All queues → DLX: export.dlx  →  q.dead_letter  (exceeded retry limit)
 q.retry  (TTL-based delay → republish to original queue on expiry)
 ```
 
-> **Note:** 340B and PBM standard extracts use prebuilt Redshift flat tables, so even large-row-count jobs for these report types will be faster than greenfield queries. The `q.large` queue remains relevant for other report types and for any 340B/PBM extracts with unusually large date ranges.
+> **Note:** 340B and PBM standard extracts use prebuilt Redshift flat tables, so even large-row-count jobs for these report types will be faster than greenfield queries. The `q.large` queue remains relevant for greenfield report types with complex queries or large data volumes.
 
 **Tasks:**
 - Deploy queue topology to Amazon MQ dev
@@ -160,11 +160,11 @@ q.retry  (TTL-based delay → republish to original queue on expiry)
 - Sends ack on success, nack (requeue=false) on unrecoverable failure
 - Logs structured JSON to CloudWatch Logs
 
-> ⚠️ **EKS note:** IRSA (IAM roles per pod) is the right pattern for accessing RDS, S3, Secrets Manager, and RabbitMQ credentials without hardcoded keys. Plan this from the start — retrofitting is painful.
+> ⚠️ **EKS note:** IRSA (IAM roles per pod) is the right pattern for accessing RDS, S3, Secrets Manager, and RabbitMQ credentials without hardcoded keys. Plan this from the start — retrofitting IRSA mid-project is painful.
 
 #### Week 9–12: Execution Logic
 
-> ✅ **340B & PBM accelerator:** Prebuilt SQL queries and Redshift flat tables are already in place for 340B and PBM standard extracts. The data retrieval step for these report types requires no query design — the worker executes the existing SQL directly against Redshift and streams results. This eliminates the most time-consuming part of execution logic for the initial report set and could compress this phase by 1–2 weeks if 340B/PBM are the primary launch reports.
+> ✅ **340B & PBM accelerator:** Prebuilt SQL queries and Redshift flat tables are already in place for 340B and PBM standard extracts. The data retrieval step for these report types requires no query design or source-system mapping — the worker executes existing SQL against existing tables.
 
 **Processing pipeline (in order):**
 
@@ -189,6 +189,113 @@ q.retry  (TTL-based delay → republish to original queue on expiry)
 - Emit delivery trigger event: either a direct call to Layer 6 service or a delivery queue message
 
 **Deliverable:** Full end-to-end path — message consumed → source data queried → file written to S3 → Layer 3 shows `completed`.
+
+---
+
+### Layer 5 EKS — Worker Runtime & Concurrency Design
+
+> **Decision: Python ✅** — See *Decisions to Lock* table, item #1.
+
+**Why Python over Node.js**
+
+The team already writes Python for AWS Glue ETL jobs and Redshift exports. The knowledge transfers directly — same language, same data processing patterns, same Redshift query approach. Key libraries are Python-native and production-mature:
+
+| Library | Purpose |
+|---|---|
+| `boto3` | S3, Secrets Manager, SES |
+| `psycopg2` / `redshift_connector` | Redshift queries |
+| `openpyxl` | Excel (.xlsx) generation |
+| `python-gnupg` | PGP encryption |
+| `WeasyPrint` | PDF generation (spike in Week 9) |
+
+---
+
+**From Glue to EKS Workers — Mental Model Shift**
+
+The team currently uses AWS Glue for ETL and export jobs. EKS workers use the same Python code patterns but operate on a fundamentally different execution model:
+
+| | AWS Glue | EKS Worker (this project) |
+|---|---|---|
+| **Triggered by** | Schedule / event / manual | RabbitMQ message |
+| **Concurrency** | One job = one execution | One pod = one message; scale horizontally |
+| **Cold start** | 30–60 seconds (DPU spin-up) | ~2–5 seconds (container already warm) |
+| **Cost model** | Per DPU-hour (expensive for short jobs) | Per pod-second (efficient for many small jobs) |
+| **Code packaging** | Glue scripts + Python libs via S3 | Docker image — full control of dependencies |
+| **State / retry** | Limited built-in | Full control via RabbitMQ ack/nack + Layer 3 |
+
+The Glue model is "run a big job." The EKS worker model is "run many small independent jobs simultaneously, each isolated in its own container."
+
+---
+
+**How Concurrent Requests Work**
+
+Each pod processes exactly one RabbitMQ message at a time. KEDA watches queue depth and automatically scales the number of running pods to match demand. No coordination between pods is needed — RabbitMQ guarantees each message is delivered to exactly one consumer:
+
+```
+5 requests submitted simultaneously
+        │
+        ▼
+Layer 3 — 5 rows written to export_requests (status: queued)
+RabbitMQ — 5 messages in queue
+        │
+        ▼
+KEDA watches queue depth → scales to 5 worker pods
+        │
+   ┌────┬────┬────┬────┐
+ Pod 1  Pod 2  Pod 3  Pod 4  Pod 5
+   Each pod independently:
+   1. Pulls ONE message from RabbitMQ
+   2. Calls Layer 2 Config API (reads config)
+   3. Opens its own Redshift connection
+   4. Executes query
+   5. Writes file to S3
+   6. Updates Layer 3 (status: completed)
+   7. ACKs the message (removed from queue)
+```
+
+If a pod crashes mid-job, the message is nacked and retried by a different pod. No shared state between pods is required.
+
+---
+
+**Redshift Concurrency Considerations**
+
+Multiple pods hitting Redshift simultaneously is supported, but requires planning:
+
+- **340B/PBM standard extracts:** prebuilt SQL against flat tables → fast, low Redshift load, high concurrency is safe
+- **Greenfield report types:** complex joins and full scans → more load per query; limit concurrent workers for these jobs
+- **Recommended:** Configure a Redshift WLM (Workload Management) queue dedicated to export workloads, capped at 10 concurrent queries as a cluster-level backstop
+- **KEDA max replicas by queue:**
+  - `q.standard` → max 10 replicas (prebuilt queries, fast execution)
+  - `q.large` → max 3–5 replicas (protect Redshift on heavy greenfield jobs)
+  - `q.priority` → max 5 replicas
+
+---
+
+**Conceptual Worker Loop**
+
+The worker is a long-running Python process. The data processing logic closely mirrors existing Glue scripts — the surrounding framework is what changes:
+
+```python
+# Runs indefinitely inside the container — processes one message at a time
+while True:
+    message = rabbitmq_channel.consume()          # blocks until a message arrives
+
+    config = layer2_api.get_config(message.report_key)
+    layer3_api.update_status(message.request_id, "executing")
+
+    rows = redshift.execute(config.sql_query)     # same patterns as existing Glue scripts
+    file_bytes = generate_file(rows, config.format)  # csv / xlsx / pdf
+    file_bytes = pgp_encrypt(file_bytes, config.pgp_key)
+
+    s3.put_object(
+        key=f"staging/{message.request_id}/output.csv",
+        body=file_bytes
+    )
+    layer3_api.update_status(message.request_id, "completed")
+    message.ack()                                 # tells RabbitMQ: done, remove from queue
+```
+
+> ⚠️ **EKS learning note:** The biggest learning curve is **not** the Python code — it is containerization (Docker), IRSA (IAM roles per pod), and KEDA configuration. The 2-week EKS buffer in the schedule accounts for this, not for learning Python data processing patterns.
 
 ---
 
@@ -306,7 +413,7 @@ Use GitHub Copilot / Cursor to generate:
 
 | # | Decision | Blocks | Recommendation |
 |---|---|---|---|
-| 1 | EKS worker runtime language | Layer 5 start | **Python** — fastest for data processing, file gen libs mature |
+| 1 | EKS worker runtime language | Layer 5 start | **Python** — team already writes Python for Glue ETL; fastest for data processing; file gen libs mature |
 | 2 | RabbitMQ: Amazon MQ vs self-hosted | Layer 4 complexity | **Amazon MQ** — removes ops burden, same AMQP protocol |
 | 3 | MySQL: RDS vs self-hosted | Layer 3 reliability | **RDS MySQL** — automated backups, Multi-AZ failover |
 | 4 | PDF library selection | Layer 5 Week 9 | Spike `WeasyPrint` (Python) in Week 1 alongside EKS setup |
