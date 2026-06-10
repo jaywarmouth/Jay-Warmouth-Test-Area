@@ -1,0 +1,1445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <DataSources>
+    <DataSource Name="claims_subscriptions">
+      <DataSourceReference>claims_subscriptions</DataSourceReference>
+      <rd:DataSourceID>217d02de-995a-4e8f-9067-9b5405386946</rd:DataSourceID>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="dspr_URXS_BROKER_001_001">
+      <Fields>
+        <Field Name="SystemLink">
+          <DataField>SystemLink</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SystemNumber">
+          <DataField>SystemNumber</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SponsorNumber">
+          <DataField>SponsorNumber</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MasterGroupNumber">
+          <DataField>MasterGroupNumber</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="GroupNumber">
+          <DataField>GroupNumber</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="MasterGroupName">
+          <DataField>MasterGroupName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="GroupName">
+          <DataField>GroupName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Broker">
+          <DataField>Broker</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AltGroupNumber">
+          <DataField>AltGroupNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Claims">
+          <DataField>Claims</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="Rate">
+          <DataField>Rate</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="DisplayName">
+          <DataField>DisplayName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="UCR">
+          <DataField>UCR</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Copay">
+          <DataField>Copay</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="AmountPaid">
+          <DataField>AmountPaid</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="PaidContractBrand">
+          <DataField>PaidContractBrand</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ReversedContractBrand">
+          <DataField>ReversedContractBrand</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PaidContractGeneric">
+          <DataField>PaidContractGeneric</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ReversedContractGeneric">
+          <DataField>ReversedContractGeneric</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PaidContractAmount">
+          <DataField>PaidContractAmount</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="TotalRatebyClaims">
+          <DataField>TotalRatebyClaims</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="TotalClaimCount">
+          <DataField>TotalClaimCount</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="TxtMonth">
+          <DataField>TxtMonth</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="YearDate">
+          <DataField>YearDate</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>claims_subscriptions</DataSourceName>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>pr_URXS_BROKER_001_001</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@SystemLink">
+            <Value>=Parameters!SystemLink.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@SystemNumber">
+            <Value>=Parameters!SystemNumber.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@SponsorNumber">
+            <Value>=Parameters!SponsorNumber.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@MasterGroupNumber">
+            <Value>=Parameters!MasterGroupNumber.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@GroupNumber">
+            <Value>=Parameters!GroupNumber.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@BrokerNumber">
+            <Value>=Parameters!BrokerNumber.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@BegDate">
+            <Value>=Parameters!BegDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@EndDate">
+            <Value>=Parameters!EndDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@DateFlag">
+            <Value>=Parameters!DateFlag.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+      </Query>
+    </DataSet>
+    <DataSet Name="dspr_SystemLinkLookup">
+      <Fields>
+        <Field Name="SYSTEM_LINK">
+          <DataField>SYSTEM_LINK</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SYS_LINK_DESCRIPTION">
+          <DataField>SYS_LINK_DESCRIPTION</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SystemLinkNumber">
+          <DataField>SystemLinkNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>claims_subscriptions</DataSourceName>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>pr_SystemLinkLookup_002</CommandText>
+      </Query>
+    </DataSet>
+    <DataSet Name="pr_SystemLookupfrAllSystemLink">
+      <Fields>
+        <Field Name="SYSTEM_NUMBER">
+          <DataField>SYSTEM_NUMBER</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SYSTEM_NAME">
+          <DataField>SYSTEM_NAME</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SYSTEM_LINK">
+          <DataField>SYSTEM_LINK</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SYS_LINK_DESCRIPTION">
+          <DataField>SYS_LINK_DESCRIPTION</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SYSTEM_NUMBER_NAME">
+          <DataField>SYSTEM_NUMBER_NAME</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>claims_subscriptions</DataSourceName>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>pr_SystemLookupAllfrSystemLink_002</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@SystemLink">
+            <Value>=Parameters!SystemLink.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+      </Query>
+    </DataSet>
+    <DataSet Name="pr_SponsorLookupfrAllSystemNumber">
+      <Fields>
+        <Field Name="SPONSOR_NUMBER">
+          <DataField>SPONSOR_NUMBER</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SPONSOR_NAME">
+          <DataField>SPONSOR_NAME</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SYSTEM_NUMBER">
+          <DataField>SYSTEM_NUMBER</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SYSTEM_NAME">
+          <DataField>SYSTEM_NAME</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SYSTEM_LINK">
+          <DataField>SYSTEM_LINK</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SYS_LINK_DESCRIPTION">
+          <DataField>SYS_LINK_DESCRIPTION</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SPONSOR_NUMBER_NAME">
+          <DataField>SPONSOR_NUMBER_NAME</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>claims_subscriptions</DataSourceName>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>pr_SponsorLookupAllfrSystem_002</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@SystemNumber">
+            <Value>=Parameters!SystemNumber.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@SystemLink">
+            <Value>=Parameters!SystemLink.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+      </Query>
+    </DataSet>
+    <DataSet Name="pr_MasterGroupLookupfrAllSponsor">
+      <Fields>
+        <Field Name="GROUP_NUMBER">
+          <DataField>GROUP_NUMBER</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="MASTER_GROUP_NAME">
+          <DataField>MASTER_GROUP_NAME</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MASTER_GROUP">
+          <DataField>MASTER_GROUP</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="SPONSOR_NUMBER">
+          <DataField>SPONSOR_NUMBER</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MASTER_GROUP_NUMBER_NAME">
+          <DataField>MASTER_GROUP_NUMBER_NAME</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>claims_subscriptions</DataSourceName>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>pr_MasterGroupLookupAllfrSponsor_002</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@SponsorNumber">
+            <Value>=Parameters!SponsorNumber.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@SystemNumber">
+            <Value>=Parameters!SystemNumber.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@SystemLink">
+            <Value>=Parameters!SystemLink.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+      </Query>
+    </DataSet>
+    <DataSet Name="pr_GroupLookupfrAllMasterGroup">
+      <Fields>
+        <Field Name="GROUP_NUMBER">
+          <DataField>GROUP_NUMBER</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="GROUP_NAME">
+          <DataField>GROUP_NAME</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MASTER_GROUP">
+          <DataField>MASTER_GROUP</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SPONSOR_NUMBER">
+          <DataField>SPONSOR_NUMBER</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="GROUP_NUMBER_NAME">
+          <DataField>GROUP_NUMBER_NAME</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>claims_subscriptions</DataSourceName>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>pr_GroupLookupAllfrMasterGroup_002</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@MasterGroupNumber">
+            <Value>=Parameters!MasterGroupNumber.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@SponsorNumber">
+            <Value>=Parameters!SponsorNumber.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@SystemNumber">
+            <Value>=Parameters!SystemNumber.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@SystemLink">
+            <Value>=Parameters!SystemLink.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+      </Query>
+    </DataSet>
+    <DataSet Name="dspr_URXS_BROKER_001_002">
+      <Fields>
+        <Field Name="SystemLink">
+          <DataField>SystemLink</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SystemNumber">
+          <DataField>SystemNumber</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SponsorNumber">
+          <DataField>SponsorNumber</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MasterGroupNumber">
+          <DataField>MasterGroupNumber</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="MasterGroupName">
+          <DataField>MasterGroupName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="GroupNumber">
+          <DataField>GroupNumber</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="GroupName">
+          <DataField>GroupName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AltGroupNumber">
+          <DataField>AltGroupNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Broker">
+          <DataField>Broker</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Rate">
+          <DataField>Rate</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="DisplayName">
+          <DataField>DisplayName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Claims">
+          <DataField>Claims</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="UCR">
+          <DataField>UCR</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Copay">
+          <DataField>Copay</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="AmountPaid">
+          <DataField>AmountPaid</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="PaidContractBrand">
+          <DataField>PaidContractBrand</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ReversedContractBrand">
+          <DataField>ReversedContractBrand</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PaidContractGeneric">
+          <DataField>PaidContractGeneric</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ReversedContractGeneric">
+          <DataField>ReversedContractGeneric</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PaidContractAmount">
+          <DataField>PaidContractAmount</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="PaidUCRAmount">
+          <DataField>PaidUCRAmount</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="TotalRatebyClaims">
+          <DataField>TotalRatebyClaims</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="TotalClaimCount">
+          <DataField>TotalClaimCount</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="TxtMonth">
+          <DataField>TxtMonth</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="YearDate">
+          <DataField>YearDate</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>claims_subscriptions</DataSourceName>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>pr_URXS_BROKER_001_002</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@SystemLink">
+            <Value>=Parameters!SystemLink.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@SystemNumber">
+            <Value>=Parameters!SystemNumber.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@SponsorNumber">
+            <Value>=Parameters!SponsorNumber.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@MasterGroupNumber">
+            <Value>=Parameters!MasterGroupNumber.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@GroupNumber">
+            <Value>=Parameters!GroupNumber.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@BrokerNumber">
+            <Value>=Parameters!BrokerNumber.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@BegDate">
+            <Value>=Parameters!BegDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@EndDate">
+            <Value>=Parameters!EndDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@DateFlag">
+            <Value>=Parameters!DateFlag.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+    </DataSet>
+  </DataSets>
+  <Body>
+    <ReportItems>
+      <Tablix Name="list1">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>7.95833in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>3.01in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Rectangle Name="list1_Contents">
+                      <ReportItems>
+                        <Textbox Name="textbox10">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Marketing Fee Report Provided by:</Value>
+                                  <Style>
+                                    <FontFamily>Calibri</FontFamily>
+                                    <FontSize>14pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>textbox10</rd:DefaultName>
+                          <Top>0.375in</Top>
+                          <Height>0.25in</Height>
+                          <Width>4.125in</Width>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox11">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Universal Rx</Value>
+                                  <Style>
+                                    <FontFamily>Calibri</FontFamily>
+                                    <FontSize>14pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Top>0.625in</Top>
+                          <Height>0.25in</Height>
+                          <Width>4.125in</Width>
+                          <ZIndex>1</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox12">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>="Period of: " &amp; Fields!TxtMonth.Value &amp; " " &amp; Fields!YearDate.Value</Value>
+                                  <Style>
+                                    <FontFamily>Calibri</FontFamily>
+                                    <FontSize>14pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Top>1.25in</Top>
+                          <Height>0.25in</Height>
+                          <Width>4.125in</Width>
+                          <ZIndex>2</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox13">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Prepared for:</Value>
+                                  <Style>
+                                    <FontFamily>Calibri</FontFamily>
+                                    <FontSize>14pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Top>1.875in</Top>
+                          <Height>0.25in</Height>
+                          <Width>1.25in</Width>
+                          <ZIndex>3</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox14">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=First(Fields!DisplayName.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Calibri</FontFamily>
+                                    <FontSize>14pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Top>1.875in</Top>
+                          <Left>1.25in</Left>
+                          <Height>0.25in</Height>
+                          <Width>4.125in</Width>
+                          <ZIndex>4</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Tablix Name="table1">
+                          <TablixBody>
+                            <TablixColumns>
+                              <TablixColumn>
+                                <Width>0.6in</Width>
+                              </TablixColumn>
+                              <TablixColumn>
+                                <Width>3.42083in</Width>
+                              </TablixColumn>
+                              <TablixColumn>
+                                <Width>1.19375in</Width>
+                              </TablixColumn>
+                              <TablixColumn>
+                                <Width>1.43125in</Width>
+                              </TablixColumn>
+                              <TablixColumn>
+                                <Width>1.3125in</Width>
+                              </TablixColumn>
+                            </TablixColumns>
+                            <TablixRows>
+                              <TablixRow>
+                                <Height>0.42in</Height>
+                                <TablixCells>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="textbox18">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>Group</Value>
+                                                <Style>
+                                                  <FontFamily>Calibri</FontFamily>
+                                                  <FontSize>11pt</FontSize>
+                                                  <FontWeight>Bold</FontWeight>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style>
+                                              <TextAlign>Left</TextAlign>
+                                            </Style>
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>textbox18</rd:DefaultName>
+                                        <ZIndex>13</ZIndex>
+                                        <Style>
+                                          <Border>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <BackgroundColor>#ffff99</BackgroundColor>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                        </Style>
+                                      </Textbox>
+                                      <ColSpan>2</ColSpan>
+                                    </CellContents>
+                                  </TablixCell>
+                                  <TablixCell />
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="textbox3">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>Num of Claims</Value>
+                                                <Style>
+                                                  <FontFamily>Calibri</FontFamily>
+                                                  <FontSize>11pt</FontSize>
+                                                  <FontWeight>Bold</FontWeight>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style>
+                                              <TextAlign>Center</TextAlign>
+                                            </Style>
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <ZIndex>12</ZIndex>
+                                        <Style>
+                                          <Border>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <BackgroundColor>#ffff99</BackgroundColor>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="textbox9">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>Marketing fee per Claim</Value>
+                                                <Style>
+                                                  <FontFamily>Calibri</FontFamily>
+                                                  <FontSize>11pt</FontSize>
+                                                  <FontWeight>Bold</FontWeight>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style>
+                                              <TextAlign>Center</TextAlign>
+                                            </Style>
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <ZIndex>11</ZIndex>
+                                        <Style>
+                                          <Border>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <BackgroundColor>#ffff99</BackgroundColor>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="textbox15">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>Total Marketing Fee</Value>
+                                                <Style>
+                                                  <FontFamily>Calibri</FontFamily>
+                                                  <FontSize>11pt</FontSize>
+                                                  <FontWeight>Bold</FontWeight>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style>
+                                              <TextAlign>Center</TextAlign>
+                                            </Style>
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>textbox15</rd:DefaultName>
+                                        <ZIndex>10</ZIndex>
+                                        <Style>
+                                          <Border>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <BackgroundColor>#ffff99</BackgroundColor>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                </TablixCells>
+                              </TablixRow>
+                              <TablixRow>
+                                <Height>0.17in</Height>
+                                <TablixCells>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="AltGroupNumber">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>=rtrim(Fields!AltGroupNumber.Value)</Value>
+                                                <Style>
+                                                  <FontFamily>Calibri</FontFamily>
+                                                  <FontSize>9pt</FontSize>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style>
+                                              <TextAlign>Left</TextAlign>
+                                            </Style>
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>AltGroupNumber</rd:DefaultName>
+                                        <ZIndex>4</ZIndex>
+                                        <Style>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="GroupName">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>=rtrim(Fields!GroupName.Value)</Value>
+                                                <Style>
+                                                  <FontFamily>Calibri</FontFamily>
+                                                  <FontSize>9pt</FontSize>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style>
+                                              <TextAlign>Left</TextAlign>
+                                            </Style>
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>GroupName</rd:DefaultName>
+                                        <ZIndex>3</ZIndex>
+                                        <Style>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="Claims">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>=Fields!TotalClaimCount.Value</Value>
+                                                <Style>
+                                                  <FontFamily>Calibri</FontFamily>
+                                                  <FontSize>9pt</FontSize>
+                                                  <Format>n0</Format>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style>
+                                              <TextAlign>Right</TextAlign>
+                                            </Style>
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>Claims</rd:DefaultName>
+                                        <ZIndex>2</ZIndex>
+                                        <Style>
+                                          <BottomBorder>
+                                            <Style>None</Style>
+                                          </BottomBorder>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="Rate">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>=Fields!Rate.Value</Value>
+                                                <Style>
+                                                  <FontFamily>Calibri</FontFamily>
+                                                  <FontSize>9pt</FontSize>
+                                                  <Format>c2</Format>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style>
+                                              <TextAlign>Right</TextAlign>
+                                            </Style>
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>Rate</rd:DefaultName>
+                                        <ZIndex>1</ZIndex>
+                                        <Style>
+                                          <BottomBorder>
+                                            <Style>None</Style>
+                                          </BottomBorder>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="Total">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>= ReportItems!Claims.Value * ReportItems!Rate.Value</Value>
+                                                <Style>
+                                                  <FontFamily>Calibri</FontFamily>
+                                                  <FontSize>9pt</FontSize>
+                                                  <Format>c2</Format>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style>
+                                              <TextAlign>Right</TextAlign>
+                                            </Style>
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <Style>
+                                          <BottomBorder>
+                                            <Style>None</Style>
+                                          </BottomBorder>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                </TablixCells>
+                              </TablixRow>
+                              <TablixRow>
+                                <Height>0.17in</Height>
+                                <TablixCells>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="textbox4">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value />
+                                                <Style>
+                                                  <FontFamily>Calibri</FontFamily>
+                                                  <FontSize>9pt</FontSize>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style />
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>textbox4</rd:DefaultName>
+                                        <ZIndex>9</ZIndex>
+                                        <Style>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="textbox1">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value />
+                                                <Style>
+                                                  <FontFamily>Calibri</FontFamily>
+                                                  <FontSize>9pt</FontSize>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style />
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <ZIndex>8</ZIndex>
+                                        <Style>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="textbox2">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>=sum(Fields!TotalClaimCount.Value)</Value>
+                                                <Style>
+                                                  <FontFamily>Calibri</FontFamily>
+                                                  <FontSize>9pt</FontSize>
+                                                  <FontWeight>Bold</FontWeight>
+                                                  <Format>n0</Format>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style />
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <ZIndex>7</ZIndex>
+                                        <Style>
+                                          <Border>
+                                            <Width>1.5pt</Width>
+                                          </Border>
+                                          <TopBorder>
+                                            <Style>Solid</Style>
+                                          </TopBorder>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="textbox7">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value />
+                                                <Style>
+                                                  <FontFamily>Calibri</FontFamily>
+                                                  <FontSize>9pt</FontSize>
+                                                  <FontWeight>Bold</FontWeight>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style />
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>textbox7</rd:DefaultName>
+                                        <ZIndex>6</ZIndex>
+                                        <Style>
+                                          <Border>
+                                            <Width>1.5pt</Width>
+                                          </Border>
+                                          <TopBorder>
+                                            <Style>Solid</Style>
+                                          </TopBorder>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="textbox8">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>=sum(Fields!TotalRatebyClaims.Value)</Value>
+                                                <Style>
+                                                  <FontFamily>Calibri</FontFamily>
+                                                  <FontSize>9pt</FontSize>
+                                                  <FontWeight>Bold</FontWeight>
+                                                  <Format>c2</Format>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style />
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>textbox8</rd:DefaultName>
+                                        <ZIndex>5</ZIndex>
+                                        <Style>
+                                          <Border>
+                                            <Width>1.5pt</Width>
+                                          </Border>
+                                          <TopBorder>
+                                            <Style>Solid</Style>
+                                          </TopBorder>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                </TablixCells>
+                              </TablixRow>
+                            </TablixRows>
+                          </TablixBody>
+                          <TablixColumnHierarchy>
+                            <TablixMembers>
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                            </TablixMembers>
+                          </TablixColumnHierarchy>
+                          <TablixRowHierarchy>
+                            <TablixMembers>
+                              <TablixMember>
+                                <KeepWithGroup>After</KeepWithGroup>
+                                <KeepTogether>true</KeepTogether>
+                              </TablixMember>
+                              <TablixMember>
+                                <Group Name="table1_Group1">
+                                  <GroupExpressions>
+                                    <GroupExpression>=Fields!SystemNumber.Value</GroupExpression>
+                                  </GroupExpressions>
+                                </Group>
+                                <TablixMembers>
+                                  <TablixMember>
+                                    <Group Name="table1_Details_Group">
+                                      <GroupExpressions>
+                                        <GroupExpression>=Fields!GroupNumber.Value</GroupExpression>
+                                      </GroupExpressions>
+                                      <DataElementName>Detail</DataElementName>
+                                    </Group>
+                                    <SortExpressions>
+                                      <SortExpression>
+                                        <Value>=Fields!GroupNumber.Value</Value>
+                                      </SortExpression>
+                                    </SortExpressions>
+                                    <TablixMembers>
+                                      <TablixMember />
+                                    </TablixMembers>
+                                    <DataElementName>Detail_Collection</DataElementName>
+                                    <DataElementOutput>Output</DataElementOutput>
+                                    <KeepTogether>true</KeepTogether>
+                                  </TablixMember>
+                                  <TablixMember>
+                                    <KeepWithGroup>Before</KeepWithGroup>
+                                    <KeepTogether>true</KeepTogether>
+                                  </TablixMember>
+                                </TablixMembers>
+                              </TablixMember>
+                            </TablixMembers>
+                          </TablixRowHierarchy>
+                          <DataSetName>pr_SystemLookupfrAllSystemLink</DataSetName>
+                          <Top>2.25in</Top>
+                          <Height>0.76in</Height>
+                          <Width>7.95833in</Width>
+                          <ZIndex>5</ZIndex>
+                          <Style />
+                        </Tablix>
+                        <Textbox Name="Textbox1">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>="RID: " &amp; Parameters!RID.Value</Value>
+                                  <Style>
+                                    <FontFamily>Calibri</FontFamily>
+                                    <FontSize>4pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox1</rd:DefaultName>
+                          <Top>2.04181in</Top>
+                          <Left>5.61125in</Left>
+                          <Height>0.08319in</Height>
+                          <Width>2.34708in</Width>
+                          <ZIndex>6</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                      <KeepTogether>true</KeepTogether>
+                      <Style />
+                    </Rectangle>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="list1_Details_Group">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!SponsorNumber.Value</GroupExpression>
+                </GroupExpressions>
+              </Group>
+              <DataElementOutput>Output</DataElementOutput>
+              <KeepTogether>true</KeepTogether>
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>dspr_URXS_BROKER_001_001</DataSetName>
+        <Height>3.01in</Height>
+        <Width>7.95833in</Width>
+        <Style />
+      </Tablix>
+    </ReportItems>
+    <Height>3.01in</Height>
+    <Style />
+  </Body>
+  <ReportParameters>
+    <ReportParameter Name="SystemLink">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>URXS</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>SystemLink</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dspr_SystemLinkLookup</DataSetName>
+          <ValueField>SYSTEM_LINK</ValueField>
+          <LabelField>SystemLinkNumber</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="SystemNumber">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>2</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>SystemNumber</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>pr_SystemLookupfrAllSystemLink</DataSetName>
+          <ValueField>SYSTEM_NUMBER</ValueField>
+          <LabelField>SYSTEM_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="SponsorNumber">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>295</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>SponsorNumber</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>pr_SponsorLookupfrAllSystemNumber</DataSetName>
+          <ValueField>SPONSOR_NUMBER</ValueField>
+          <LabelField>SPONSOR_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="MasterGroupNumber">
+      <DataType>String</DataType>
+      <Prompt>MasterGroupNumber</Prompt>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="GroupNumber">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>-1</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>GroupNumber</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>pr_GroupLookupfrAllMasterGroup</DataSetName>
+          <ValueField>GROUP_NUMBER</ValueField>
+          <LabelField>GROUP_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="BrokerNumber">
+      <DataType>String</DataType>
+      <Prompt>BrokerNumber</Prompt>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="BegDate">
+      <DataType>DateTime</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>05/01/2009 00:00:00</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>BegDate</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="EndDate">
+      <DataType>DateTime</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>05/31/2009 00:00:00</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>EndDate</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DateFlag">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>p</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>DateFlag</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="RID">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>RID</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Function GetValue(ByVal parameterName As String) As String
+   Dim s as String  =  " "  &amp; vbCrLf   
+   Dim i as Integer
+   IF Report.Parameters(parameterName).Label(0) = " All" THEN
+     s = s &amp;  Report.Parameters(parameterName).Label(0)
+     s = s &amp; vbCrLf &amp; vbCrLf
+     return s
+   ELSE
+    For i = 0 to Report.Parameters(parameterName).Count - 1
+       s = s  &amp; RTrim(Report.Parameters(parameterName).Label(i))
+       IF i &lt; Report.Parameters(parameterName).Count -1 THEN
+           s = s &amp; ", "
+       END IF
+
+       IF (i  Mod 3) = 2 THEN
+           s = s &amp; " "  &amp; vbCrLf  
+       ELSE 
+           s = s &amp; " "
+       END IF 
+
+       IF i = Report.Parameters(parameterName).Count -1 AND  (i  Mod 3) &lt;&gt; 2 THEN
+           s = s &amp; vbCrLf
+       END IF
+       IF i = Report.Parameters(parameterName).Count -1 THEN
+           s = s &amp; vbCrLf
+       END IF
+   Next
+   END IF
+   Return s
+End Function
+
+Function isMultipleSelectionReport() As boolean
+  Dim isMultipleSelection As boolean = false
+  IF Report.Parameters("SystemLink").Count &gt; 1 THEN
+    return true
+  ELSE IF Report.Parameters("SystemNumber").Count &gt; 1 THEN
+    return true
+  ELSE IF Report.Parameters("SponsorNumber").Count &gt; 1 THEN
+    return true
+  ELSE IF Report.Parameters("MasterGroupNumber").Count &gt; 1 THEN
+    return true
+  ELSE IF Report.Parameters("GroupNumber").Count &gt; 1 THEN
+    return true
+  END IF
+  return false
+End Function
+
+       'IF i &lt; Report.Parameters(parameterName).Count Mod 2 = 1 THEN
+       '    s = s &amp; " "  &amp; vbCrLf  
+       'ELSE 
+       '    s = s &amp; " "
+       'END IF
+</Code>
+  <Width>7.95833in</Width>
+  <Page>
+    <PageFooter>
+      <Height>0.17in</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <Style />
+    </PageFooter>
+    <PageHeight>8.5in</PageHeight>
+    <PageWidth>11in</PageWidth>
+    <InteractiveHeight>11in</InteractiveHeight>
+    <InteractiveWidth>8.5in</InteractiveWidth>
+    <LeftMargin>0.3in</LeftMargin>
+    <RightMargin>0.3in</RightMargin>
+    <TopMargin>0.3in</TopMargin>
+    <BottomMargin>0.3in</BottomMargin>
+    <Style />
+  </Page>
+  <Language>en-US</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportID>7ff65a77-cf65-4f22-8898-36330216c158</rd:ReportID>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+</Report>
