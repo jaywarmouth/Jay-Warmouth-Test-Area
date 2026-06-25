@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition">
   <DataSources>
     <DataSource Name="CLAIMS_SUBS">
@@ -441,24 +441,6 @@
       </Query>
     </DataSet>
   </DataSets>
-  <ReportParameters>
-    <ReportParameter Name="BegDate">
-      <DataType>DateTime</DataType>
-      <Prompt>BegDate</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="EndDate">
-      <DataType>DateTime</DataType>
-      <Prompt>EndDate</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="CardholderNumber">
-      <DataType>String</DataType>
-      <Prompt>10 Digit Cardholder Number</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="MemberNumber">
-      <DataType>String</DataType>
-      <Prompt>2 Digit Member Number</Prompt>
-    </ReportParameter>
-  </ReportParameters>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -986,7 +968,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>LI_CARDHOLDER_NUMBER</rd:DefaultName>
@@ -1018,7 +1000,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>LI_MEMBER_NUMBER</rd:DefaultName>
@@ -1050,7 +1032,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>LI_BIN</rd:DefaultName>
@@ -1082,7 +1064,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>LI_ROLE_DATE</rd:DefaultName>
@@ -1114,7 +1096,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>LI_DATE</rd:DefaultName>
@@ -1146,7 +1128,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>LI_TIME</rd:DefaultName>
@@ -1178,7 +1160,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>LI_FUNC</rd:DefaultName>
@@ -1210,7 +1192,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>LI_USER</rd:DefaultName>
@@ -1242,7 +1224,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>LI_LAST_QUARTER_CARRY_OVER</rd:DefaultName>
@@ -1274,7 +1256,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>LI_M_CARRY_OVER</rd:DefaultName>
@@ -1306,7 +1288,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>LI_ADD_TO_MAX</rd:DefaultName>
@@ -1338,7 +1320,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>PDMAddToDed</rd:DefaultName>
@@ -1370,7 +1352,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>PDMAddToOOP</rd:DefaultName>
@@ -1393,19 +1375,19 @@
             </TablixBody>
             <TablixColumnHierarchy>
               <TablixMembers>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -1414,7 +1396,7 @@
                   <KeepWithGroup>After</KeepWithGroup>
                 </TablixMember>
                 <TablixMember>
-                  <Group Name="Details"/>
+                  <Group Name="Details" />
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
@@ -1429,7 +1411,7 @@
           </Tablix>
         </ReportItems>
         <Height>0.5in</Height>
-        <Style/>
+        <Style />
       </Body>
       <Width>13in</Width>
       <Page>
@@ -1441,10 +1423,28 @@
         <RightMargin>0.4in</RightMargin>
         <TopMargin>0.5in</TopMargin>
         <BottomMargin>0.5in</BottomMargin>
-        <Style/>
+        <Style />
       </Page>
     </ReportSection>
   </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="BegDate">
+      <DataType>DateTime</DataType>
+      <Prompt>BegDate</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="EndDate">
+      <DataType>DateTime</DataType>
+      <Prompt>EndDate</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CardholderNumber">
+      <DataType>String</DataType>
+      <Prompt>10 Digit Cardholder Number</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="MemberNumber">
+      <DataType>String</DataType>
+      <Prompt>2 Digit Member Number</Prompt>
+    </ReportParameter>
+  </ReportParameters>
   <Language>en-US</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportID>dd18590d-e9e5-4e27-a63a-60c6e6534cef</rd:ReportID>

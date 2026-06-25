@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition">
   <DataSources>
     <DataSource Name="claims_subscriptions">
@@ -378,91 +378,6 @@
       </Query>
     </DataSet>
   </DataSets>
-  <ReportParameters>
-    <ReportParameter Name="SystemLink">
-      <DataType>String</DataType>
-      <Prompt>SystemLink</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>rwSystemLinkLookup</DataSetName>
-          <ValueField>SYSTEM_LINK</ValueField>
-          <LabelField>SystemLinkNumber</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="SystemNumber">
-      <DataType>Integer</DataType>
-      <Prompt>SystemNumber</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dssystemLookUpfrSystemLink</DataSetName>
-          <ValueField>SYSTEM_NUMBER</ValueField>
-          <LabelField>SYSTEM_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-      <MultiValue>true</MultiValue>
-    </ReportParameter>
-    <ReportParameter Name="SponsorNumber">
-      <DataType>Integer</DataType>
-      <Prompt>SponsorNumber</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dsSponsorLookUpAllfrSystem</DataSetName>
-          <ValueField>SPONSOR_NUMBER</ValueField>
-          <LabelField>SPONSOR_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-      <MultiValue>true</MultiValue>
-    </ReportParameter>
-    <ReportParameter Name="MasterGroupNumber">
-      <DataType>Integer</DataType>
-      <Prompt>MasterGroupNumber</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dsMasterGroupLookupAllfrSponsor</DataSetName>
-          <ValueField>MASTER_GROUP</ValueField>
-          <LabelField>MASTER_GROUP_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-      <MultiValue>true</MultiValue>
-    </ReportParameter>
-    <ReportParameter Name="GroupNumber">
-      <DataType>String</DataType>
-      <Prompt>Group Number</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dspr_GroupLookupAllfrMasterGroup</DataSetName>
-          <ValueField>GROUP_NUMBER</ValueField>
-          <LabelField>GROUP_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-      <MultiValue>true</MultiValue>
-    </ReportParameter>
-    <ReportParameter Name="InvoiceBegDate">
-      <DataType>DateTime</DataType>
-      <Prompt>Invoice Beg Date</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="InvoiceEndDate">
-      <DataType>DateTime</DataType>
-      <Prompt>Invoice End Date</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="AdminFeePerSponsor">
-      <DataType>String</DataType>
-      <Prompt>Admin Fee Per Sponsor</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="RID">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
-        </Values>
-      </DefaultValue>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>Report_Parameter_6</Prompt>
-      <Hidden>true</Hidden>
-    </ReportParameter>
-  </ReportParameters>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -502,12 +417,12 @@
                                   <TextRuns>
                                     <TextRun>
                                       <Value>=First(Fields!BillFromCity.Value) + ", " +  
-First(Fields!BillFromState.Value) + "  " +  
-First(Fields!BillFromZIP.Value)</Value>
-                                      <Style/>
+    First(Fields!BillFromState.Value) + "  " +  
+    First(Fields!BillFromZIP.Value)</Value>
+                                      <Style />
                                     </TextRun>
                                   </TextRuns>
-                                  <Style/>
+                                  <Style />
                                 </Paragraph>
                               </Paragraphs>
                               <Top>0.85in</Top>
@@ -526,10 +441,10 @@ First(Fields!BillFromZIP.Value)</Value>
                                   <TextRuns>
                                     <TextRun>
                                       <Value>=First(Fields!BillFromName.Value)</Value>
-                                      <Style/>
+                                      <Style />
                                     </TextRun>
                                   </TextRuns>
-                                  <Style/>
+                                  <Style />
                                 </Paragraph>
                               </Paragraphs>
                               <Top>0.45in</Top>
@@ -549,10 +464,10 @@ First(Fields!BillFromZIP.Value)</Value>
                                   <TextRuns>
                                     <TextRun>
                                       <Value>=First(Fields!BillFromStreet1.Value)</Value>
-                                      <Style/>
+                                      <Style />
                                     </TextRun>
                                   </TextRuns>
-                                  <Style/>
+                                  <Style />
                                 </Paragraph>
                               </Paragraphs>
                               <Top>0.65in</Top>
@@ -619,7 +534,7 @@ First(Fields!BillFromZIP.Value)</Value>
                               <Width>3.65208in</Width>
                               <ZIndex>4</ZIndex>
                               <Style>
-                                <Border/>
+                                <Border />
                                 <PaddingLeft>2pt</PaddingLeft>
                                 <PaddingRight>2pt</PaddingRight>
                                 <PaddingTop>2pt</PaddingTop>
@@ -701,7 +616,7 @@ First(Fields!BillFromZIP.Value)</Value>
                                       </Style>
                                     </TextRun>
                                   </TextRuns>
-                                  <Style/>
+                                  <Style />
                                 </Paragraph>
                               </Paragraphs>
                               <Top>2.65in</Top>
@@ -709,7 +624,7 @@ First(Fields!BillFromZIP.Value)</Value>
                               <Width>7.70208in</Width>
                               <ZIndex>7</ZIndex>
                               <Style>
-                                <Border/>
+                                <Border />
                                 <PaddingLeft>2pt</PaddingLeft>
                                 <PaddingRight>2pt</PaddingRight>
                                 <PaddingTop>2pt</PaddingTop>
@@ -724,10 +639,10 @@ First(Fields!BillFromZIP.Value)</Value>
                                   <TextRuns>
                                     <TextRun>
                                       <Value>=First(Fields!BillToName.Value)</Value>
-                                      <Style/>
+                                      <Style />
                                     </TextRun>
                                   </TextRuns>
-                                  <Style/>
+                                  <Style />
                                 </Paragraph>
                               </Paragraphs>
                               <Top>2.30511in</Top>
@@ -748,7 +663,7 @@ First(Fields!BillFromZIP.Value)</Value>
                                   <TextRuns>
                                     <TextRun>
                                       <Value>= "Invoice Period: " &amp; FORMAT(Parameters!InvoiceBegDate.Value, "MM/dd/yyyy") &amp; 
-" to " &amp; FORMAT(Parameters!InvoiceEndDate.Value, "MM/dd/yyyy")</Value>
+    " to " &amp; FORMAT(Parameters!InvoiceEndDate.Value, "MM/dd/yyyy")</Value>
                                       <Style>
                                         <FontSize>11pt</FontSize>
                                         <Format>MM/dd/yyyy</Format>
@@ -766,7 +681,7 @@ First(Fields!BillFromZIP.Value)</Value>
                               <Width>3.65208in</Width>
                               <ZIndex>9</ZIndex>
                               <Style>
-                                <Border/>
+                                <Border />
                                 <PaddingLeft>2pt</PaddingLeft>
                                 <PaddingRight>2pt</PaddingRight>
                                 <PaddingTop>2pt</PaddingTop>
@@ -776,15 +691,15 @@ First(Fields!BillFromZIP.Value)</Value>
                           </ReportItems>
                           <DataElementOutput>ContentsOnly</DataElementOutput>
                           <ZIndex>36</ZIndex>
-                          <Style/>
+                          <Style />
                         </Rectangle>
                         <ColSpan>5</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
@@ -996,7 +911,7 @@ First(Fields!BillFromZIP.Value)</Value>
                           <rd:DefaultName>SPONSOR_NUMBER</rd:DefaultName>
                           <ZIndex>6</ZIndex>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>LightSteelBlue</BackgroundColor>
                             <PaddingLeft>12pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1091,7 +1006,7 @@ First(Fields!BillFromZIP.Value)</Value>
                           </Paragraphs>
                           <rd:DefaultName>Admin_Fee</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>LightSteelBlue</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1126,7 +1041,7 @@ First(Fields!BillFromZIP.Value)</Value>
                           </Paragraphs>
                           <rd:DefaultName>Total_Admin_Fee</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>LightSteelBlue</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1152,11 +1067,11 @@ First(Fields!BillFromZIP.Value)</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
-                                  <Style/>
+                                  <Value />
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox7</rd:DefaultName>
@@ -1179,7 +1094,7 @@ First(Fields!BillFromZIP.Value)</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1210,7 +1125,7 @@ First(Fields!BillFromZIP.Value)</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1241,7 +1156,7 @@ First(Fields!BillFromZIP.Value)</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1272,7 +1187,7 @@ First(Fields!BillFromZIP.Value)</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1308,11 +1223,11 @@ First(Fields!BillFromZIP.Value)</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
-                                  <Style/>
+                                  <Value />
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox60</rd:DefaultName>
@@ -1396,7 +1311,7 @@ First(Fields!BillFromZIP.Value)</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1489,21 +1404,21 @@ First(Fields!BillFromZIP.Value)</Value>
                         <ColSpan>5</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
                   </TablixCells>
                 </TablixRow>
               </TablixRows>
             </TablixBody>
             <TablixColumnHierarchy>
               <TablixMembers>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -1523,7 +1438,7 @@ First(Fields!BillFromZIP.Value)</Value>
                             <DataElementName>Detail</DataElementName>
                           </Group>
                           <TablixMembers>
-                            <TablixMember/>
+                            <TablixMember />
                           </TablixMembers>
                           <DataElementName>Detail_Collection</DataElementName>
                           <DataElementOutput>Output</DataElementOutput>
@@ -1536,7 +1451,7 @@ First(Fields!BillFromZIP.Value)</Value>
                 <TablixMember>
                   <KeepTogether>true</KeepTogether>
                 </TablixMember>
-                <TablixMember/>
+                <TablixMember />
                 <TablixMember>
                   <KeepTogether>true</KeepTogether>
                 </TablixMember>
@@ -1545,11 +1460,11 @@ First(Fields!BillFromZIP.Value)</Value>
             <DataSetName>dspr_PDM_AdminFee_Invoice_ByMember_001NS</DataSetName>
             <Height>3.73285in</Height>
             <Width>7.71597in</Width>
-            <Style/>
+            <Style />
           </Tablix>
         </ReportItems>
         <Height>3.73285in</Height>
-        <Style/>
+        <Style />
       </Body>
       <Width>7.71597in</Width>
       <Page>
@@ -1586,16 +1501,101 @@ First(Fields!BillFromZIP.Value)</Value>
               </Style>
             </Textbox>
           </ReportItems>
-          <Style/>
+          <Style />
         </PageFooter>
         <LeftMargin>0.3in</LeftMargin>
         <RightMargin>0.3in</RightMargin>
         <TopMargin>0.1in</TopMargin>
         <BottomMargin>0.3in</BottomMargin>
-        <Style/>
+        <Style />
       </Page>
     </ReportSection>
   </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="SystemLink">
+      <DataType>String</DataType>
+      <Prompt>SystemLink</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>rwSystemLinkLookup</DataSetName>
+          <ValueField>SYSTEM_LINK</ValueField>
+          <LabelField>SystemLinkNumber</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="SystemNumber">
+      <DataType>Integer</DataType>
+      <Prompt>SystemNumber</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dssystemLookUpfrSystemLink</DataSetName>
+          <ValueField>SYSTEM_NUMBER</ValueField>
+          <LabelField>SYSTEM_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="SponsorNumber">
+      <DataType>Integer</DataType>
+      <Prompt>SponsorNumber</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dsSponsorLookUpAllfrSystem</DataSetName>
+          <ValueField>SPONSOR_NUMBER</ValueField>
+          <LabelField>SPONSOR_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="MasterGroupNumber">
+      <DataType>Integer</DataType>
+      <Prompt>MasterGroupNumber</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dsMasterGroupLookupAllfrSponsor</DataSetName>
+          <ValueField>MASTER_GROUP</ValueField>
+          <LabelField>MASTER_GROUP_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="GroupNumber">
+      <DataType>String</DataType>
+      <Prompt>Group Number</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dspr_GroupLookupAllfrMasterGroup</DataSetName>
+          <ValueField>GROUP_NUMBER</ValueField>
+          <LabelField>GROUP_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="InvoiceBegDate">
+      <DataType>DateTime</DataType>
+      <Prompt>Invoice Beg Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="InvoiceEndDate">
+      <DataType>DateTime</DataType>
+      <Prompt>Invoice End Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AdminFeePerSponsor">
+      <DataType>String</DataType>
+      <Prompt>Admin Fee Per Sponsor</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="RID">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_6</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+  </ReportParameters>
   <Language>en-US</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportID>f5ee2e0f-462d-4cc7-b22c-faf0c6fcfe26</rd:ReportID>

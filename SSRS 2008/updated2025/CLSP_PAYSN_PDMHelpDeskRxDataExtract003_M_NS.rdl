@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition">
   <DataSources>
     <DataSource Name="HelpDeskRx">
@@ -272,45 +272,6 @@
       </Query>
     </DataSet>
   </DataSets>
-  <ReportParameters>
-    <ReportParameter Name="BegDate">
-      <DataType>DateTime</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsDateCall</DataSetName>
-          <ValueField>MonthBeginningDate</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>Beg Date</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="EndDate">
-      <DataType>DateTime</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsDateCall</DataSetName>
-          <ValueField>MonthEndingDate</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>End Date</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="RID">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
-        </Values>
-      </DefaultValue>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>Report_Parameter_6</Prompt>
-      <Hidden>true</Hidden>
-    </ReportParameter>
-    <ReportParameter Name="SystemNumber">
-      <DataType>String</DataType>
-      <Prompt>System Number</Prompt>
-      <MultiValue>true</MultiValue>
-    </ReportParameter>
-  </ReportParameters>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -1135,7 +1096,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>StartTime</rd:DefaultName>
@@ -1167,7 +1128,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>EndTime</rd:DefaultName>
@@ -1199,7 +1160,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>CallerIdNumber</rd:DefaultName>
@@ -1231,7 +1192,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>DNIS</rd:DefaultName>
@@ -1263,7 +1224,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>CallType</rd:DefaultName>
@@ -1295,7 +1256,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>SystemNumber</rd:DefaultName>
@@ -1327,7 +1288,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>SponsorNumber</rd:DefaultName>
@@ -1359,7 +1320,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>GroupNumber</rd:DefaultName>
@@ -1391,7 +1352,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>NABP</rd:DefaultName>
@@ -1423,7 +1384,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>NPI</rd:DefaultName>
@@ -1455,7 +1416,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>RxNumber</rd:DefaultName>
@@ -1487,7 +1448,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>RejectNumber</rd:DefaultName>
@@ -1519,7 +1480,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>RejectDescription</rd:DefaultName>
@@ -1551,7 +1512,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>CardholderNumber</rd:DefaultName>
@@ -1583,7 +1544,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>ContactName</rd:DefaultName>
@@ -1615,7 +1576,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>AgentNames</rd:DefaultName>
@@ -1647,7 +1608,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Agent_Ring_Sec</rd:DefaultName>
@@ -1679,7 +1640,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>In_Queue_Time</rd:DefaultName>
@@ -1711,7 +1672,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Agent_Connected_Sec</rd:DefaultName>
@@ -1743,7 +1704,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Abandoned</rd:DefaultName>
@@ -1775,7 +1736,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Diverted</rd:DefaultName>
@@ -1807,7 +1768,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Multiple_Agents</rd:DefaultName>
@@ -1830,28 +1791,28 @@
             </TablixBody>
             <TablixColumnHierarchy>
               <TablixMembers>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -1860,7 +1821,7 @@
                   <KeepWithGroup>After</KeepWithGroup>
                 </TablixMember>
                 <TablixMember>
-                  <Group Name="Details"/>
+                  <Group Name="Details" />
                   <KeepTogether>true</KeepTogether>
                 </TablixMember>
               </TablixMembers>
@@ -1905,7 +1866,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1976,8 +1937,8 @@
                         <ColSpan>3</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
-                    <TablixCell/>
+                    <TablixCell />
+                    <TablixCell />
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
@@ -2147,7 +2108,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>SponsorNumber1</rd:DefaultName>
@@ -2179,7 +2140,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>RejectDescription1</rd:DefaultName>
@@ -2211,7 +2172,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>RejectNumber1</rd:DefaultName>
@@ -2277,7 +2238,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -2339,7 +2300,7 @@
                         <ColSpan>2</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
+                    <TablixCell />
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Textbox160">
@@ -2382,10 +2343,10 @@
             </TablixBody>
             <TablixColumnHierarchy>
               <TablixMembers>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -2424,7 +2385,7 @@
                 <FilterExpression>=Fields!RejectNumber.Value</FilterExpression>
                 <Operator>NotEqual</Operator>
                 <FilterValues>
-                  <FilterValue/>
+                  <FilterValue />
                 </FilterValues>
               </Filter>
             </Filters>
@@ -2445,7 +2406,7 @@
           </Tablix>
         </ReportItems>
         <Height>1.72861in</Height>
-        <Style/>
+        <Style />
       </Body>
       <Width>28.52041in</Width>
       <Page>
@@ -2463,6 +2424,45 @@
       </Page>
     </ReportSection>
   </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="BegDate">
+      <DataType>DateTime</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsDateCall</DataSetName>
+          <ValueField>MonthBeginningDate</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Beg Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="EndDate">
+      <DataType>DateTime</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsDateCall</DataSetName>
+          <ValueField>MonthEndingDate</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>End Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="RID">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_6</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="SystemNumber">
+      <DataType>String</DataType>
+      <Prompt>System Number</Prompt>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+  </ReportParameters>
   <Language>en-US</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportID>f5ee2e0f-462d-4cc7-b22c-faf0c6fcfe26</rd:ReportID>

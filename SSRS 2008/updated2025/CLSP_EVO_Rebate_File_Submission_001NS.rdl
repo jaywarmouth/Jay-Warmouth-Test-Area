@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition">
   <DataSources>
     <DataSource Name="claims_subscriptions">
@@ -496,103 +496,6 @@
       </Query>
     </DataSet>
   </DataSets>
-  <ReportParameters>
-    <ReportParameter Name="SystemLink">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>PRAT</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>System Link</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dsSystemLinkLookUp</DataSetName>
-          <ValueField>SYSTEM_LINK</ValueField>
-          <LabelField>SystemLinkNumber</LabelField>
-        </DataSetReference>
-      </ValidValues>
-      <MultiValue>true</MultiValue>
-    </ReportParameter>
-    <ReportParameter Name="SystemNumber">
-      <DataType>String</DataType>
-      <Prompt>System</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>pr_systemlookupAllFrSystemLink</DataSetName>
-          <ValueField>SYSTEM_NUMBER</ValueField>
-          <LabelField>SYSTEM_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-      <MultiValue>true</MultiValue>
-    </ReportParameter>
-    <ReportParameter Name="SponsorNumber">
-      <DataType>String</DataType>
-      <Prompt>Sponsor</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>pr_sponsorlookupallfrsystem</DataSetName>
-          <ValueField>SPONSOR_NUMBER</ValueField>
-          <LabelField>SPONSOR_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-      <MultiValue>true</MultiValue>
-    </ReportParameter>
-    <ReportParameter Name="MasterGroupNumber">
-      <DataType>String</DataType>
-      <Prompt>Master Group</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dsmastergrouplookupallfrsystem</DataSetName>
-          <ValueField>MASTER_GROUP</ValueField>
-          <LabelField>MASTER_GROUP_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-      <MultiValue>true</MultiValue>
-    </ReportParameter>
-    <ReportParameter Name="GroupNumber">
-      <DataType>String</DataType>
-      <Prompt>Sub Group</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dsGroupLookupAllfrMasterGroup</DataSetName>
-          <ValueField>GROUP_NUMBER</ValueField>
-          <LabelField>GROUP_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-      <MultiValue>true</MultiValue>
-    </ReportParameter>
-    <ReportParameter Name="BegDate">
-      <DataType>DateTime</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsDateCall</DataSetName>
-          <ValueField>FirstOfMonth</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>BegDate</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="EndDate">
-      <DataType>DateTime</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsDateCall</DataSetName>
-          <ValueField>LastOfMonth</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>EndDate</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="RID">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <Prompt>RID</Prompt>
-      <Hidden>true</Hidden>
-    </ReportParameter>
-    <ReportParameter Name="DateFlag">
-      <DataType>String</DataType>
-      <Prompt>Date Flag</Prompt>
-    </ReportParameter>
-  </ReportParameters>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -3026,7 +2929,7 @@
                           </Paragraphs>
                           <rd:DefaultName>externalClientId</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3044,7 +2947,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -3057,7 +2960,7 @@
                           </Paragraphs>
                           <rd:DefaultName>managedHierarchy1</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3075,7 +2978,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -3088,7 +2991,7 @@
                           </Paragraphs>
                           <rd:DefaultName>managedHierarchy2</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3106,7 +3009,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -3119,7 +3022,7 @@
                           </Paragraphs>
                           <rd:DefaultName>managedHierarchy3</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3150,7 +3053,7 @@
                           </Paragraphs>
                           <rd:DefaultName>claimId</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3181,7 +3084,7 @@
                           </Paragraphs>
                           <rd:DefaultName>uniqueTransactionId</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3212,7 +3115,7 @@
                           </Paragraphs>
                           <rd:DefaultName>ndc</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3243,7 +3146,7 @@
                           </Paragraphs>
                           <rd:DefaultName>claimType</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3274,7 +3177,7 @@
                           </Paragraphs>
                           <rd:DefaultName>quantityDispensed</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3305,7 +3208,7 @@
                           </Paragraphs>
                           <rd:DefaultName>unitOfMeasure</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3336,7 +3239,7 @@
                           </Paragraphs>
                           <rd:DefaultName>daysSupply</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3367,7 +3270,7 @@
                           </Paragraphs>
                           <rd:DefaultName>dateOfService</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3398,7 +3301,7 @@
                           </Paragraphs>
                           <rd:DefaultName>dateReceived</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3429,7 +3332,7 @@
                           </Paragraphs>
                           <rd:DefaultName>mailRetailCode</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3460,7 +3363,7 @@
                           </Paragraphs>
                           <rd:DefaultName>prescriptionRxNumber</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3491,7 +3394,7 @@
                           </Paragraphs>
                           <rd:DefaultName>fillNumber</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3522,7 +3425,7 @@
                           </Paragraphs>
                           <rd:DefaultName>serviceProviderId</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3553,7 +3456,7 @@
                           </Paragraphs>
                           <rd:DefaultName>serviceProviderIdQualifier</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3584,7 +3487,7 @@
                           </Paragraphs>
                           <rd:DefaultName>prescriberIdNumber</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3615,7 +3518,7 @@
                           </Paragraphs>
                           <rd:DefaultName>prescriberIdQualifier</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3646,7 +3549,7 @@
                           </Paragraphs>
                           <rd:DefaultName>unitAwp</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3677,7 +3580,7 @@
                           </Paragraphs>
                           <rd:DefaultName>totalAwp</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3708,7 +3611,7 @@
                           </Paragraphs>
                           <rd:DefaultName>clientIngredientCost</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3739,7 +3642,7 @@
                           </Paragraphs>
                           <rd:DefaultName>clientDispensingFee</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3770,7 +3673,7 @@
                           </Paragraphs>
                           <rd:DefaultName>clientSalesTax</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3801,7 +3704,7 @@
                           </Paragraphs>
                           <rd:DefaultName>planCopay</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3832,7 +3735,7 @@
                           </Paragraphs>
                           <rd:DefaultName>deductibleApplied</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3863,7 +3766,7 @@
                           </Paragraphs>
                           <rd:DefaultName>totalPatientPayAmount</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3881,7 +3784,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -3894,7 +3797,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox143</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3925,7 +3828,7 @@
                           </Paragraphs>
                           <rd:DefaultName>copayDifferential</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3943,7 +3846,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -3956,7 +3859,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox142</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3987,7 +3890,7 @@
                           </Paragraphs>
                           <rd:DefaultName>claimIndicator</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -4018,7 +3921,7 @@
                           </Paragraphs>
                           <rd:DefaultName>otherCoverageCode</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -4036,7 +3939,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -4049,7 +3952,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox144</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -4067,7 +3970,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -4080,7 +3983,7 @@
                           </Paragraphs>
                           <rd:DefaultName>brandGenericIndicator</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -4111,7 +4014,7 @@
                           </Paragraphs>
                           <rd:DefaultName>daw</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -4142,7 +4045,7 @@
                           </Paragraphs>
                           <rd:DefaultName>compoundCode</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -4173,7 +4076,7 @@
                           </Paragraphs>
                           <rd:DefaultName>formularyIndicator</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -4204,7 +4107,7 @@
                           </Paragraphs>
                           <rd:DefaultName>priorAuthorizationFlag</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -4222,7 +4125,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -4235,7 +4138,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox145</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -4266,7 +4169,7 @@
                           </Paragraphs>
                           <rd:DefaultName>memberNumber</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -4297,7 +4200,7 @@
                           </Paragraphs>
                           <rd:DefaultName>memberState</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -4328,7 +4231,7 @@
                           </Paragraphs>
                           <rd:DefaultName>relationshipCode</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -4359,7 +4262,7 @@
                           </Paragraphs>
                           <rd:DefaultName>patientBirthDate</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -4390,7 +4293,7 @@
                           </Paragraphs>
                           <rd:DefaultName>hierarchyLevel1</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -4421,7 +4324,7 @@
                           </Paragraphs>
                           <rd:DefaultName>hierarchyLevel2</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -4452,7 +4355,7 @@
                           </Paragraphs>
                           <rd:DefaultName>hierarchyLevel3</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -4483,7 +4386,7 @@
                           </Paragraphs>
                           <rd:DefaultName>hierarchyLevel4</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -4514,7 +4417,7 @@
                           </Paragraphs>
                           <rd:DefaultName>lineOfBusinessIndicator</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -4532,7 +4435,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -4545,7 +4448,7 @@
                           </Paragraphs>
                           <rd:DefaultName>clientCustomField1</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -4563,7 +4466,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -4576,7 +4479,7 @@
                           </Paragraphs>
                           <rd:DefaultName>clientCustomField2</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -4594,7 +4497,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -4607,7 +4510,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox130</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -4625,7 +4528,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -4638,7 +4541,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox131</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -4656,7 +4559,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -4669,7 +4572,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox132</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -4687,7 +4590,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -4700,7 +4603,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox133</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -4718,7 +4621,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -4731,7 +4634,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox134</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -4749,7 +4652,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -4762,7 +4665,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox135</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -4780,7 +4683,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -4793,7 +4696,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox136</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -4811,7 +4714,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -4824,7 +4727,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox137</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -4842,7 +4745,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -4855,7 +4758,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox138</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -4873,7 +4776,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -4886,7 +4789,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox139</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -4904,7 +4807,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -4917,7 +4820,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox140</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -4935,7 +4838,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -4948,7 +4851,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox141</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -4963,69 +4866,69 @@
             </TablixBody>
             <TablixColumnHierarchy>
               <TablixMembers>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -5039,7 +4942,7 @@
                     <DataElementName>Detail</DataElementName>
                   </Group>
                   <TablixMembers>
-                    <TablixMember/>
+                    <TablixMember />
                   </TablixMembers>
                   <DataElementName>Detail_Collection</DataElementName>
                   <DataElementOutput>Output</DataElementOutput>
@@ -5050,11 +4953,11 @@
             <DataSetName>dspr_PDM_Rebate_File_Submission_001NS</DataSetName>
             <Height>0.8in</Height>
             <Width>94.5in</Width>
-            <Style/>
+            <Style />
           </Tablix>
         </ReportItems>
         <Height>0.8in</Height>
-        <Style/>
+        <Style />
       </Body>
       <Width>94.5in</Width>
       <Page>
@@ -5066,10 +4969,107 @@
         <RightMargin>0.4in</RightMargin>
         <TopMargin>0.5in</TopMargin>
         <BottomMargin>0.5in</BottomMargin>
-        <Style/>
+        <Style />
       </Page>
     </ReportSection>
   </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="SystemLink">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>PRAT</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>System Link</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dsSystemLinkLookUp</DataSetName>
+          <ValueField>SYSTEM_LINK</ValueField>
+          <LabelField>SystemLinkNumber</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="SystemNumber">
+      <DataType>String</DataType>
+      <Prompt>System</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>pr_systemlookupAllFrSystemLink</DataSetName>
+          <ValueField>SYSTEM_NUMBER</ValueField>
+          <LabelField>SYSTEM_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="SponsorNumber">
+      <DataType>String</DataType>
+      <Prompt>Sponsor</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>pr_sponsorlookupallfrsystem</DataSetName>
+          <ValueField>SPONSOR_NUMBER</ValueField>
+          <LabelField>SPONSOR_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="MasterGroupNumber">
+      <DataType>String</DataType>
+      <Prompt>Master Group</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dsmastergrouplookupallfrsystem</DataSetName>
+          <ValueField>MASTER_GROUP</ValueField>
+          <LabelField>MASTER_GROUP_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="GroupNumber">
+      <DataType>String</DataType>
+      <Prompt>Sub Group</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dsGroupLookupAllfrMasterGroup</DataSetName>
+          <ValueField>GROUP_NUMBER</ValueField>
+          <LabelField>GROUP_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="BegDate">
+      <DataType>DateTime</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsDateCall</DataSetName>
+          <ValueField>FirstOfMonth</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>BegDate</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="EndDate">
+      <DataType>DateTime</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsDateCall</DataSetName>
+          <ValueField>LastOfMonth</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>EndDate</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="RID">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <Prompt>RID</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="DateFlag">
+      <DataType>String</DataType>
+      <Prompt>Date Flag</Prompt>
+    </ReportParameter>
+  </ReportParameters>
   <Language>en-US</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportID>dd18590d-e9e5-4e27-a63a-60c6e6534cef</rd:ReportID>

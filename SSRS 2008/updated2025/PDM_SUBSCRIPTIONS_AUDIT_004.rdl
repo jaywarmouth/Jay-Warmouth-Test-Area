@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition">
   <DataSources>
     <DataSource Name="DB11">
@@ -354,116 +354,6 @@
       </Query>
     </DataSet>
   </DataSets>
-  <ReportParameters>
-    <ReportParameter Name="SystemLink">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
-        </Values>
-      </DefaultValue>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>System Link</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dspr_SystemLinkLookupAll_002</DataSetName>
-          <ValueField>SYSTEM_LINK</ValueField>
-          <LabelField>SYS_LINK_DESCRIPTION</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="SystemNumber">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>-1</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>System Number</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dspr_SystemLookupAllfrSystemLink_002</DataSetName>
-          <ValueField>SYSTEM_NUMBER</ValueField>
-          <LabelField>SYSTEM_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="SponsorNumber">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>-1</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>Sponsor Number</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dspr_SponsorLookupAllfrSystem_002</DataSetName>
-          <ValueField>SPONSOR_NUMBER</ValueField>
-          <LabelField>SPONSOR_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="MasterGroupNumber">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>-1</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>Master Group Number</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dspr_MasterGroupLookupAllfrSponsor_002</DataSetName>
-          <ValueField>MASTER_GROUP</ValueField>
-          <LabelField>MASTER_GROUP_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="GroupNumber">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>-1</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>Group Number</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dspr_GroupLookupAllfrMasterGroup_002</DataSetName>
-          <ValueField>GROUP_NUMBER</ValueField>
-          <LabelField>GROUP_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="ActiveFlag">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>A</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>Active Definitions</Prompt>
-      <ValidValues>
-        <ParameterValues>
-          <ParameterValue>
-            <Value>Y</Value>
-            <Label>Active Only</Label>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>A</Value>
-            <Label>All Definitions</Label>
-          </ParameterValue>
-        </ParameterValues>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="searchString">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <Prompt>search String</Prompt>
-    </ReportParameter>
-  </ReportParameters>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -1552,13 +1442,13 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>TableName</rd:DefaultName>
                           <ZIndex>6</ZIndex>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>=iif(RowNumber(Nothing) Mod 2, "WhiteSmoke", "White")</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1585,12 +1475,12 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>SystemLink</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>=iif(RowNumber(Nothing) Mod 2, "WhiteSmoke", "White")</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1617,12 +1507,12 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>SystemNumber</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>=iif(RowNumber(Nothing) Mod 2, "WhiteSmoke", "White")</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1649,12 +1539,12 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>SponsorNumber</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>=iif(RowNumber(Nothing) Mod 2, "WhiteSmoke", "White")</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1681,12 +1571,12 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>MasterGroupNumber</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>=iif(RowNumber(Nothing) Mod 2, "WhiteSmoke", "White")</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1713,12 +1603,12 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>GroupNumber</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>=iif(RowNumber(Nothing) Mod 2, "WhiteSmoke", "White")</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1745,12 +1635,12 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>DateFlag</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>=iif(RowNumber(Nothing) Mod 2, "WhiteSmoke", "White")</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1777,12 +1667,12 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>BegDate</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>=iif(RowNumber(Nothing) Mod 2, "WhiteSmoke", "White")</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1809,12 +1699,12 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>EndDate</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>=iif(RowNumber(Nothing) Mod 2, "WhiteSmoke", "White")</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1841,12 +1731,12 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>InvoiceBeginDate</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>=iif(RowNumber(Nothing) Mod 2, "WhiteSmoke", "White")</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1873,12 +1763,12 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>InvoiceDate</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>=iif(RowNumber(Nothing) Mod 2, "WhiteSmoke", "White")</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1905,12 +1795,12 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>RecipientTo</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>=iif(RowNumber(Nothing) Mod 2, "WhiteSmoke", "White")</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1937,12 +1827,12 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>RecipientCC</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>=iif(RowNumber(Nothing) Mod 2, "WhiteSmoke", "White")</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1969,12 +1859,12 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>RecipientBCC</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>=iif(RowNumber(Nothing) Mod 2, "WhiteSmoke", "White")</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -2001,12 +1891,12 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>RecipientFile</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>=iif(RowNumber(Nothing) Mod 2, "WhiteSmoke", "White")</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -2033,12 +1923,12 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>FileName</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>=iif(RowNumber(Nothing) Mod 2, "WhiteSmoke", "White")</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -2065,12 +1955,12 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Format</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>=iif(RowNumber(Nothing) Mod 2, "WhiteSmoke", "White")</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -2097,12 +1987,12 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Frequency</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>=iif(RowNumber(Nothing) Mod 2, "WhiteSmoke", "White")</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -2129,12 +2019,12 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>CycleType</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>=iif(RowNumber(Nothing) Mod 2, "WhiteSmoke", "White")</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -2161,12 +2051,12 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>ReportTermDate</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>=iif(RowNumber(Nothing) Mod 2, "WhiteSmoke", "White")</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -2193,12 +2083,12 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Runtime</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>=iif(RowNumber(Nothing) Mod 2, "WhiteSmoke", "White")</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -2225,12 +2115,12 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>SystemGroup</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>=iif(RowNumber(Nothing) Mod 2, "WhiteSmoke", "White")</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -2257,12 +2147,12 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>PrettyName</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>=iif(RowNumber(Nothing) Mod 2, "WhiteSmoke", "White")</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -2289,12 +2179,12 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>BufferDays</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>=iif(RowNumber(Nothing) Mod 2, "WhiteSmoke", "White")</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -2321,12 +2211,12 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>BufferWeekends</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>=iif(RowNumber(Nothing) Mod 2, "WhiteSmoke", "White")</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -2353,12 +2243,12 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>BufferHolidays</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>=iif(RowNumber(Nothing) Mod 2, "WhiteSmoke", "White")</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -2385,12 +2275,12 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>WriteMode</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>=iif(RowNumber(Nothing) Mod 2, "WhiteSmoke", "White")</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -2406,33 +2296,33 @@
             </TablixBody>
             <TablixColumnHierarchy>
               <TablixMembers>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -2447,7 +2337,7 @@
                         <DataElementName>Detail</DataElementName>
                       </Group>
                       <TablixMembers>
-                        <TablixMember/>
+                        <TablixMember />
                       </TablixMembers>
                       <DataElementName>Detail_Collection</DataElementName>
                       <DataElementOutput>Output</DataElementOutput>
@@ -2461,7 +2351,7 @@
             <Top>0.875in</Top>
             <Height>0.565in</Height>
             <Width>30in</Width>
-            <Style/>
+            <Style />
           </Tablix>
           <Textbox Name="textbox25">
             <CanGrow>true</CanGrow>
@@ -2621,9 +2511,9 @@
                 <TextRuns>
                   <TextRun>
                     <Value>="Search String:   " &amp; UCase(Parameters!searchString.Value) &amp; 
-iif(Parameters!ActiveFlag.Value = "Y", 
-" - Active Subscriptions Only",
-"")</Value>
+    iif(Parameters!ActiveFlag.Value = "Y", 
+    " - Active Subscriptions Only",
+    "")</Value>
                     <Style>
                       <FontFamily>Tahoma</FontFamily>
                       <FontSize>8pt</FontSize>
@@ -2640,10 +2530,10 @@ iif(Parameters!ActiveFlag.Value = "Y",
                 <TextRuns>
                   <TextRun>
                     <Value>="System: " + Parameters!SystemLink.Value + "/" +
-Parameters!SystemNumber.Value +
-"; Sponsor: " + Parameters!SponsorNumber.Value +
-"; MG: " + Parameters!MasterGroupNumber.Value +
-"; Group: " + Parameters!GroupNumber.Value</Value>
+    Parameters!SystemNumber.Value +
+    "; Sponsor: " + Parameters!SponsorNumber.Value +
+    "; MG: " + Parameters!MasterGroupNumber.Value +
+    "; Group: " + Parameters!GroupNumber.Value</Value>
                     <Style>
                       <FontFamily>Tahoma</FontFamily>
                       <FontSize>8pt</FontSize>
@@ -2676,7 +2566,7 @@ Parameters!SystemNumber.Value +
           </Textbox>
         </ReportItems>
         <Height>1.44in</Height>
-        <Style/>
+        <Style />
       </Body>
       <Width>30in</Width>
       <Page>
@@ -2688,10 +2578,120 @@ Parameters!SystemNumber.Value +
         <RightMargin>0.3in</RightMargin>
         <TopMargin>0.3in</TopMargin>
         <BottomMargin>0.3in</BottomMargin>
-        <Style/>
+        <Style />
       </Page>
     </ReportSection>
   </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="SystemLink">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>System Link</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dspr_SystemLinkLookupAll_002</DataSetName>
+          <ValueField>SYSTEM_LINK</ValueField>
+          <LabelField>SYS_LINK_DESCRIPTION</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="SystemNumber">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>-1</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>System Number</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dspr_SystemLookupAllfrSystemLink_002</DataSetName>
+          <ValueField>SYSTEM_NUMBER</ValueField>
+          <LabelField>SYSTEM_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="SponsorNumber">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>-1</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Sponsor Number</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dspr_SponsorLookupAllfrSystem_002</DataSetName>
+          <ValueField>SPONSOR_NUMBER</ValueField>
+          <LabelField>SPONSOR_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="MasterGroupNumber">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>-1</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Master Group Number</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dspr_MasterGroupLookupAllfrSponsor_002</DataSetName>
+          <ValueField>MASTER_GROUP</ValueField>
+          <LabelField>MASTER_GROUP_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="GroupNumber">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>-1</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Group Number</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dspr_GroupLookupAllfrMasterGroup_002</DataSetName>
+          <ValueField>GROUP_NUMBER</ValueField>
+          <LabelField>GROUP_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="ActiveFlag">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>A</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Active Definitions</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>Y</Value>
+            <Label>Active Only</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>A</Value>
+            <Label>All Definitions</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="searchString">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <Prompt>search String</Prompt>
+    </ReportParameter>
+  </ReportParameters>
   <Language>en-US</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportID>35fdd1c6-1a04-4619-94cf-c6c97ec569c1</rd:ReportID>

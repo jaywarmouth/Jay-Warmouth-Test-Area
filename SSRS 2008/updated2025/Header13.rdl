@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition">
   <DataSources>
     <DataSource Name="claims">
@@ -64,7 +64,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
     <DataSet Name="dsServername">
       <Fields>
         <Field Name="ID">
-          <DataField/>
+          <DataField />
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
@@ -75,26 +75,6 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
       </Query>
     </DataSet>
   </DataSets>
-  <ReportParameters>
-    <ReportParameter Name="ReportID">
-      <DataType>String</DataType>
-      <Prompt>ReportID</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="BegDate">
-      <DataType>Integer</DataType>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>Beg Date</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="EndDate">
-      <DataType>Integer</DataType>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>End Date</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="SystemLink">
-      <DataType>String</DataType>
-      <Prompt>SystemLink</Prompt>
-    </ReportParameter>
-  </ReportParameters>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -235,7 +215,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                         </Style>
                       </TextRun>
                     </TextRuns>
-                    <Style/>
+                    <Style />
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>SYS_LINK_DESCRIPTION</rd:DefaultName>
@@ -261,7 +241,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
           </Rectangle>
         </ReportItems>
         <Height>0.7in</Height>
-        <Style/>
+        <Style />
       </Body>
       <Width>10in</Width>
       <Page>
@@ -269,10 +249,30 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
         <RightMargin>1in</RightMargin>
         <TopMargin>1in</TopMargin>
         <BottomMargin>1in</BottomMargin>
-        <Style/>
+        <Style />
       </Page>
     </ReportSection>
   </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="ReportID">
+      <DataType>String</DataType>
+      <Prompt>ReportID</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="BegDate">
+      <DataType>Integer</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Beg Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="EndDate">
+      <DataType>Integer</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>End Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SystemLink">
+      <DataType>String</DataType>
+      <Prompt>SystemLink</Prompt>
+    </ReportParameter>
+  </ReportParameters>
   <Language>en-US</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportID>be1d9606-5899-4049-82e1-042d4cd6982e</rd:ReportID>

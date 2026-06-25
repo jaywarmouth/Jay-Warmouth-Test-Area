@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition">
   <DataSources>
     <DataSource Name="claims_subscriptions">
@@ -197,7 +197,7 @@
     <DataSet Name="dspr_ServerNameLookup">
       <Fields>
         <Field Name="ID">
-          <DataField/>
+          <DataField />
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
@@ -375,66 +375,6 @@
       </Query>
     </DataSet>
   </DataSets>
-  <ReportParameters>
-    <ReportParameter Name="SystemLink">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>EVER</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>SystemLink</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>rwSystemLinkLookup</DataSetName>
-          <ValueField>SYSTEM_LINK</ValueField>
-          <LabelField>SystemLinkNumber</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="SystemNumber">
-      <DataType>Integer</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsReportUserInfo</DataSetName>
-          <ValueField>SystemNumber</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>SystemNumber</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dssystemLookUpfrSystemLink</DataSetName>
-          <ValueField>SYSTEM_NUMBER</ValueField>
-          <LabelField>SYSTEM_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="InvoiceBeginDate">
-      <DataType>DateTime</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsDateCall</DataSetName>
-          <ValueField>FirstOfMonth</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>Invoice Begin Date</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="InvoiceDate">
-      <DataType>DateTime</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsDateCall</DataSetName>
-          <ValueField>LastOfMonth</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>Invoice Date</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="InvoiceNo">
-      <DataType>String</DataType>
-      <Prompt>Invoice No</Prompt>
-    </ReportParameter>
-  </ReportParameters>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -526,21 +466,21 @@
                         <ColSpan>16</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
@@ -555,16 +495,16 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
-                                  <Style/>
+                                  <Value />
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <ZIndex>1</ZIndex>
                           <Style>
-                            <Border/>
+                            <Border />
                             <VerticalAlign>Bottom</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -573,8 +513,8 @@
                         <ColSpan>3</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
-                    <TablixCell/>
+                    <TablixCell />
+                    <TablixCell />
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Textbox160">
@@ -584,11 +524,11 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
-                                  <Style/>
+                                  <Value />
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox160</rd:DefaultName>
@@ -608,14 +548,14 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox161</rd:DefaultName>
@@ -637,14 +577,14 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox162</rd:DefaultName>
@@ -666,14 +606,14 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox107</rd:DefaultName>
@@ -695,14 +635,14 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox124</rd:DefaultName>
@@ -724,14 +664,14 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox134</rd:DefaultName>
@@ -753,14 +693,14 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox144</rd:DefaultName>
@@ -782,14 +722,14 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox83</rd:DefaultName>
@@ -811,14 +751,14 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox163</rd:DefaultName>
@@ -840,7 +780,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>18pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -894,8 +834,8 @@
                         <ColSpan>3</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
-                    <TablixCell/>
+                    <TablixCell />
+                    <TablixCell />
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
@@ -911,10 +851,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>= First(Fields!BillFromName.Value, "dspr_clasAdmin_FeeSum_002_NS")</Value>
-                                  <Style/>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <ZIndex>1</ZIndex>
@@ -926,8 +866,8 @@
                         <ColSpan>3</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
-                    <TablixCell/>
+                    <TablixCell />
+                    <TablixCell />
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="textbox34">
@@ -938,8 +878,8 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>="Invoice Number: " &amp; 
-cstr(Parameters!SystemNumber.Value) &amp;  "-INV-ADMIN-" &amp; 
-format(Parameters!InvoiceDate.Value,"MM-dd-yyyy")</Value>
+    cstr(Parameters!SystemNumber.Value) &amp;  "-INV-ADMIN-" &amp; 
+    format(Parameters!InvoiceDate.Value,"MM-dd-yyyy")</Value>
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                   </Style>
@@ -961,18 +901,18 @@ format(Parameters!InvoiceDate.Value,"MM-dd-yyyy")</Value>
                         <ColSpan>13</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
@@ -988,10 +928,10 @@ format(Parameters!InvoiceDate.Value,"MM-dd-yyyy")</Value>
                               <TextRuns>
                                 <TextRun>
                                   <Value>=First(Fields!BillFromStreet1.Value, "dspr_clasAdmin_FeeSum_002_NS")</Value>
-                                  <Style/>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <Style>
@@ -1002,8 +942,8 @@ format(Parameters!InvoiceDate.Value,"MM-dd-yyyy")</Value>
                         <ColSpan>3</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
-                    <TablixCell/>
+                    <TablixCell />
+                    <TablixCell />
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="textbox33">
@@ -1014,7 +954,7 @@ format(Parameters!InvoiceDate.Value,"MM-dd-yyyy")</Value>
                               <TextRuns>
                                 <TextRun>
                                   <Value>= "Invoice Date: " &amp; 
-format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-yyyy")</Value>
+    format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-yyyy")</Value>
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                   </Style>
@@ -1036,18 +976,18 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                         <ColSpan>13</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
@@ -1063,12 +1003,12 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                               <TextRuns>
                                 <TextRun>
                                   <Value>=First(Fields!BillFromCity.Value, "dspr_clasAdmin_FeeSum_002_NS") + 
-", " +  First(Fields!BillFromState.Value, "dspr_clasAdmin_FeeSum_002_NS") + 
-"  " +  First(Fields!BillFromZIP.Value, "dspr_clasAdmin_FeeSum_002_NS")</Value>
-                                  <Style/>
+    ", " +  First(Fields!BillFromState.Value, "dspr_clasAdmin_FeeSum_002_NS") + 
+    "  " +  First(Fields!BillFromZIP.Value, "dspr_clasAdmin_FeeSum_002_NS")</Value>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox121</rd:DefaultName>
@@ -1082,8 +1022,8 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                         <ColSpan>3</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
-                    <TablixCell/>
+                    <TablixCell />
+                    <TablixCell />
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="textbox32">
@@ -1115,18 +1055,18 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                         <ColSpan>13</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
@@ -1141,11 +1081,11 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
-                                  <Style/>
+                                  <Value />
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox45</rd:DefaultName>
@@ -1167,11 +1107,11 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
-                                  <Style/>
+                                  <Value />
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox46</rd:DefaultName>
@@ -1193,11 +1133,11 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
-                                  <Style/>
+                                  <Value />
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox47</rd:DefaultName>
@@ -1220,8 +1160,8 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                               <TextRuns>
                                 <TextRun>
                                   <Value>= "Period: " &amp;  
-format(First(Fields!PeriodBeginning.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-yyyy") &amp; "  thru  " &amp;  
-format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-yyyy")</Value>
+    format(First(Fields!PeriodBeginning.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-yyyy") &amp; "  thru  " &amp;  
+    format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-yyyy")</Value>
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                   </Style>
@@ -1243,18 +1183,18 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                         <ColSpan>13</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
@@ -1269,14 +1209,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox169</rd:DefaultName>
@@ -1298,13 +1238,13 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox170</rd:DefaultName>
@@ -1324,11 +1264,11 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
-                                  <Style/>
+                                  <Value />
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox171</rd:DefaultName>
@@ -1370,18 +1310,18 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                         <ColSpan>13</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
@@ -1396,14 +1336,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox23</rd:DefaultName>
@@ -1425,13 +1365,13 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox24</rd:DefaultName>
@@ -1451,11 +1391,11 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
-                                  <Style/>
+                                  <Value />
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox25</rd:DefaultName>
@@ -1475,7 +1415,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                   </Style>
@@ -1505,7 +1445,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                   </Style>
@@ -1535,7 +1475,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                   </Style>
@@ -1565,7 +1505,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                   </Style>
@@ -1595,7 +1535,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                   </Style>
@@ -1625,7 +1565,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                   </Style>
@@ -1655,7 +1595,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                   </Style>
@@ -1685,7 +1625,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                   </Style>
@@ -1715,7 +1655,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                   </Style>
@@ -1745,7 +1685,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                   </Style>
@@ -1775,7 +1715,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                   </Style>
@@ -1805,7 +1745,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                   </Style>
@@ -1835,7 +1775,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                   </Style>
@@ -1870,14 +1810,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox7</rd:DefaultName>
@@ -1899,13 +1839,13 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox8</rd:DefaultName>
@@ -1925,11 +1865,11 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
-                                  <Style/>
+                                  <Value />
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox9</rd:DefaultName>
@@ -1949,7 +1889,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                   </Style>
@@ -1979,7 +1919,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                   </Style>
@@ -2009,7 +1949,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                   </Style>
@@ -2039,7 +1979,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                   </Style>
@@ -2069,7 +2009,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                   </Style>
@@ -2099,7 +2039,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                   </Style>
@@ -2129,7 +2069,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                   </Style>
@@ -2159,7 +2099,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                   </Style>
@@ -2189,7 +2129,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                   </Style>
@@ -2219,7 +2159,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                   </Style>
@@ -2249,7 +2189,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                   </Style>
@@ -2279,7 +2219,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                   </Style>
@@ -2309,7 +2249,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                   </Style>
@@ -2344,14 +2284,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox109</rd:DefaultName>
@@ -2379,7 +2319,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <ZIndex>13</ZIndex>
@@ -2399,11 +2339,11 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
-                                  <Style/>
+                                  <Value />
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox111</rd:DefaultName>
@@ -2423,11 +2363,11 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
-                                  <Style/>
+                                  <Value />
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox112</rd:DefaultName>
@@ -2447,14 +2387,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox113</rd:DefaultName>
@@ -2476,14 +2416,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox114</rd:DefaultName>
@@ -2505,14 +2445,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox116</rd:DefaultName>
@@ -2534,14 +2474,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox127</rd:DefaultName>
@@ -2563,14 +2503,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox137</rd:DefaultName>
@@ -2592,14 +2532,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox147</rd:DefaultName>
@@ -2621,14 +2561,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox87</rd:DefaultName>
@@ -2650,14 +2590,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox115</rd:DefaultName>
@@ -2679,7 +2619,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                   </Style>
@@ -2709,7 +2649,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                   </Style>
@@ -2731,8 +2671,8 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                         <ColSpan>3</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
-                    <TablixCell/>
+                    <TablixCell />
+                    <TablixCell />
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
@@ -2747,14 +2687,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox97</rd:DefaultName>
@@ -2777,10 +2717,10 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                               <TextRuns>
                                 <TextRun>
                                   <Value>= Fields!BillToName.Value</Value>
-                                  <Style/>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <ZIndex>10</ZIndex>
@@ -2792,8 +2732,8 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                         <ColSpan>3</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
-                    <TablixCell/>
+                    <TablixCell />
+                    <TablixCell />
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Textbox101">
@@ -2803,14 +2743,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox101</rd:DefaultName>
@@ -2832,14 +2772,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox102</rd:DefaultName>
@@ -2861,14 +2801,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox117</rd:DefaultName>
@@ -2890,14 +2830,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox128</rd:DefaultName>
@@ -2919,14 +2859,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox138</rd:DefaultName>
@@ -2948,14 +2888,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox148</rd:DefaultName>
@@ -2977,14 +2917,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox88</rd:DefaultName>
@@ -3006,14 +2946,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox103</rd:DefaultName>
@@ -3035,14 +2975,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox158</rd:DefaultName>
@@ -3064,14 +3004,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox104</rd:DefaultName>
@@ -3093,14 +3033,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox105</rd:DefaultName>
@@ -3122,14 +3062,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox106</rd:DefaultName>
@@ -3156,14 +3096,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox85</rd:DefaultName>
@@ -3186,10 +3126,10 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!BillToStreet1.Value</Value>
-                                  <Style/>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <ZIndex>11</ZIndex>
@@ -3201,8 +3141,8 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                         <ColSpan>3</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
-                    <TablixCell/>
+                    <TablixCell />
+                    <TablixCell />
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Textbox89">
@@ -3212,14 +3152,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox89</rd:DefaultName>
@@ -3241,14 +3181,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox90</rd:DefaultName>
@@ -3270,14 +3210,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox118</rd:DefaultName>
@@ -3299,14 +3239,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox129</rd:DefaultName>
@@ -3328,14 +3268,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox139</rd:DefaultName>
@@ -3357,14 +3297,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox149</rd:DefaultName>
@@ -3386,14 +3326,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox95</rd:DefaultName>
@@ -3415,14 +3355,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox91</rd:DefaultName>
@@ -3444,14 +3384,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox159</rd:DefaultName>
@@ -3473,14 +3413,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox92</rd:DefaultName>
@@ -3502,14 +3442,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox93</rd:DefaultName>
@@ -3531,14 +3471,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox94</rd:DefaultName>
@@ -3565,14 +3505,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox73</rd:DefaultName>
@@ -3595,14 +3535,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!BillToCity.Value +
- ", " +  
- Fields!BillToState.Value + 
- "  " +  
- Fields!BillToZIP.Value</Value>
-                                  <Style/>
+     ", " +  
+     Fields!BillToState.Value + 
+     "  " +  
+     Fields!BillToZIP.Value</Value>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <ZIndex>12</ZIndex>
@@ -3614,8 +3554,8 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                         <ColSpan>3</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
-                    <TablixCell/>
+                    <TablixCell />
+                    <TablixCell />
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Textbox77">
@@ -3625,14 +3565,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox77</rd:DefaultName>
@@ -3654,14 +3594,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox78</rd:DefaultName>
@@ -3683,14 +3623,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox119</rd:DefaultName>
@@ -3712,14 +3652,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox130</rd:DefaultName>
@@ -3741,14 +3681,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox140</rd:DefaultName>
@@ -3770,14 +3710,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox150</rd:DefaultName>
@@ -3799,14 +3739,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox96</rd:DefaultName>
@@ -3828,14 +3768,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox79</rd:DefaultName>
@@ -3857,14 +3797,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox164</rd:DefaultName>
@@ -3886,14 +3826,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox80</rd:DefaultName>
@@ -3915,14 +3855,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox81</rd:DefaultName>
@@ -3944,14 +3884,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox82</rd:DefaultName>
@@ -3978,14 +3918,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox61</rd:DefaultName>
@@ -4007,14 +3947,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox62</rd:DefaultName>
@@ -4036,14 +3976,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox63</rd:DefaultName>
@@ -4065,14 +4005,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox64</rd:DefaultName>
@@ -4094,14 +4034,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox65</rd:DefaultName>
@@ -4123,14 +4063,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox66</rd:DefaultName>
@@ -4152,14 +4092,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox120</rd:DefaultName>
@@ -4181,14 +4121,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox131</rd:DefaultName>
@@ -4210,14 +4150,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox141</rd:DefaultName>
@@ -4239,14 +4179,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox151</rd:DefaultName>
@@ -4268,14 +4208,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox98</rd:DefaultName>
@@ -4297,14 +4237,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox67</rd:DefaultName>
@@ -4326,14 +4266,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox165</rd:DefaultName>
@@ -4355,14 +4295,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox68</rd:DefaultName>
@@ -4384,14 +4324,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox69</rd:DefaultName>
@@ -4413,14 +4353,14 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox70</rd:DefaultName>
@@ -4454,7 +4394,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <ZIndex>8</ZIndex>
@@ -4468,21 +4408,21 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                         <ColSpan>16</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
@@ -5168,7 +5108,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                           <rd:DefaultName>Claims_1_150_000</rd:DefaultName>
                           <ZIndex>18</ZIndex>
                           <Style>
-                            <Border/>
+                            <Border />
                             <VerticalAlign>Bottom</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -5202,7 +5142,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                           <rd:DefaultName>Admin_Fee__0_50</rd:DefaultName>
                           <ZIndex>17</ZIndex>
                           <Style>
-                            <Border/>
+                            <Border />
                             <VerticalAlign>Bottom</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -5237,7 +5177,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                           <rd:DefaultName>Claims_150_001_300_000</rd:DefaultName>
                           <ZIndex>16</ZIndex>
                           <Style>
-                            <Border/>
+                            <Border />
                             <VerticalAlign>Bottom</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -5271,7 +5211,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                           <rd:DefaultName>Admin_Fee__0_45</rd:DefaultName>
                           <ZIndex>15</ZIndex>
                           <Style>
-                            <Border/>
+                            <Border />
                             <VerticalAlign>Bottom</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -5305,7 +5245,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                           </Paragraphs>
                           <rd:DefaultName>Textbox123</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <VerticalAlign>Bottom</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -5338,7 +5278,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                           </Paragraphs>
                           <rd:DefaultName>Textbox133</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <VerticalAlign>Bottom</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -5372,7 +5312,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                           </Paragraphs>
                           <rd:DefaultName>Textbox143</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <VerticalAlign>Bottom</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -5405,7 +5345,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                           </Paragraphs>
                           <rd:DefaultName>Textbox153</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <VerticalAlign>Bottom</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -5439,7 +5379,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                           </Paragraphs>
                           <rd:DefaultName>Textbox100</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <VerticalAlign>Bottom</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -5472,7 +5412,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                           </Paragraphs>
                           <rd:DefaultName>Claims_300_001_</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <VerticalAlign>Bottom</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -5506,7 +5446,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                           </Paragraphs>
                           <rd:DefaultName>Textbox167</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <VerticalAlign>Bottom</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -5540,7 +5480,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                           </Paragraphs>
                           <rd:DefaultName>Admin_Fee__0_40</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <VerticalAlign>Bottom</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -5574,7 +5514,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                           </Paragraphs>
                           <rd:DefaultName>Total_Claims1</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <VerticalAlign>Bottom</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -5607,7 +5547,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                           </Paragraphs>
                           <rd:DefaultName>Total_Admin_Fee_Due</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <VerticalAlign>Bottom</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -5624,22 +5564,22 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
             </TablixBody>
             <TablixColumnHierarchy>
               <TablixMembers>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -5647,20 +5587,20 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
                 <TablixMember>
                   <KeepTogether>true</KeepTogether>
                 </TablixMember>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
                 <TablixMember>
                   <KeepTogether>true</KeepTogether>
                 </TablixMember>
@@ -5674,11 +5614,11 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
             <Height>5.17499in</Height>
             <Width>13.24in</Width>
             <DataElementOutput>NoOutput</DataElementOutput>
-            <Style/>
+            <Style />
           </Tablix>
         </ReportItems>
         <Height>5.17499in</Height>
-        <Style/>
+        <Style />
       </Body>
       <Width>13.24in</Width>
       <Page>
@@ -5715,7 +5655,7 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
               </Style>
             </Textbox>
           </ReportItems>
-          <Style/>
+          <Style />
         </PageFooter>
         <PageHeight>11.69in</PageHeight>
         <PageWidth>8.27in</PageWidth>
@@ -5723,10 +5663,70 @@ format(First(Fields!PeriodEnding.Value, "dspr_clasAdmin_FeeSum_002_NS"),"MM-dd-y
         <RightMargin>0.3in</RightMargin>
         <TopMargin>0.1in</TopMargin>
         <BottomMargin>0.3in</BottomMargin>
-        <Style/>
+        <Style />
       </Page>
     </ReportSection>
   </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="SystemLink">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>EVER</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>SystemLink</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>rwSystemLinkLookup</DataSetName>
+          <ValueField>SYSTEM_LINK</ValueField>
+          <LabelField>SystemLinkNumber</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="SystemNumber">
+      <DataType>Integer</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsReportUserInfo</DataSetName>
+          <ValueField>SystemNumber</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>SystemNumber</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dssystemLookUpfrSystemLink</DataSetName>
+          <ValueField>SYSTEM_NUMBER</ValueField>
+          <LabelField>SYSTEM_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="InvoiceBeginDate">
+      <DataType>DateTime</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsDateCall</DataSetName>
+          <ValueField>FirstOfMonth</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Invoice Begin Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="InvoiceDate">
+      <DataType>DateTime</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsDateCall</DataSetName>
+          <ValueField>LastOfMonth</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Invoice Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="InvoiceNo">
+      <DataType>String</DataType>
+      <Prompt>Invoice No</Prompt>
+    </ReportParameter>
+  </ReportParameters>
   <Language>en-US</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportID>f5ee2e0f-462d-4cc7-b22c-faf0c6fcfe26</rd:ReportID>

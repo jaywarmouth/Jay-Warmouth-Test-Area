@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition">
   <DataSources>
     <DataSource Name="claims_subscriptions">
@@ -11,7 +11,7 @@
     <DataSet Name="dspr_ServerNameLookup">
       <Fields>
         <Field Name="ID">
-          <DataField/>
+          <DataField />
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
@@ -441,166 +441,6 @@
       </Query>
     </DataSet>
   </DataSets>
-  <ReportParameters>
-    <ReportParameter Name="SystemLink">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dspr_ReportUserInfo</DataSetName>
-          <ValueField>SystemLink</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>SystemLink</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dspr_SystemLinkLookup</DataSetName>
-          <ValueField>SYSTEM_LINK</ValueField>
-          <LabelField>SystemLinkNumber</LabelField>
-        </DataSetReference>
-      </ValidValues>
-      <MultiValue>true</MultiValue>
-    </ReportParameter>
-    <ReportParameter Name="SystemNumber">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dspr_ReportUserInfo</DataSetName>
-          <ValueField>SystemNumber</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>SystemNumber</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dspr_SystemLookupfrAllSystemLink</DataSetName>
-          <ValueField>SYSTEM_NUMBER</ValueField>
-          <LabelField>SYSTEM_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-      <MultiValue>true</MultiValue>
-    </ReportParameter>
-    <ReportParameter Name="SponsorNumber">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dspr_ReportUserInfo</DataSetName>
-          <ValueField>SponsorNumber</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>SponsorNumber</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dspr_SponsorLookupfrAllSystem</DataSetName>
-          <ValueField>SPONSOR_NUMBER</ValueField>
-          <LabelField>SPONSOR_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-      <MultiValue>true</MultiValue>
-    </ReportParameter>
-    <ReportParameter Name="MasterGroupNumber">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dspr_ReportUserInfo</DataSetName>
-          <ValueField>MasterGroupNumber</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>MasterGroupNumber</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dspr_MasterGroupLookupfrAllSponsor</DataSetName>
-          <ValueField>MASTER_GROUP</ValueField>
-          <LabelField>MASTER_GROUP_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-      <MultiValue>true</MultiValue>
-    </ReportParameter>
-    <ReportParameter Name="GroupNumber">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dspr_ReportUserInfo</DataSetName>
-          <ValueField>GroupNumber</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>GroupNumber</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dspr_GroupLookupfrAllMasterGroup</DataSetName>
-          <ValueField>GROUP_NUMBER</ValueField>
-          <LabelField>GROUP_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-      <MultiValue>true</MultiValue>
-    </ReportParameter>
-    <ReportParameter Name="BegDate">
-      <DataType>DateTime</DataType>
-      <Prompt>BegDate</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="EndDate">
-      <DataType>DateTime</DataType>
-      <Prompt>EndDate</Prompt>
-    </ReportParameter>
-  </ReportParameters>
-  <Code>Function GetValue(ByVal parameterName As String) As String
-   Dim s as String  =  " "  &amp; vbCrLf   
-   Dim i as Integer
-   IF Report.Parameters(parameterName).Label(0) = " All" THEN
-     s = s &amp;  Report.Parameters(parameterName).Label(0)
-     s = s &amp; vbCrLf &amp; vbCrLf
-     return s
-   ELSE
-    For i = 0 to Report.Parameters(parameterName).Count - 1
-       s = s  &amp; RTrim(Report.Parameters(parameterName).Label(i))
-       IF i &lt; Report.Parameters(parameterName).Count -1 THEN
-           s = s &amp; ", "
-       END IF
-
-       IF (i  Mod 3) = 2 THEN
-           s = s &amp; " "  &amp; vbCrLf  
-       ELSE 
-           s = s &amp; " "
-       END IF 
-
-       IF i = Report.Parameters(parameterName).Count -1 AND  (i  Mod 3) &lt;&gt; 2 THEN
-           s = s &amp; vbCrLf
-       END IF
-       IF i = Report.Parameters(parameterName).Count -1 THEN
-           s = s &amp; vbCrLf
-       END IF
-   Next
-   END IF
-   Return s
-End Function
-
-Function isMultipleSelectionReport() As boolean
-  Dim isMultipleSelection As boolean = false
-  IF Report.Parameters("SystemLink").Count &gt; 1 THEN
-    return true
-  ELSE IF Report.Parameters("SystemNumber").Count &gt; 1 THEN
-    return true
-  ELSE IF Report.Parameters("SponsorNumber").Count &gt; 1 THEN
-    return true
-  ELSE IF Report.Parameters("MasterGroupNumber").Count &gt; 1 THEN
-    return true
-  ELSE IF Report.Parameters("GroupNumber").Count &gt; 1 THEN
-    return true
-  END IF
-  return false
-End Function
-
-       'IF i &lt; Report.Parameters(parameterName).Count Mod 2 = 1 THEN
-       '    s = s &amp; " "  &amp; vbCrLf  
-       'ELSE 
-       '    s = s &amp; " "
-       'END IF
-
-function Divide(a, b, c) 
-   if b = 0 then 
-   return c 
-   else 
-   return a/b 
-   end if 
-end function </Code>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -694,20 +534,20 @@ end function </Code>
                         <ColSpan>15</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
@@ -1038,7 +878,7 @@ end function </Code>
                         <ColSpan>2</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
+                    <TablixCell />
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="textbox5">
@@ -1427,7 +1267,7 @@ end function </Code>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <ZIndex>40</ZIndex>
@@ -1501,7 +1341,7 @@ end function </Code>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <ZIndex>38</ZIndex>
@@ -1575,7 +1415,7 @@ end function </Code>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <ZIndex>36</ZIndex>
@@ -1649,7 +1489,7 @@ end function </Code>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <ZIndex>34</ZIndex>
@@ -1685,7 +1525,7 @@ end function </Code>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <ZIndex>33</ZIndex>
@@ -1721,7 +1561,7 @@ end function </Code>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox75</rd:DefaultName>
@@ -1758,7 +1598,7 @@ end function </Code>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox81</rd:DefaultName>
@@ -1799,7 +1639,7 @@ end function </Code>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox33</rd:DefaultName>
@@ -1986,7 +1826,7 @@ end function </Code>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <ZIndex>25</ZIndex>
@@ -2060,7 +1900,7 @@ end function </Code>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <ZIndex>23</ZIndex>
@@ -2134,7 +1974,7 @@ end function </Code>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <ZIndex>21</ZIndex>
@@ -2208,7 +2048,7 @@ end function </Code>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <ZIndex>19</ZIndex>
@@ -2244,7 +2084,7 @@ end function </Code>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <ZIndex>18</ZIndex>
@@ -2280,7 +2120,7 @@ end function </Code>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox76</rd:DefaultName>
@@ -2317,7 +2157,7 @@ end function </Code>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox82</rd:DefaultName>
@@ -2358,7 +2198,7 @@ end function </Code>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>YearDate</rd:DefaultName>
@@ -2550,7 +2390,7 @@ end function </Code>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox18</rd:DefaultName>
@@ -2626,7 +2466,7 @@ end function </Code>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox24</rd:DefaultName>
@@ -2702,7 +2542,7 @@ end function </Code>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox29</rd:DefaultName>
@@ -2778,7 +2618,7 @@ end function </Code>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox32</rd:DefaultName>
@@ -2815,7 +2655,7 @@ end function </Code>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox34</rd:DefaultName>
@@ -2852,7 +2692,7 @@ end function </Code>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox77</rd:DefaultName>
@@ -2889,7 +2729,7 @@ end function </Code>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox83</rd:DefaultName>
@@ -2930,7 +2770,7 @@ end function </Code>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox4</rd:DefaultName>
@@ -3118,7 +2958,7 @@ end function </Code>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox18</rd:DefaultName>
@@ -3192,7 +3032,7 @@ end function </Code>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox24</rd:DefaultName>
@@ -3266,7 +3106,7 @@ end function </Code>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox29</rd:DefaultName>
@@ -3340,7 +3180,7 @@ end function </Code>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox32</rd:DefaultName>
@@ -3376,7 +3216,7 @@ end function </Code>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox34</rd:DefaultName>
@@ -3412,7 +3252,7 @@ end function </Code>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox77</rd:DefaultName>
@@ -3448,7 +3288,7 @@ end function </Code>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox83</rd:DefaultName>
@@ -3507,41 +3347,41 @@ end function </Code>
                         <ColSpan>15</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
                   </TablixCells>
                 </TablixRow>
               </TablixRows>
             </TablixBody>
             <TablixColumnHierarchy>
               <TablixMembers>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -3623,7 +3463,7 @@ end function </Code>
             <Left>0.00004in</Left>
             <Height>1.30834in</Height>
             <Width>9.99998in</Width>
-            <Style/>
+            <Style />
           </Tablix>
           <Subreport Name="subreport1">
             <ReportName>Header13NS</ReportName>
@@ -3650,7 +3490,7 @@ end function </Code>
             </Visibility>
             <DataElementOutput>NoOutput</DataElementOutput>
             <Style>
-              <Border/>
+              <Border />
             </Style>
           </Subreport>
           <Subreport Name="subreport3">
@@ -3692,12 +3532,12 @@ end function </Code>
             </Visibility>
             <DataElementOutput>NoOutput</DataElementOutput>
             <Style>
-              <Border/>
+              <Border />
             </Style>
           </Subreport>
         </ReportItems>
         <Height>3.43334in</Height>
-        <Style/>
+        <Style />
       </Body>
       <Width>10.00002in</Width>
       <Page>
@@ -3736,7 +3576,7 @@ end function </Code>
               </Style>
             </Textbox>
           </ReportItems>
-          <Style/>
+          <Style />
         </PageFooter>
         <PageHeight>8.5in</PageHeight>
         <PageWidth>11in</PageWidth>
@@ -3746,10 +3586,170 @@ end function </Code>
         <RightMargin>0.4in</RightMargin>
         <TopMargin>0.3in</TopMargin>
         <BottomMargin>0.3in</BottomMargin>
-        <Style/>
+        <Style />
       </Page>
     </ReportSection>
   </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="SystemLink">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dspr_ReportUserInfo</DataSetName>
+          <ValueField>SystemLink</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>SystemLink</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dspr_SystemLinkLookup</DataSetName>
+          <ValueField>SYSTEM_LINK</ValueField>
+          <LabelField>SystemLinkNumber</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="SystemNumber">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dspr_ReportUserInfo</DataSetName>
+          <ValueField>SystemNumber</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>SystemNumber</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dspr_SystemLookupfrAllSystemLink</DataSetName>
+          <ValueField>SYSTEM_NUMBER</ValueField>
+          <LabelField>SYSTEM_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="SponsorNumber">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dspr_ReportUserInfo</DataSetName>
+          <ValueField>SponsorNumber</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>SponsorNumber</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dspr_SponsorLookupfrAllSystem</DataSetName>
+          <ValueField>SPONSOR_NUMBER</ValueField>
+          <LabelField>SPONSOR_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="MasterGroupNumber">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dspr_ReportUserInfo</DataSetName>
+          <ValueField>MasterGroupNumber</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>MasterGroupNumber</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dspr_MasterGroupLookupfrAllSponsor</DataSetName>
+          <ValueField>MASTER_GROUP</ValueField>
+          <LabelField>MASTER_GROUP_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="GroupNumber">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dspr_ReportUserInfo</DataSetName>
+          <ValueField>GroupNumber</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>GroupNumber</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dspr_GroupLookupfrAllMasterGroup</DataSetName>
+          <ValueField>GROUP_NUMBER</ValueField>
+          <LabelField>GROUP_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="BegDate">
+      <DataType>DateTime</DataType>
+      <Prompt>BegDate</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="EndDate">
+      <DataType>DateTime</DataType>
+      <Prompt>EndDate</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Function GetValue(ByVal parameterName As String) As String
+   Dim s as String  =  " "  &amp; vbCrLf   
+   Dim i as Integer
+   IF Report.Parameters(parameterName).Label(0) = " All" THEN
+     s = s &amp;  Report.Parameters(parameterName).Label(0)
+     s = s &amp; vbCrLf &amp; vbCrLf
+     return s
+   ELSE
+    For i = 0 to Report.Parameters(parameterName).Count - 1
+       s = s  &amp; RTrim(Report.Parameters(parameterName).Label(i))
+       IF i &lt; Report.Parameters(parameterName).Count -1 THEN
+           s = s &amp; ", "
+       END IF
+
+       IF (i  Mod 3) = 2 THEN
+           s = s &amp; " "  &amp; vbCrLf  
+       ELSE 
+           s = s &amp; " "
+       END IF 
+
+       IF i = Report.Parameters(parameterName).Count -1 AND  (i  Mod 3) &lt;&gt; 2 THEN
+           s = s &amp; vbCrLf
+       END IF
+       IF i = Report.Parameters(parameterName).Count -1 THEN
+           s = s &amp; vbCrLf
+       END IF
+   Next
+   END IF
+   Return s
+End Function
+
+Function isMultipleSelectionReport() As boolean
+  Dim isMultipleSelection As boolean = false
+  IF Report.Parameters("SystemLink").Count &gt; 1 THEN
+    return true
+  ELSE IF Report.Parameters("SystemNumber").Count &gt; 1 THEN
+    return true
+  ELSE IF Report.Parameters("SponsorNumber").Count &gt; 1 THEN
+    return true
+  ELSE IF Report.Parameters("MasterGroupNumber").Count &gt; 1 THEN
+    return true
+  ELSE IF Report.Parameters("GroupNumber").Count &gt; 1 THEN
+    return true
+  END IF
+  return false
+End Function
+
+       'IF i &lt; Report.Parameters(parameterName).Count Mod 2 = 1 THEN
+       '    s = s &amp; " "  &amp; vbCrLf  
+       'ELSE 
+       '    s = s &amp; " "
+       'END IF
+
+function Divide(a, b, c) 
+   if b = 0 then 
+   return c 
+   else 
+   return a/b 
+   end if 
+end function </Code>
   <Language>en-US</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportID>7048f5fd-6ef7-4872-909b-b58b6594defa</rd:ReportID>

@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition">
   <DataSources>
     <DataSource Name="claims">
@@ -403,156 +403,6 @@
       </Query>
     </DataSet>
   </DataSets>
-  <ReportParameters>
-    <ReportParameter Name="SystemLink">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>ABC</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>SystemLink</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>rwSystemLinkLookup</DataSetName>
-          <ValueField>SYSTEM_LINK</ValueField>
-          <LabelField>SystemLinkNumber</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="SystemNumber">
-      <DataType>Integer</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <Values>
-          <Value>195</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>SystemNumber</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dssystemLookUpfrSystemLink</DataSetName>
-          <ValueField>SYSTEM_NUMBER</ValueField>
-          <LabelField>SYSTEM_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="SponsorNumber">
-      <DataType>Integer</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <Values>
-          <Value>3620</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>SponsorNumber</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dsSponsorLookUpAllfrSystem</DataSetName>
-          <ValueField>SPONSOR_NUMBER</ValueField>
-          <LabelField>SPONSOR_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="MasterGroupNumber">
-      <DataType>Integer</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsReportUserInfo</DataSetName>
-          <ValueField>MasterGroupNumber</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>MasterGroupNumber</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dsMasterGroupLookupAllfrSponsor</DataSetName>
-          <ValueField>MASTER_GROUP</ValueField>
-          <LabelField>MASTER_GROUP_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="GroupNumber">
-      <DataType>Integer</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsReportUserInfo</DataSetName>
-          <ValueField>GroupNumber</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>Group Number</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dspr_GroupLookupfrAllMasterGroup</DataSetName>
-          <ValueField>GROUP_NUMBER</ValueField>
-          <LabelField>GROUP_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="DateFlag">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsReportUserInfo</DataSetName>
-          <ValueField>PeriodFlag</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>Date Flag</Prompt>
-      <ValidValues>
-        <ParameterValues>
-          <ParameterValue>
-            <Value>R</Value>
-            <Label>Rx Date</Label>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>P</Value>
-            <Label>Process Date</Label>
-          </ParameterValue>
-        </ParameterValues>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="BegDate">
-      <DataType>DateTime</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsDateCall</DataSetName>
-          <ValueField>FirstOfMonth</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>Beg Date</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="EndDate">
-      <DataType>DateTime</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsDateCall</DataSetName>
-          <ValueField>LastOfMonth</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>End Date</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="RID">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
-        </Values>
-      </DefaultValue>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>Report_Parameter_6</Prompt>
-      <Hidden>true</Hidden>
-    </ReportParameter>
-  </ReportParameters>
-  <Code>function Divide(a, b, c) 
-   if b = 0 then 
-   return c 
-   else 
-   return a/b 
-   end if 
-end function 
-</Code>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -631,15 +481,15 @@ end function
                         <ColSpan>10</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
@@ -680,15 +530,15 @@ end function
                         <ColSpan>10</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
@@ -1034,7 +884,7 @@ end function
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>C2</Format>
@@ -1115,7 +965,7 @@ end function
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>SponsorName</rd:DefaultName>
@@ -1224,7 +1074,7 @@ end function
                           <rd:DefaultName>ClaimCount_2</rd:DefaultName>
                           <ZIndex>25</ZIndex>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>LightSteelBlue</BackgroundColor>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1327,7 +1177,7 @@ end function
                           <rd:DefaultName>ReversalClaims3</rd:DefaultName>
                           <ZIndex>23</ZIndex>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>LightSteelBlue</BackgroundColor>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1361,7 +1211,7 @@ end function
                           </Paragraphs>
                           <rd:DefaultName>ReversalAmountPaid</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>LightSteelBlue</BackgroundColor>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1395,7 +1245,7 @@ end function
                           </Paragraphs>
                           <rd:DefaultName>AmountPaid5</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>LightSteelBlue</BackgroundColor>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1461,7 +1311,7 @@ end function
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>MasterGroupName</rd:DefaultName>
@@ -1570,7 +1420,7 @@ end function
                           <rd:DefaultName>Claims</rd:DefaultName>
                           <ZIndex>18</ZIndex>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>LightGrey</BackgroundColor>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1672,7 +1522,7 @@ end function
                           <rd:DefaultName>ReversalClaims4</rd:DefaultName>
                           <ZIndex>16</ZIndex>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>LightGrey</BackgroundColor>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1706,7 +1556,7 @@ end function
                           </Paragraphs>
                           <rd:DefaultName>ReversalAmountPaid1</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>LightGrey</BackgroundColor>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1740,7 +1590,7 @@ end function
                           </Paragraphs>
                           <rd:DefaultName>AmountPaid4</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>LightGrey</BackgroundColor>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1803,7 +1653,7 @@ end function
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>GroupName</rd:DefaultName>
@@ -1905,7 +1755,7 @@ end function
                           <rd:DefaultName>Claims1</rd:DefaultName>
                           <ZIndex>3</ZIndex>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -2001,7 +1851,7 @@ end function
                           <rd:DefaultName>ReversalClaims5</rd:DefaultName>
                           <ZIndex>1</ZIndex>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -2033,7 +1883,7 @@ end function
                           </Paragraphs>
                           <rd:DefaultName>ReversalAmountPaid2</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -2065,7 +1915,7 @@ end function
                           </Paragraphs>
                           <rd:DefaultName>AmountPaid3</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -2115,31 +1965,31 @@ end function
                         <ColSpan>10</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
                   </TablixCells>
                 </TablixRow>
               </TablixRows>
             </TablixBody>
             <TablixColumnHierarchy>
               <TablixMembers>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -2194,7 +2044,7 @@ end function
                             </SortExpression>
                           </SortExpressions>
                           <TablixMembers>
-                            <TablixMember/>
+                            <TablixMember />
                           </TablixMembers>
                           <DataElementName>Detail_Collection</DataElementName>
                           <DataElementOutput>Output</DataElementOutput>
@@ -2213,11 +2063,11 @@ end function
             <DataSetName>dspr_CLSP_ABC_HOSPICE_GRP_001_003</DataSetName>
             <Height>1.76803in</Height>
             <Width>9.49374in</Width>
-            <Style/>
+            <Style />
           </Tablix>
         </ReportItems>
         <Height>2.0914in</Height>
-        <Style/>
+        <Style />
       </Body>
       <Width>9.49374in</Width>
       <Page>
@@ -2254,7 +2104,7 @@ end function
               </Style>
             </Textbox>
           </ReportItems>
-          <Style/>
+          <Style />
         </PageFooter>
         <PageHeight>8.5in</PageHeight>
         <PageWidth>11in</PageWidth>
@@ -2262,10 +2112,160 @@ end function
         <RightMargin>0.3in</RightMargin>
         <TopMargin>0.3in</TopMargin>
         <BottomMargin>0.3in</BottomMargin>
-        <Style/>
+        <Style />
       </Page>
     </ReportSection>
   </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="SystemLink">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ABC</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>SystemLink</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>rwSystemLinkLookup</DataSetName>
+          <ValueField>SYSTEM_LINK</ValueField>
+          <LabelField>SystemLinkNumber</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="SystemNumber">
+      <DataType>Integer</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>195</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>SystemNumber</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dssystemLookUpfrSystemLink</DataSetName>
+          <ValueField>SYSTEM_NUMBER</ValueField>
+          <LabelField>SYSTEM_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="SponsorNumber">
+      <DataType>Integer</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>3620</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>SponsorNumber</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dsSponsorLookUpAllfrSystem</DataSetName>
+          <ValueField>SPONSOR_NUMBER</ValueField>
+          <LabelField>SPONSOR_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="MasterGroupNumber">
+      <DataType>Integer</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsReportUserInfo</DataSetName>
+          <ValueField>MasterGroupNumber</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>MasterGroupNumber</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dsMasterGroupLookupAllfrSponsor</DataSetName>
+          <ValueField>MASTER_GROUP</ValueField>
+          <LabelField>MASTER_GROUP_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="GroupNumber">
+      <DataType>Integer</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsReportUserInfo</DataSetName>
+          <ValueField>GroupNumber</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Group Number</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dspr_GroupLookupfrAllMasterGroup</DataSetName>
+          <ValueField>GROUP_NUMBER</ValueField>
+          <LabelField>GROUP_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="DateFlag">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsReportUserInfo</DataSetName>
+          <ValueField>PeriodFlag</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Date Flag</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>R</Value>
+            <Label>Rx Date</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>P</Value>
+            <Label>Process Date</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="BegDate">
+      <DataType>DateTime</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsDateCall</DataSetName>
+          <ValueField>FirstOfMonth</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Beg Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="EndDate">
+      <DataType>DateTime</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsDateCall</DataSetName>
+          <ValueField>LastOfMonth</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>End Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="RID">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_6</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>function Divide(a, b, c) 
+   if b = 0 then 
+   return c 
+   else 
+   return a/b 
+   end if 
+end function 
+</Code>
   <Language>en-US</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportID>f5ee2e0f-462d-4cc7-b22c-faf0c6fcfe26</rd:ReportID>

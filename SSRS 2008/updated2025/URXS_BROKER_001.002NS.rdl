@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition">
   <DataSources>
     <DataSource Name="claims_subscriptions">
@@ -193,6 +193,129 @@
       </Query>
     </DataSet>
   </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Subreport Name="SummaryPage">
+            <ReportName>URXS_BROKER_002.002NS</ReportName>
+            <Parameters>
+              <Parameter Name="SystemLink">
+                <Value>=Parameters!SystemLink.Value</Value>
+              </Parameter>
+              <Parameter Name="SystemNumber">
+                <Value>=Parameters!SystemNumber.Value</Value>
+              </Parameter>
+              <Parameter Name="SponsorNumber">
+                <Value>=Parameters!SponsorNumber.Value</Value>
+              </Parameter>
+              <Parameter Name="MasterGroupNumber">
+                <Value>=Parameters!MasterGroupNumber.Value</Value>
+              </Parameter>
+              <Parameter Name="GroupNumber">
+                <Value>=Parameters!GroupNumber.Value</Value>
+              </Parameter>
+              <Parameter Name="BrokerNumber">
+                <Value>=Parameters!BrokerNumber.Value</Value>
+              </Parameter>
+              <Parameter Name="BegDate">
+                <Value>=Parameters!BegDate.Value</Value>
+              </Parameter>
+              <Parameter Name="EndDate">
+                <Value>=Parameters!EndDate.Value</Value>
+              </Parameter>
+              <Parameter Name="DateFlag">
+                <Value>=Parameters!DateFlag.Value</Value>
+              </Parameter>
+              <Parameter Name="RID">
+                <Value>=Parameters!RID.Value</Value>
+              </Parameter>
+            </Parameters>
+            <Height>0.60417in</Height>
+            <Width>8.46875in</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Subreport>
+          <Rectangle Name="Rectangle1">
+            <PageBreak>
+              <BreakLocation>Start</BreakLocation>
+            </PageBreak>
+            <KeepTogether>true</KeepTogether>
+            <Top>0.67361in</Top>
+            <Height>0.02083in</Height>
+            <Width>8.46875in</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Subreport Name="DetailPage2">
+            <ReportName>URXS_BROKER_003.001NS</ReportName>
+            <Parameters>
+              <Parameter Name="SystemLink">
+                <Value>=Parameters!SystemLink.Value</Value>
+              </Parameter>
+              <Parameter Name="SystemNumber">
+                <Value>=Parameters!SystemNumber.Value</Value>
+              </Parameter>
+              <Parameter Name="SponsorNumber">
+                <Value>=Parameters!SponsorNumber.Value</Value>
+              </Parameter>
+              <Parameter Name="MasterGroupNumber">
+                <Value>=Parameters!MasterGroupNumber.Value</Value>
+              </Parameter>
+              <Parameter Name="GroupNumber">
+                <Value>=Parameters!GroupNumber.Value</Value>
+              </Parameter>
+              <Parameter Name="BrokerNumber">
+                <Value>=Parameters!BrokerNumber.Value</Value>
+              </Parameter>
+              <Parameter Name="BegDate">
+                <Value>=Parameters!BegDate.Value</Value>
+              </Parameter>
+              <Parameter Name="EndDate">
+                <Value>=Parameters!EndDate.Value</Value>
+              </Parameter>
+              <Parameter Name="DateFlag">
+                <Value>=Parameters!DateFlag.Value</Value>
+              </Parameter>
+              <Parameter Name="RID">
+                <Value>=Parameters!RID.Value</Value>
+              </Parameter>
+            </Parameters>
+            <Top>0.76389in</Top>
+            <Height>0.60417in</Height>
+            <Width>8.46875in</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Subreport>
+        </ReportItems>
+        <Height>1.43056in</Height>
+        <Style />
+      </Body>
+      <Width>8.46875in</Width>
+      <Page>
+        <PageHeight>8.5in</PageHeight>
+        <PageWidth>11in</PageWidth>
+        <InteractiveHeight>11in</InteractiveHeight>
+        <InteractiveWidth>8.5in</InteractiveWidth>
+        <LeftMargin>0.3in</LeftMargin>
+        <RightMargin>0.3in</RightMargin>
+        <TopMargin>0.3in</TopMargin>
+        <BottomMargin>0.3in</BottomMargin>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
   <ReportParameters>
     <ReportParameter Name="SystemLink">
       <DataType>String</DataType>
@@ -360,129 +483,6 @@ End Function
        '    s = s &amp; " "
        'END IF
 </Code>
-  <ReportSections>
-    <ReportSection>
-      <Body>
-        <ReportItems>
-          <Subreport Name="SummaryPage">
-            <ReportName>URXS_BROKER_002.002NS</ReportName>
-            <Parameters>
-              <Parameter Name="SystemLink">
-                <Value>=Parameters!SystemLink.Value</Value>
-              </Parameter>
-              <Parameter Name="SystemNumber">
-                <Value>=Parameters!SystemNumber.Value</Value>
-              </Parameter>
-              <Parameter Name="SponsorNumber">
-                <Value>=Parameters!SponsorNumber.Value</Value>
-              </Parameter>
-              <Parameter Name="MasterGroupNumber">
-                <Value>=Parameters!MasterGroupNumber.Value</Value>
-              </Parameter>
-              <Parameter Name="GroupNumber">
-                <Value>=Parameters!GroupNumber.Value</Value>
-              </Parameter>
-              <Parameter Name="BrokerNumber">
-                <Value>=Parameters!BrokerNumber.Value</Value>
-              </Parameter>
-              <Parameter Name="BegDate">
-                <Value>=Parameters!BegDate.Value</Value>
-              </Parameter>
-              <Parameter Name="EndDate">
-                <Value>=Parameters!EndDate.Value</Value>
-              </Parameter>
-              <Parameter Name="DateFlag">
-                <Value>=Parameters!DateFlag.Value</Value>
-              </Parameter>
-              <Parameter Name="RID">
-                <Value>=Parameters!RID.Value</Value>
-              </Parameter>
-            </Parameters>
-            <Height>0.60417in</Height>
-            <Width>8.46875in</Width>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-            </Style>
-          </Subreport>
-          <Rectangle Name="Rectangle1">
-            <PageBreak>
-              <BreakLocation>Start</BreakLocation>
-            </PageBreak>
-            <KeepTogether>true</KeepTogether>
-            <Top>0.67361in</Top>
-            <Height>0.02083in</Height>
-            <Width>8.46875in</Width>
-            <ZIndex>1</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-            </Style>
-          </Rectangle>
-          <Subreport Name="DetailPage2">
-            <ReportName>URXS_BROKER_003.001NS</ReportName>
-            <Parameters>
-              <Parameter Name="SystemLink">
-                <Value>=Parameters!SystemLink.Value</Value>
-              </Parameter>
-              <Parameter Name="SystemNumber">
-                <Value>=Parameters!SystemNumber.Value</Value>
-              </Parameter>
-              <Parameter Name="SponsorNumber">
-                <Value>=Parameters!SponsorNumber.Value</Value>
-              </Parameter>
-              <Parameter Name="MasterGroupNumber">
-                <Value>=Parameters!MasterGroupNumber.Value</Value>
-              </Parameter>
-              <Parameter Name="GroupNumber">
-                <Value>=Parameters!GroupNumber.Value</Value>
-              </Parameter>
-              <Parameter Name="BrokerNumber">
-                <Value>=Parameters!BrokerNumber.Value</Value>
-              </Parameter>
-              <Parameter Name="BegDate">
-                <Value>=Parameters!BegDate.Value</Value>
-              </Parameter>
-              <Parameter Name="EndDate">
-                <Value>=Parameters!EndDate.Value</Value>
-              </Parameter>
-              <Parameter Name="DateFlag">
-                <Value>=Parameters!DateFlag.Value</Value>
-              </Parameter>
-              <Parameter Name="RID">
-                <Value>=Parameters!RID.Value</Value>
-              </Parameter>
-            </Parameters>
-            <Top>0.76389in</Top>
-            <Height>0.60417in</Height>
-            <Width>8.46875in</Width>
-            <ZIndex>2</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-            </Style>
-          </Subreport>
-        </ReportItems>
-        <Height>1.43056in</Height>
-        <Style/>
-      </Body>
-      <Width>8.46875in</Width>
-      <Page>
-        <PageHeight>8.5in</PageHeight>
-        <PageWidth>11in</PageWidth>
-        <InteractiveHeight>11in</InteractiveHeight>
-        <InteractiveWidth>8.5in</InteractiveWidth>
-        <LeftMargin>0.3in</LeftMargin>
-        <RightMargin>0.3in</RightMargin>
-        <TopMargin>0.3in</TopMargin>
-        <BottomMargin>0.3in</BottomMargin>
-        <Style/>
-      </Page>
-    </ReportSection>
-  </ReportSections>
   <Language>en-US</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportID>7ff65a77-cf65-4f22-8898-36330216c158</rd:ReportID>

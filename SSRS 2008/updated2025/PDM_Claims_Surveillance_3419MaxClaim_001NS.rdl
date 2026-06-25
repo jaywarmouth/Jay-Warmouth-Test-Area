@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition">
   <DataSources>
     <DataSource Name="claims_subscriptions">
@@ -604,141 +604,6 @@
       </Query>
     </DataSet>
   </DataSets>
-  <ReportParameters>
-    <ReportParameter Name="SystemLink">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>PAYSN</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>System Link</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dspr_SystemLinkLookup_002</DataSetName>
-          <ValueField>SYSTEM_LINK</ValueField>
-          <LabelField>SYS_LINK_DESCRIPTION</LabelField>
-        </DataSetReference>
-      </ValidValues>
-      <MultiValue>true</MultiValue>
-    </ReportParameter>
-    <ReportParameter Name="SystemNumber">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>214</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>System</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dspr_SystemLookupAllfrSystemLink_002</DataSetName>
-          <ValueField>SYSTEM_NUMBER</ValueField>
-          <LabelField>SYSTEM_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-      <MultiValue>true</MultiValue>
-    </ReportParameter>
-    <ReportParameter Name="SponsorNumber">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>3419</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>Sponsor</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dspr_SponsorLookupAllfrSystem_002</DataSetName>
-          <ValueField>SPONSOR_NUMBER</ValueField>
-          <LabelField>SPONSOR_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-      <MultiValue>true</MultiValue>
-    </ReportParameter>
-    <ReportParameter Name="MasterGroupNumber">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>-1</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>Master Group</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dspr_MasterGroupLookupAllfrSponsor_002</DataSetName>
-          <ValueField>MASTER_GROUP</ValueField>
-          <LabelField>MASTER_GROUP_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-      <MultiValue>true</MultiValue>
-    </ReportParameter>
-    <ReportParameter Name="GroupNumber">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>-1</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>Sub Group</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dspr_GroupLookupAllfrMasterGroup_002</DataSetName>
-          <ValueField>GROUP_NUMBER</ValueField>
-          <LabelField>GROUP_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-      <MultiValue>true</MultiValue>
-    </ReportParameter>
-    <ReportParameter Name="DateFlag">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsReportUserInfo</DataSetName>
-          <ValueField>PeriodFlag</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>Date Flag</Prompt>
-      <ValidValues>
-        <ParameterValues>
-          <ParameterValue>
-            <Value>R</Value>
-            <Label>Rx Date</Label>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>P</Value>
-            <Label>Process Date</Label>
-          </ParameterValue>
-        </ParameterValues>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="BegDate">
-      <DataType>DateTime</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsDateCall</DataSetName>
-          <ValueField>Yesterday</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>BegDate</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="EndDate">
-      <DataType>DateTime</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsDateCall</DataSetName>
-          <ValueField>Yesterday</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>EndDate</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="RID">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <Prompt>RID</Prompt>
-      <Hidden>true</Hidden>
-    </ReportParameter>
-  </ReportParameters>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -2777,7 +2642,7 @@
                           </Paragraphs>
                           <rd:DefaultName>RX_DATE</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -2809,7 +2674,7 @@
                           </Paragraphs>
                           <rd:DefaultName>PROCESS_DATE</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -2841,7 +2706,7 @@
                           </Paragraphs>
                           <rd:DefaultName>PERIOD_ENDING</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -2963,7 +2828,7 @@
                           </Paragraphs>
                           <rd:DefaultName>AMOUNT_PAID</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -2995,7 +2860,7 @@
                           </Paragraphs>
                           <rd:DefaultName>ING_BILLED</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3027,7 +2892,7 @@
                           </Paragraphs>
                           <rd:DefaultName>COPAY</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3059,7 +2924,7 @@
                           </Paragraphs>
                           <rd:DefaultName>ING_PAID</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3091,7 +2956,7 @@
                           </Paragraphs>
                           <rd:DefaultName>DISP_FEE</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3123,7 +2988,7 @@
                           </Paragraphs>
                           <rd:DefaultName>ADMIN_FEE</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3155,7 +3020,7 @@
                           </Paragraphs>
                           <rd:DefaultName>TAX</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3230,42 +3095,42 @@
             </TablixBody>
             <TablixColumnHierarchy>
               <TablixMembers>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -3287,10 +3152,10 @@
                       </Filter>
                       <Filter>
                         <FilterExpression>=IIF((Fields!ALT_GROUP_NUMBER.Value = "100297" 
-		 
-	AND Fields!AMOUNT_PAID.Value &gt; Fields!WACRefPrice.Value * 1.015
-	
-		), 1, 0)</FilterExpression>
+    		 
+    	AND Fields!AMOUNT_PAID.Value &gt; Fields!WACRefPrice.Value * 1.015
+    	
+    		), 1, 0)</FilterExpression>
                         <Operator>Equal</Operator>
                         <FilterValues>
                           <FilterValue DataType="Integer">1</FilterValue>
@@ -3300,7 +3165,7 @@
                     <DataElementName>Detail</DataElementName>
                   </Group>
                   <TablixMembers>
-                    <TablixMember/>
+                    <TablixMember />
                   </TablixMembers>
                   <DataElementName>Detail_Collection</DataElementName>
                   <DataElementOutput>Output</DataElementOutput>
@@ -3314,7 +3179,7 @@
             </PageBreak>
             <Height>0.8in</Height>
             <Width>36in</Width>
-            <Style/>
+            <Style />
           </Tablix>
           <Tablix Name="table3">
             <TablixBody>
@@ -5350,7 +5215,7 @@
                           </Paragraphs>
                           <rd:DefaultName>RX_DATE</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -5382,7 +5247,7 @@
                           </Paragraphs>
                           <rd:DefaultName>PROCESS_DATE</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -5414,7 +5279,7 @@
                           </Paragraphs>
                           <rd:DefaultName>PERIOD_ENDING</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -5536,7 +5401,7 @@
                           </Paragraphs>
                           <rd:DefaultName>AMOUNT_PAID</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -5568,7 +5433,7 @@
                           </Paragraphs>
                           <rd:DefaultName>ING_BILLED</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -5600,7 +5465,7 @@
                           </Paragraphs>
                           <rd:DefaultName>COPAY</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -5632,7 +5497,7 @@
                           </Paragraphs>
                           <rd:DefaultName>ING_PAID</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -5664,7 +5529,7 @@
                           </Paragraphs>
                           <rd:DefaultName>DISP_FEE</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -5696,7 +5561,7 @@
                           </Paragraphs>
                           <rd:DefaultName>ADMIN_FEE</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -5728,7 +5593,7 @@
                           </Paragraphs>
                           <rd:DefaultName>TAX</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -5803,42 +5668,42 @@
             </TablixBody>
             <TablixColumnHierarchy>
               <TablixMembers>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -5860,10 +5725,10 @@
                       </Filter>
                       <Filter>
                         <FilterExpression>=IIF((Fields!ALT_GROUP_NUMBER.Value = "NDBR297" 
-		 
-	AND Fields!AMOUNT_PAID.Value &gt; Fields!WACRefPrice.Value * 1.015
-	
-		), 1, 0)</FilterExpression>
+    		 
+    	AND Fields!AMOUNT_PAID.Value &gt; Fields!WACRefPrice.Value * 1.015
+    	
+    		), 1, 0)</FilterExpression>
                         <Operator>Equal</Operator>
                         <FilterValues>
                           <FilterValue DataType="Integer">1</FilterValue>
@@ -5873,7 +5738,7 @@
                     <DataElementName>Detail</DataElementName>
                   </Group>
                   <TablixMembers>
-                    <TablixMember/>
+                    <TablixMember />
                   </TablixMembers>
                   <DataElementName>Detail_Collection</DataElementName>
                   <DataElementOutput>Output</DataElementOutput>
@@ -5889,7 +5754,7 @@
             <Height>0.8in</Height>
             <Width>36in</Width>
             <ZIndex>1</ZIndex>
-            <Style/>
+            <Style />
           </Tablix>
           <Tablix Name="table4">
             <TablixBody>
@@ -7925,7 +7790,7 @@
                           </Paragraphs>
                           <rd:DefaultName>RX_DATE</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -7957,7 +7822,7 @@
                           </Paragraphs>
                           <rd:DefaultName>PROCESS_DATE</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -7989,7 +7854,7 @@
                           </Paragraphs>
                           <rd:DefaultName>PERIOD_ENDING</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -8111,7 +7976,7 @@
                           </Paragraphs>
                           <rd:DefaultName>AMOUNT_PAID</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -8143,7 +8008,7 @@
                           </Paragraphs>
                           <rd:DefaultName>ING_BILLED</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -8175,7 +8040,7 @@
                           </Paragraphs>
                           <rd:DefaultName>COPAY</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -8207,7 +8072,7 @@
                           </Paragraphs>
                           <rd:DefaultName>ING_PAID</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -8239,7 +8104,7 @@
                           </Paragraphs>
                           <rd:DefaultName>DISP_FEE</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -8271,7 +8136,7 @@
                           </Paragraphs>
                           <rd:DefaultName>ADMIN_FEE</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -8303,7 +8168,7 @@
                           </Paragraphs>
                           <rd:DefaultName>TAX</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -8378,42 +8243,42 @@
             </TablixBody>
             <TablixColumnHierarchy>
               <TablixMembers>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -8458,7 +8323,7 @@
                     <DataElementName>Detail</DataElementName>
                   </Group>
                   <TablixMembers>
-                    <TablixMember/>
+                    <TablixMember />
                   </TablixMembers>
                   <DataElementName>Detail_Collection</DataElementName>
                   <DataElementOutput>Output</DataElementOutput>
@@ -8474,7 +8339,7 @@
             <Height>0.8in</Height>
             <Width>36in</Width>
             <ZIndex>2</ZIndex>
-            <Style/>
+            <Style />
           </Tablix>
           <Tablix Name="table5">
             <TablixBody>
@@ -10510,7 +10375,7 @@
                           </Paragraphs>
                           <rd:DefaultName>RX_DATE</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -10542,7 +10407,7 @@
                           </Paragraphs>
                           <rd:DefaultName>PROCESS_DATE</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -10574,7 +10439,7 @@
                           </Paragraphs>
                           <rd:DefaultName>PERIOD_ENDING</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -10696,7 +10561,7 @@
                           </Paragraphs>
                           <rd:DefaultName>AMOUNT_PAID</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -10728,7 +10593,7 @@
                           </Paragraphs>
                           <rd:DefaultName>ING_BILLED</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -10760,7 +10625,7 @@
                           </Paragraphs>
                           <rd:DefaultName>COPAY</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -10792,7 +10657,7 @@
                           </Paragraphs>
                           <rd:DefaultName>ING_PAID</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -10824,7 +10689,7 @@
                           </Paragraphs>
                           <rd:DefaultName>DISP_FEE</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -10856,7 +10721,7 @@
                           </Paragraphs>
                           <rd:DefaultName>ADMIN_FEE</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -10888,7 +10753,7 @@
                           </Paragraphs>
                           <rd:DefaultName>TAX</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -10963,42 +10828,42 @@
             </TablixBody>
             <TablixColumnHierarchy>
               <TablixMembers>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -11020,10 +10885,10 @@
                       </Filter>
                       <Filter>
                         <FilterExpression>=IIF((Fields!ALT_GROUP_NUMBER.Value = "EBPTR297" 
-		 
-	AND Fields!AMOUNT_PAID.Value &gt; Fields!WACRefPrice.Value * 1.015
-	
-		), 1, 0)</FilterExpression>
+    		 
+    	AND Fields!AMOUNT_PAID.Value &gt; Fields!WACRefPrice.Value * 1.015
+    	
+    		), 1, 0)</FilterExpression>
                         <Operator>Equal</Operator>
                         <FilterValues>
                           <FilterValue DataType="Integer">1</FilterValue>
@@ -11033,7 +10898,7 @@
                     <DataElementName>Detail</DataElementName>
                   </Group>
                   <TablixMembers>
-                    <TablixMember/>
+                    <TablixMember />
                   </TablixMembers>
                   <DataElementName>Detail_Collection</DataElementName>
                   <DataElementOutput>Output</DataElementOutput>
@@ -11049,11 +10914,11 @@
             <Height>0.8in</Height>
             <Width>36in</Width>
             <ZIndex>3</ZIndex>
-            <Style/>
+            <Style />
           </Tablix>
         </ReportItems>
         <Height>3.8in</Height>
-        <Style/>
+        <Style />
       </Body>
       <Width>36in</Width>
       <Page>
@@ -11065,10 +10930,145 @@
         <RightMargin>0.4in</RightMargin>
         <TopMargin>0.5in</TopMargin>
         <BottomMargin>0.5in</BottomMargin>
-        <Style/>
+        <Style />
       </Page>
     </ReportSection>
   </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="SystemLink">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>PAYSN</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>System Link</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dspr_SystemLinkLookup_002</DataSetName>
+          <ValueField>SYSTEM_LINK</ValueField>
+          <LabelField>SYS_LINK_DESCRIPTION</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="SystemNumber">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>214</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>System</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dspr_SystemLookupAllfrSystemLink_002</DataSetName>
+          <ValueField>SYSTEM_NUMBER</ValueField>
+          <LabelField>SYSTEM_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="SponsorNumber">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>3419</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Sponsor</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dspr_SponsorLookupAllfrSystem_002</DataSetName>
+          <ValueField>SPONSOR_NUMBER</ValueField>
+          <LabelField>SPONSOR_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="MasterGroupNumber">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>-1</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Master Group</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dspr_MasterGroupLookupAllfrSponsor_002</DataSetName>
+          <ValueField>MASTER_GROUP</ValueField>
+          <LabelField>MASTER_GROUP_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="GroupNumber">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>-1</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Sub Group</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dspr_GroupLookupAllfrMasterGroup_002</DataSetName>
+          <ValueField>GROUP_NUMBER</ValueField>
+          <LabelField>GROUP_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="DateFlag">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsReportUserInfo</DataSetName>
+          <ValueField>PeriodFlag</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Date Flag</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>R</Value>
+            <Label>Rx Date</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>P</Value>
+            <Label>Process Date</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="BegDate">
+      <DataType>DateTime</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsDateCall</DataSetName>
+          <ValueField>Yesterday</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>BegDate</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="EndDate">
+      <DataType>DateTime</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsDateCall</DataSetName>
+          <ValueField>Yesterday</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>EndDate</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="RID">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <Prompt>RID</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+  </ReportParameters>
   <Language>en-US</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportID>dd18590d-e9e5-4e27-a63a-60c6e6534cef</rd:ReportID>

@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition">
   <DataSources>
     <DataSource Name="claims">
@@ -650,7 +650,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
     <DataSet Name="dspr_ServerNameLookup">
       <Fields>
         <Field Name="ID">
-          <DataField/>
+          <DataField />
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
@@ -661,195 +661,6 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
       </Query>
     </DataSet>
   </DataSets>
-  <ReportParameters>
-    <ReportParameter Name="SystemLink">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsReportUserInfo</DataSetName>
-          <ValueField>SystemLink</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>SystemLink</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>prSystemLinkLookup</DataSetName>
-          <ValueField>SYSTEM_LINK</ValueField>
-          <LabelField>SystemLinkNumber</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="SystemNumber">
-      <DataType>Integer</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsReportUserInfo</DataSetName>
-          <ValueField>SystemNumber</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>SystemNumber</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>prSystemLookup</DataSetName>
-          <ValueField>SYSTEM_NUMBER</ValueField>
-          <LabelField>SYSTEM_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="SponsorNumber">
-      <DataType>Integer</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsReportUserInfo</DataSetName>
-          <ValueField>SponsorNumber</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>SponsorNumber</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>prSponsorLookup</DataSetName>
-          <ValueField>SPONSOR_NUMBER</ValueField>
-          <LabelField>SPONSOR_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="MasterGroupNumber">
-      <DataType>Integer</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsReportUserInfo</DataSetName>
-          <ValueField>MasterGroupNumber</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>MasterGroupNumber</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>prMasterGroupLookup</DataSetName>
-          <ValueField>MASTER_GROUP</ValueField>
-          <LabelField>MASTER_GROUP_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="GroupNumber">
-      <DataType>Integer</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsReportUserInfo</DataSetName>
-          <ValueField>GroupNumber</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>GroupNumber</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>prGroupLookup</DataSetName>
-          <ValueField>GROUP_NUMBER</ValueField>
-          <LabelField>GROUP_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="DateFlag">
-      <DataType>String</DataType>
-      <Prompt>DateFlag</Prompt>
-      <ValidValues>
-        <ParameterValues>
-          <ParameterValue>
-            <Value>R</Value>
-            <Label>Rx Date</Label>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>P</Value>
-            <Label>Process Date</Label>
-          </ParameterValue>
-        </ParameterValues>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="BegDate">
-      <DataType>DateTime</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsDateCall</DataSetName>
-          <ValueField>MonthBeginningDate</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>BegDate</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="EndDate">
-      <DataType>DateTime</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsDateCall</DataSetName>
-          <ValueField>MonthEndingDate</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>EndDate</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="DrugDetail">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>I</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>Drug Detail</Prompt>
-      <ValidValues>
-        <ParameterValues>
-          <ParameterValue>
-            <Value>I</Value>
-            <Label>Include</Label>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>E</Value>
-            <Label>Exclude</Label>
-          </ParameterValue>
-        </ParameterValues>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="DetailLevel">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>1</Value>
-        </Values>
-      </DefaultValue>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>Aggregate By</Prompt>
-      <ValidValues>
-        <ParameterValues>
-          <ParameterValue>
-            <Value>1</Value>
-            <Label>System</Label>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>2</Value>
-            <Label>Sponsor</Label>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>3</Value>
-            <Label>MasterGroup</Label>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>4</Value>
-            <Label>Sub-Group</Label>
-          </ParameterValue>
-        </ParameterValues>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="WarehouseFlag">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>ds_WarehouseCheck</DataSetName>
-          <ValueField>WAREHOUSE_STATUS</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>Report_Parameter_10</Prompt>
-      <Hidden>true</Hidden>
-    </ReportParameter>
-  </ReportParameters>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -925,7 +736,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                                       </Style>
                                     </TextRun>
                                   </TextRuns>
-                                  <Style/>
+                                  <Style />
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>CardholderName</rd:DefaultName>
@@ -954,7 +765,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                                       </Style>
                                     </TextRun>
                                   </TextRuns>
-                                  <Style/>
+                                  <Style />
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>CardholderNumber_1</rd:DefaultName>
@@ -1016,7 +827,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                                       </Style>
                                     </TextRun>
                                   </TextRuns>
-                                  <Style/>
+                                  <Style />
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>GroupName</rd:DefaultName>
@@ -1046,7 +857,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                                       </Style>
                                     </TextRun>
                                   </TextRuns>
-                                  <Style/>
+                                  <Style />
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>textbox5</rd:DefaultName>
@@ -1075,7 +886,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                                       </Style>
                                     </TextRun>
                                   </TextRuns>
-                                  <Style/>
+                                  <Style />
                                 </Paragraph>
                               </Paragraphs>
                               <Top>0.8in</Top>
@@ -1103,7 +914,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                                       </Style>
                                     </TextRun>
                                   </TextRuns>
-                                  <Style/>
+                                  <Style />
                                 </Paragraph>
                               </Paragraphs>
                               <Height>0.2in</Height>
@@ -1130,7 +941,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                                       </Style>
                                     </TextRun>
                                   </TextRuns>
-                                  <Style/>
+                                  <Style />
                                 </Paragraph>
                               </Paragraphs>
                               <Top>0.4in</Top>
@@ -1159,7 +970,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                                       </Style>
                                     </TextRun>
                                   </TextRuns>
-                                  <Style/>
+                                  <Style />
                                 </Paragraph>
                               </Paragraphs>
                               <Top>0.2in</Top>
@@ -1188,7 +999,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                                       </Style>
                                     </TextRun>
                                   </TextRuns>
-                                  <Style/>
+                                  <Style />
                                 </Paragraph>
                               </Paragraphs>
                               <Left>1.8in</Left>
@@ -1216,7 +1027,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                                       </Style>
                                     </TextRun>
                                   </TextRuns>
-                                  <Style/>
+                                  <Style />
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>PhysicianName</rd:DefaultName>
@@ -1329,25 +1140,25 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                           </ReportItems>
                           <DataElementOutput>ContentsOnly</DataElementOutput>
                           <ZIndex>52</ZIndex>
-                          <Style/>
+                          <Style />
                         </Rectangle>
                         <ColSpan>15</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
@@ -1439,7 +1250,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                         <ColSpan>2</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
+                    <TablixCell />
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="textbox50">
@@ -1598,7 +1409,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                         <ColSpan>2</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
+                    <TablixCell />
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="textbox40">
@@ -1757,7 +1568,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                         <ColSpan>2</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
+                    <TablixCell />
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="textbox23">
@@ -1915,7 +1726,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                         <ColSpan>2</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
+                    <TablixCell />
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="textbox51">
@@ -1925,7 +1736,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1959,14 +1770,14 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox11</rd:DefaultName>
@@ -1990,7 +1801,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1998,7 +1809,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox12</rd:DefaultName>
@@ -2022,7 +1833,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -2030,7 +1841,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox22</rd:DefaultName>
@@ -2046,7 +1857,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                         <ColSpan>2</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
+                    <TablixCell />
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="textbox14">
@@ -2056,7 +1867,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -2064,7 +1875,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox14</rd:DefaultName>
@@ -2088,14 +1899,14 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox16</rd:DefaultName>
@@ -2119,14 +1930,14 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox21</rd:DefaultName>
@@ -2150,7 +1961,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -2158,7 +1969,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox26</rd:DefaultName>
@@ -2174,7 +1985,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                         <ColSpan>2</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
+                    <TablixCell />
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="textbox24">
@@ -2192,7 +2003,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox24</rd:DefaultName>
@@ -2258,13 +2069,13 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox4</rd:DefaultName>
@@ -2315,7 +2126,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                         <ColSpan>2</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
+                    <TablixCell />
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="textbox53">
@@ -2427,7 +2238,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>ProdAbbr_1</rd:DefaultName>
@@ -2599,7 +2410,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                         <ColSpan>2</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
+                    <TablixCell />
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="textbox27">
@@ -2648,7 +2459,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>DosageForm</rd:DefaultName>
@@ -2681,11 +2492,11 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
-                                  <Style/>
+                                  <Value />
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox31</rd:DefaultName>
@@ -2714,11 +2525,11 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
-                                  <Style/>
+                                  <Value />
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox68</rd:DefaultName>
@@ -2747,11 +2558,11 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
-                                  <Style/>
+                                  <Value />
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox32</rd:DefaultName>
@@ -2780,11 +2591,11 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
-                                  <Style/>
+                                  <Value />
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox54</rd:DefaultName>
@@ -2813,11 +2624,11 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
-                                  <Style/>
+                                  <Value />
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox33</rd:DefaultName>
@@ -2846,11 +2657,11 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
-                                  <Style/>
+                                  <Value />
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox34</rd:DefaultName>
@@ -2879,11 +2690,11 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
-                                  <Style/>
+                                  <Value />
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox44</rd:DefaultName>
@@ -2912,11 +2723,11 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
-                                  <Style/>
+                                  <Value />
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox28</rd:DefaultName>
@@ -2945,11 +2756,11 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
-                                  <Style/>
+                                  <Value />
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox45</rd:DefaultName>
@@ -2978,11 +2789,11 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
-                                  <Style/>
+                                  <Value />
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox46</rd:DefaultName>
@@ -3011,11 +2822,11 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
-                                  <Style/>
+                                  <Value />
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox47</rd:DefaultName>
@@ -3044,11 +2855,11 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
-                                  <Style/>
+                                  <Value />
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox48</rd:DefaultName>
@@ -3077,11 +2888,11 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
-                                  <Style/>
+                                  <Value />
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox19</rd:DefaultName>
@@ -3110,11 +2921,11 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
-                                  <Style/>
+                                  <Value />
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox52</rd:DefaultName>
@@ -3181,21 +2992,21 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
             </TablixBody>
             <TablixColumnHierarchy>
               <TablixMembers>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -3428,7 +3239,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                         </Style>
                       </TextRun>
                     </TextRuns>
-                    <Style/>
+                    <Style />
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>SYS_LINK_DESCRIPTION</rd:DefaultName>
@@ -3524,13 +3335,13 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                         <ColSpan>8</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
@@ -3831,7 +3642,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -4091,13 +3902,13 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <ZIndex>47</ZIndex>
@@ -4126,7 +3937,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>SYSTEM_NAME</rd:DefaultName>
@@ -4384,7 +4195,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <ZIndex>38</ZIndex>
@@ -4676,7 +4487,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <ZIndex>30</ZIndex>
@@ -4927,7 +4738,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>GROUP_NAME_1</rd:DefaultName>
@@ -5150,7 +4961,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>CardholderKey</rd:DefaultName>
@@ -5219,7 +5030,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <ZIndex>14</ZIndex>
@@ -5449,13 +5260,13 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <ZIndex>7</ZIndex>
@@ -5482,7 +5293,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>PROD_ABBR</rd:DefaultName>
@@ -5684,14 +5495,14 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
             </TablixBody>
             <TablixColumnHierarchy>
               <TablixMembers>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -5830,7 +5641,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                                             </SortExpression>
                                           </SortExpressions>
                                           <TablixMembers>
-                                            <TablixMember/>
+                                            <TablixMember />
                                           </TablixMembers>
                                           <Visibility>
                                             <Hidden>true</Hidden>
@@ -5862,7 +5673,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
               <Hidden>=iif(Parameters!WarehouseFlag.Value = "ONLINE", FALSE, TRUE)</Hidden>
             </Visibility>
             <DataElementOutput>NoOutput</DataElementOutput>
-            <Style/>
+            <Style />
           </Tablix>
           <Tablix Name="table3">
             <TablixBody>
@@ -5928,12 +5739,12 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                         <ColSpan>7</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
@@ -5948,7 +5759,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -6150,7 +5961,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                         <ColSpan>2</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
+                    <TablixCell />
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
@@ -6165,7 +5976,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -6391,13 +6202,13 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <ActionInfo>
@@ -6465,7 +6276,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <ZIndex>12</ZIndex>
@@ -6660,13 +6471,13 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <ZIndex>6</ZIndex>
@@ -6693,7 +6504,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <ZIndex>5</ZIndex>
@@ -6861,13 +6672,13 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
             </TablixBody>
             <TablixColumnHierarchy>
               <TablixMembers>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -6927,7 +6738,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
                             </SortExpression>
                           </SortExpressions>
                           <TablixMembers>
-                            <TablixMember/>
+                            <TablixMember />
                           </TablixMembers>
                           <Visibility>
                             <Hidden>true</Hidden>
@@ -6954,7 +6765,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
               <Hidden>=iif(Parameters!WarehouseFlag.Value = "ONLINE", FALSE, TRUE)</Hidden>
             </Visibility>
             <DataElementOutput>NoOutput</DataElementOutput>
-            <Style/>
+            <Style />
           </Tablix>
           <Subreport Name="subreport1">
             <ReportName>Header11WarehouseOffline</ReportName>
@@ -6966,7 +6777,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
               <Hidden>=iif(Parameters!WarehouseFlag.Value = "ONLINE", TRUE, FALSE)</Hidden>
             </Visibility>
             <DataElementOutput>NoOutput</DataElementOutput>
-            <Style/>
+            <Style />
           </Subreport>
         </ReportItems>
         <Height>5.75417in</Height>
@@ -7017,7 +6828,7 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
               </Style>
             </Textbox>
           </ReportItems>
-          <Style/>
+          <Style />
         </PageFooter>
         <PageHeight>8.5in</PageHeight>
         <PageWidth>11in</PageWidth>
@@ -7025,10 +6836,199 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
         <RightMargin>0.4in</RightMargin>
         <TopMargin>0.5in</TopMargin>
         <BottomMargin>0.4in</BottomMargin>
-        <Style/>
+        <Style />
       </Page>
     </ReportSection>
   </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="SystemLink">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsReportUserInfo</DataSetName>
+          <ValueField>SystemLink</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>SystemLink</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>prSystemLinkLookup</DataSetName>
+          <ValueField>SYSTEM_LINK</ValueField>
+          <LabelField>SystemLinkNumber</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="SystemNumber">
+      <DataType>Integer</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsReportUserInfo</DataSetName>
+          <ValueField>SystemNumber</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>SystemNumber</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>prSystemLookup</DataSetName>
+          <ValueField>SYSTEM_NUMBER</ValueField>
+          <LabelField>SYSTEM_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="SponsorNumber">
+      <DataType>Integer</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsReportUserInfo</DataSetName>
+          <ValueField>SponsorNumber</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>SponsorNumber</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>prSponsorLookup</DataSetName>
+          <ValueField>SPONSOR_NUMBER</ValueField>
+          <LabelField>SPONSOR_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="MasterGroupNumber">
+      <DataType>Integer</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsReportUserInfo</DataSetName>
+          <ValueField>MasterGroupNumber</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>MasterGroupNumber</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>prMasterGroupLookup</DataSetName>
+          <ValueField>MASTER_GROUP</ValueField>
+          <LabelField>MASTER_GROUP_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="GroupNumber">
+      <DataType>Integer</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsReportUserInfo</DataSetName>
+          <ValueField>GroupNumber</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>GroupNumber</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>prGroupLookup</DataSetName>
+          <ValueField>GROUP_NUMBER</ValueField>
+          <LabelField>GROUP_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="DateFlag">
+      <DataType>String</DataType>
+      <Prompt>DateFlag</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>R</Value>
+            <Label>Rx Date</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>P</Value>
+            <Label>Process Date</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="BegDate">
+      <DataType>DateTime</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsDateCall</DataSetName>
+          <ValueField>MonthBeginningDate</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>BegDate</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="EndDate">
+      <DataType>DateTime</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsDateCall</DataSetName>
+          <ValueField>MonthEndingDate</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>EndDate</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DrugDetail">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>I</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Drug Detail</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>I</Value>
+            <Label>Include</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>E</Value>
+            <Label>Exclude</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="DetailLevel">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>1</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Aggregate By</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>1</Value>
+            <Label>System</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>2</Value>
+            <Label>Sponsor</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>3</Value>
+            <Label>MasterGroup</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>4</Value>
+            <Label>Sub-Group</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="WarehouseFlag">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>ds_WarehouseCheck</DataSetName>
+          <ValueField>WAREHOUSE_STATUS</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Report_Parameter_10</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+  </ReportParameters>
   <Language>en-US</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportID>87d7f574-3a9d-4ba1-86f8-4d33d4901ffc</rd:ReportID>

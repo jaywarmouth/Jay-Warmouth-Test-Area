@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition">
   <DataSources>
     <DataSource Name="claims_subscriptions">
@@ -562,76 +562,6 @@
       </Query>
     </DataSet>
   </DataSets>
-  <ReportParameters>
-    <ReportParameter Name="SystemLink">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>PRAT</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>System Link</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dsSystemLinkLookUp</DataSetName>
-          <ValueField>SYSTEM_LINK</ValueField>
-          <LabelField>SystemLinkNumber</LabelField>
-        </DataSetReference>
-      </ValidValues>
-      <MultiValue>true</MultiValue>
-    </ReportParameter>
-    <ReportParameter Name="SystemNumber">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>83</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>System</Prompt>
-      <MultiValue>true</MultiValue>
-    </ReportParameter>
-    <ReportParameter Name="SponsorNumber">
-      <DataType>String</DataType>
-      <Prompt>Sponsor</Prompt>
-      <MultiValue>true</MultiValue>
-    </ReportParameter>
-    <ReportParameter Name="MasterGroupNumber">
-      <DataType>String</DataType>
-      <Prompt>Master Group</Prompt>
-      <MultiValue>true</MultiValue>
-    </ReportParameter>
-    <ReportParameter Name="GroupNumber">
-      <DataType>String</DataType>
-      <Prompt>Sub Group</Prompt>
-      <MultiValue>true</MultiValue>
-    </ReportParameter>
-    <ReportParameter Name="BegDate">
-      <DataType>DateTime</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsDateCall</DataSetName>
-          <ValueField>FirstOfMonth</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>BegDate</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="EndDate">
-      <DataType>DateTime</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsDateCall</DataSetName>
-          <ValueField>LastOfMonth</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>EndDate</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="RID">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <Prompt>RID</Prompt>
-      <Hidden>true</Hidden>
-    </ReportParameter>
-  </ReportParameters>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -1660,7 +1590,7 @@
                           </Paragraphs>
                           <rd:DefaultName>RollDate</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -1962,7 +1892,7 @@
                           </Paragraphs>
                           <rd:DefaultName>DateofBirth</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -1994,7 +1924,7 @@
                           </Paragraphs>
                           <rd:DefaultName>EFF_DATE_1</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -2026,7 +1956,7 @@
                           </Paragraphs>
                           <rd:DefaultName>TER_DATE_1</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -2057,7 +1987,7 @@
                           </Paragraphs>
                           <rd:DefaultName>LI_CARDHOLDER_NUMBER</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -2088,7 +2018,7 @@
                           </Paragraphs>
                           <rd:DefaultName>LI_MEMBER_NUMBER</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -2119,7 +2049,7 @@
                           </Paragraphs>
                           <rd:DefaultName>LI_BIN</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -2150,7 +2080,7 @@
                           </Paragraphs>
                           <rd:DefaultName>LI_ROLE_DATE</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -2181,7 +2111,7 @@
                           </Paragraphs>
                           <rd:DefaultName>LI_DATE</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -2212,7 +2142,7 @@
                           </Paragraphs>
                           <rd:DefaultName>LI_TIME</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -2243,7 +2173,7 @@
                           </Paragraphs>
                           <rd:DefaultName>LI_FUNC</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -2274,7 +2204,7 @@
                           </Paragraphs>
                           <rd:DefaultName>LI_USER</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -2305,7 +2235,7 @@
                           </Paragraphs>
                           <rd:DefaultName>LI_LAST_QUARTER_CARRY_OVER</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -2336,7 +2266,7 @@
                           </Paragraphs>
                           <rd:DefaultName>LI_M_CARRY_OVER</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -2367,7 +2297,7 @@
                           </Paragraphs>
                           <rd:DefaultName>LI_ADD_TO_MAX</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -2442,32 +2372,32 @@
             </TablixBody>
             <TablixColumnHierarchy>
               <TablixMembers>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -2481,7 +2411,7 @@
                     <DataElementName>Detail</DataElementName>
                   </Group>
                   <TablixMembers>
-                    <TablixMember/>
+                    <TablixMember />
                   </TablixMembers>
                   <DataElementName>Detail_Collection</DataElementName>
                   <DataElementOutput>Output</DataElementOutput>
@@ -2492,11 +2422,11 @@
             <DataSetName>DataSet1</DataSetName>
             <Height>0.8in</Height>
             <Width>26in</Width>
-            <Style/>
+            <Style />
           </Tablix>
         </ReportItems>
         <Height>0.8in</Height>
-        <Style/>
+        <Style />
       </Body>
       <Width>26in</Width>
       <Page>
@@ -2508,10 +2438,80 @@
         <RightMargin>0.4in</RightMargin>
         <TopMargin>0.5in</TopMargin>
         <BottomMargin>0.5in</BottomMargin>
-        <Style/>
+        <Style />
       </Page>
     </ReportSection>
   </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="SystemLink">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>PRAT</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>System Link</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dsSystemLinkLookUp</DataSetName>
+          <ValueField>SYSTEM_LINK</ValueField>
+          <LabelField>SystemLinkNumber</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="SystemNumber">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>83</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>System</Prompt>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="SponsorNumber">
+      <DataType>String</DataType>
+      <Prompt>Sponsor</Prompt>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="MasterGroupNumber">
+      <DataType>String</DataType>
+      <Prompt>Master Group</Prompt>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="GroupNumber">
+      <DataType>String</DataType>
+      <Prompt>Sub Group</Prompt>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="BegDate">
+      <DataType>DateTime</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsDateCall</DataSetName>
+          <ValueField>FirstOfMonth</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>BegDate</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="EndDate">
+      <DataType>DateTime</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsDateCall</DataSetName>
+          <ValueField>LastOfMonth</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>EndDate</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="RID">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <Prompt>RID</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+  </ReportParameters>
   <Language>en-US</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportID>dd18590d-e9e5-4e27-a63a-60c6e6534cef</rd:ReportID>

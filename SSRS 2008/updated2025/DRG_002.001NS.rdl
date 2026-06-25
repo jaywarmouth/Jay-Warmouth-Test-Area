@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition">
   <DataSources>
     <DataSource Name="claims_subscriptions">
@@ -388,272 +388,6 @@
       </Query>
     </DataSet>
   </DataSets>
-  <ReportParameters>
-    <ReportParameter Name="SystemLink">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsReportUserInfo</DataSetName>
-          <ValueField>SystemLink</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>System Link</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dsSystemLinkLookUp</DataSetName>
-          <ValueField>SYSTEM_LINK</ValueField>
-          <LabelField>SystemLinkNumber</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="SystemNumber">
-      <DataType>Integer</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsReportUserInfo</DataSetName>
-          <ValueField>SystemNumber</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>System</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dsSystemLookupAllfrSystemLink</DataSetName>
-          <ValueField>SYSTEM_NUMBER</ValueField>
-          <LabelField>SYSTEM_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="SponsorNumber">
-      <DataType>Integer</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsReportUserInfo</DataSetName>
-          <ValueField>SponsorNumber</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>Sponsor</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dsSponsorLookupAllfrSystem</DataSetName>
-          <ValueField>SPONSOR_NUMBER</ValueField>
-          <LabelField>SPONSOR_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="MasterGroupNumber">
-      <DataType>Integer</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsReportUserInfo</DataSetName>
-          <ValueField>MasterGroupNumber</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>Master Group</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dsMasterGroupLookupAllfrSponsor</DataSetName>
-          <ValueField>MASTER_GROUP</ValueField>
-          <LabelField>MASTER_GROUP_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="GroupNumber">
-      <DataType>Float</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsReportUserInfo</DataSetName>
-          <ValueField>GroupNumber</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>Sub Group</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dsGroupLookupAllfrMasterGroup</DataSetName>
-          <ValueField>GROUP_NUMBER</ValueField>
-          <LabelField>GROUP_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="DateFlag">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsReportUserInfo</DataSetName>
-          <ValueField>PeriodFlag</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>Date Flag</Prompt>
-      <ValidValues>
-        <ParameterValues>
-          <ParameterValue>
-            <Value>P</Value>
-            <Label>Process Date</Label>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>R</Value>
-            <Label>Rx Date</Label>
-          </ParameterValue>
-        </ParameterValues>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="BegDate">
-      <DataType>DateTime</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsDateCall</DataSetName>
-          <ValueField>MonthBeginningDate</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>BegDate</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="EndDate">
-      <DataType>DateTime</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsDateCall</DataSetName>
-          <ValueField>MonthEndingDate</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>End Date</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="TopLimit">
-      <DataType>Integer</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>100</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>TopLimit</Prompt>
-      <ValidValues>
-        <ParameterValues>
-          <ParameterValue>
-            <Value DataType="Integer">25</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value DataType="Integer">50</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value DataType="Integer">75</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value DataType="Integer">100</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value DataType="Integer">999999</Value>
-            <Label>All</Label>
-          </ParameterValue>
-        </ParameterValues>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="DrugNameType">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>L</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>Drug Description</Prompt>
-      <ValidValues>
-        <ParameterValues>
-          <ParameterValue>
-            <Value>L</Value>
-            <Label>Long</Label>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>S</Value>
-            <Label>Short</Label>
-          </ParameterValue>
-        </ParameterValues>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="GenericFlag">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>A</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>Generic Flag</Prompt>
-      <ValidValues>
-        <ParameterValues>
-          <ParameterValue>
-            <Value>G</Value>
-            <Label>Generic Only</Label>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>A</Value>
-            <Label>All </Label>
-          </ParameterValue>
-        </ParameterValues>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="SortOrder">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>C</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>Rank By</Prompt>
-      <ValidValues>
-        <ParameterValues>
-          <ParameterValue>
-            <Value>C</Value>
-            <Label>Claims</Label>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>A</Value>
-            <Label>Amount Paid</Label>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>M</Value>
-            <Label>Members</Label>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>I</Value>
-            <Label>Ing Paid</Label>
-          </ParameterValue>
-        </ParameterValues>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="RouteAdmin">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>A</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>Injectible</Prompt>
-      <ValidValues>
-        <ParameterValues>
-          <ParameterValue>
-            <Value>I</Value>
-            <Label>Injectible Only</Label>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>A</Value>
-            <Label>All Products</Label>
-          </ParameterValue>
-        </ParameterValues>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="RID">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
-        </Values>
-      </DefaultValue>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>Report_Parameter_14</Prompt>
-      <Hidden>true</Hidden>
-    </ReportParameter>
-  </ReportParameters>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -723,7 +457,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -809,20 +543,20 @@
                         <ColSpan>15</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
@@ -937,7 +671,7 @@
                         <ColSpan>2</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
+                    <TablixCell />
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="textbox6">
@@ -1047,7 +781,7 @@
                         <ColSpan>2</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
+                    <TablixCell />
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="textbox25">
@@ -1085,7 +819,7 @@
                         <ColSpan>2</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
+                    <TablixCell />
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="textbox29">
@@ -1123,7 +857,7 @@
                         <ColSpan>2</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
+                    <TablixCell />
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="textbox31">
@@ -1161,8 +895,8 @@
                         <ColSpan>3</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
-                    <TablixCell/>
+                    <TablixCell />
+                    <TablixCell />
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="textbox21">
@@ -1213,7 +947,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1309,7 +1043,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1342,7 +1076,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1375,7 +1109,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1637,7 +1371,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1703,7 +1437,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1778,7 +1512,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>DrugName</rd:DefaultName>
@@ -2294,43 +2028,43 @@
                         <ColSpan>16</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
                   </TablixCells>
                 </TablixRow>
               </TablixRows>
             </TablixBody>
             <TablixColumnHierarchy>
               <TablixMembers>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -2379,7 +2113,7 @@
                         </SortExpression>
                       </SortExpressions>
                       <TablixMembers>
-                        <TablixMember/>
+                        <TablixMember />
                       </TablixMembers>
                       <DataElementName>Detail_Collection</DataElementName>
                       <DataElementOutput>Output</DataElementOutput>
@@ -2397,7 +2131,7 @@
             <Top>0.9in</Top>
             <Height>0.85in</Height>
             <Width>10in</Width>
-            <Style/>
+            <Style />
           </Tablix>
           <Subreport Name="subreport1">
             <ReportName>Header02</ReportName>
@@ -2422,11 +2156,11 @@
             <Height>0.9in</Height>
             <Width>10in</Width>
             <ZIndex>1</ZIndex>
-            <Style/>
+            <Style />
           </Subreport>
         </ReportItems>
         <Height>1.75in</Height>
-        <Style/>
+        <Style />
       </Body>
       <Width>10in</Width>
       <Page>
@@ -2464,7 +2198,7 @@
               </Style>
             </Textbox>
           </ReportItems>
-          <Style/>
+          <Style />
         </PageFooter>
         <PageHeight>8.5in</PageHeight>
         <PageWidth>11in</PageWidth>
@@ -2474,10 +2208,276 @@
         <RightMargin>0.4in</RightMargin>
         <TopMargin>0.5in</TopMargin>
         <BottomMargin>0.5in</BottomMargin>
-        <Style/>
+        <Style />
       </Page>
     </ReportSection>
   </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="SystemLink">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsReportUserInfo</DataSetName>
+          <ValueField>SystemLink</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>System Link</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dsSystemLinkLookUp</DataSetName>
+          <ValueField>SYSTEM_LINK</ValueField>
+          <LabelField>SystemLinkNumber</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="SystemNumber">
+      <DataType>Integer</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsReportUserInfo</DataSetName>
+          <ValueField>SystemNumber</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>System</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dsSystemLookupAllfrSystemLink</DataSetName>
+          <ValueField>SYSTEM_NUMBER</ValueField>
+          <LabelField>SYSTEM_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="SponsorNumber">
+      <DataType>Integer</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsReportUserInfo</DataSetName>
+          <ValueField>SponsorNumber</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Sponsor</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dsSponsorLookupAllfrSystem</DataSetName>
+          <ValueField>SPONSOR_NUMBER</ValueField>
+          <LabelField>SPONSOR_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="MasterGroupNumber">
+      <DataType>Integer</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsReportUserInfo</DataSetName>
+          <ValueField>MasterGroupNumber</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Master Group</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dsMasterGroupLookupAllfrSponsor</DataSetName>
+          <ValueField>MASTER_GROUP</ValueField>
+          <LabelField>MASTER_GROUP_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="GroupNumber">
+      <DataType>Float</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsReportUserInfo</DataSetName>
+          <ValueField>GroupNumber</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Sub Group</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dsGroupLookupAllfrMasterGroup</DataSetName>
+          <ValueField>GROUP_NUMBER</ValueField>
+          <LabelField>GROUP_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="DateFlag">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsReportUserInfo</DataSetName>
+          <ValueField>PeriodFlag</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Date Flag</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>P</Value>
+            <Label>Process Date</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>R</Value>
+            <Label>Rx Date</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="BegDate">
+      <DataType>DateTime</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsDateCall</DataSetName>
+          <ValueField>MonthBeginningDate</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>BegDate</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="EndDate">
+      <DataType>DateTime</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsDateCall</DataSetName>
+          <ValueField>MonthEndingDate</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>End Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="TopLimit">
+      <DataType>Integer</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>100</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>TopLimit</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value DataType="Integer">25</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value DataType="Integer">50</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value DataType="Integer">75</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value DataType="Integer">100</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value DataType="Integer">999999</Value>
+            <Label>All</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="DrugNameType">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>L</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Drug Description</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>L</Value>
+            <Label>Long</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>S</Value>
+            <Label>Short</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="GenericFlag">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>A</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Generic Flag</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>G</Value>
+            <Label>Generic Only</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>A</Value>
+            <Label>All </Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="SortOrder">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>C</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Rank By</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>C</Value>
+            <Label>Claims</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>A</Value>
+            <Label>Amount Paid</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>M</Value>
+            <Label>Members</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>I</Value>
+            <Label>Ing Paid</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="RouteAdmin">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>A</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Injectible</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>I</Value>
+            <Label>Injectible Only</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>A</Value>
+            <Label>All Products</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="RID">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_14</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+  </ReportParameters>
   <Language>en-US</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportID>d21b2ee2-5d87-4a8b-9a62-1f8a3b7d5a0c</rd:ReportID>

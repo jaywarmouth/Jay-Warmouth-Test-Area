@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition">
   <DataSources>
     <DataSource Name="claims_subscriptions">
@@ -1332,14 +1332,6 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
       </Query>
     </DataSet>
   </DataSets>
-  <ReportParameters>
-    <ReportParameter Name="RID">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <Prompt>RID</Prompt>
-      <Hidden>true</Hidden>
-    </ReportParameter>
-  </ReportParameters>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -13317,7 +13309,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>PLAN_MAX_FAMILY</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -13498,7 +13490,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>COPAY_NDL_COV</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -13559,7 +13551,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>STAND_DAYS</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -13620,7 +13612,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>COMPOUND_FLAG</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -13681,7 +13673,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>MAIL_ORDER_CD</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -13712,7 +13704,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>COPAY_MONTH</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -13743,7 +13735,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>ACTIVE_OPTION</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -13774,7 +13766,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>MAX_CLAIM_AMT</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -13805,7 +13797,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>MAIL_LIMIT</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -13836,7 +13828,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>MAND_MAIL_FLAG</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -13867,7 +13859,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>MAND_MAIL_FILLS</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -13898,7 +13890,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>MAINT_LOWER_FLAG</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -13929,7 +13921,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>MAINT_LOWER_FILLS</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -13960,7 +13952,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>MAINT_MEDISPAN</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -13991,7 +13983,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DAYS_CUT_1</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -14022,7 +14014,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DAYS_CUT_2</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -14053,7 +14045,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DAYS_CUT_3</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -14084,7 +14076,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>EXC_TABLE_1</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -14115,7 +14107,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_STATUS_1</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -14146,7 +14138,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>EXC_TABLE_2</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -14177,7 +14169,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_STATUS_2</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -14208,7 +14200,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>EXC_TABLE_3</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -14239,7 +14231,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_STATUS_3</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -14270,7 +14262,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>EXC_TABLE_4</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -14301,7 +14293,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_STATUS_4</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -14331,7 +14323,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                             </Paragraph>
                           </Paragraphs>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -14362,7 +14354,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_STATUS_5</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -14393,7 +14385,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>EXC_TABLE_6</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -14424,7 +14416,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_STATUS_6</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -14455,7 +14447,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>EXC_TABLE_7</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -14486,7 +14478,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_STATUS_7</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -14517,7 +14509,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>EXC_TABLE_8</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -14548,7 +14540,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_STATUS_8</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -14579,7 +14571,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>EXC_TABLE_9</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -14610,7 +14602,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_STATUS_9</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -14641,7 +14633,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>EXC_TABLE_10</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -14672,7 +14664,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_STATUS_10</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -14703,7 +14695,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>EXC_TABLE_11</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -14734,7 +14726,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_STATUS_11</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -14765,7 +14757,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>EXC_TABLE_12</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -14796,7 +14788,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_STATUS_12</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -14827,7 +14819,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>EXC_TABLE_13</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -14858,7 +14850,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_STATUS_13</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -14889,7 +14881,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>EXC_TABLE_14</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -14920,7 +14912,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_STATUS_14</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -14951,7 +14943,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>EXC_TABLE_15</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -14982,7 +14974,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_STATUS_15</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -15013,7 +15005,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>CMSTA_PLAN_TYPE</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -15044,7 +15036,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>TROOP_AMOUNT</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -15075,7 +15067,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DEDUCT_APPLIES</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -15106,7 +15098,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>COVERAGE_GAP_APPLIES</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -15137,7 +15129,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>MEDD_BEN_CODE</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -15168,7 +15160,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_COPAY_1</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -15199,7 +15191,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_COPAY_2</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -15230,7 +15222,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_COPAY_3</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -15261,7 +15253,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_COPAY_4</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -15292,7 +15284,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_COPAY_5</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -15323,7 +15315,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_COPAY_6</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -15354,7 +15346,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_COPAY_7</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -15385,7 +15377,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_COPAY_8</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -15416,7 +15408,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_COPAY_9</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -15447,7 +15439,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_COPAY_10</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -15478,7 +15470,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_COPAY_11</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -15509,7 +15501,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_COPAY_12</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -15540,7 +15532,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_COPAY_13</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -15571,7 +15563,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_COPAY_14</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -15602,7 +15594,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_COPAY_15</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -15633,7 +15625,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_COPAY_16</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -15664,7 +15656,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_COPAY_17</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -15695,7 +15687,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_COPAY_18</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -15726,7 +15718,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_COPAY_19</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -15757,7 +15749,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_COPAY_20</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -15788,7 +15780,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>EXC_TABLE_16</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -15819,7 +15811,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>EXC_TABLE_17</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -15850,7 +15842,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>EXC_TABLE_18</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -15881,7 +15873,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>EXC_TABLE_19</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -15912,7 +15904,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>EXC_TABLE_20</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -15943,7 +15935,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_STATUS_16</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -15974,7 +15966,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_STATUS_17</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -16005,7 +15997,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_STATUS_18</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -16036,7 +16028,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_STATUS_19</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -16067,7 +16059,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_STATUS_20</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -16098,7 +16090,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>KIND_W_SPEC_OPTIONS</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -16129,7 +16121,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>PURGE_STATUS</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -16160,7 +16152,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_TABLE_1</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -16191,7 +16183,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_TABLE_2</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -16222,7 +16214,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_TABLE_3</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -16253,7 +16245,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_TABLE_4</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -16284,7 +16276,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_TABLE_5</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -16315,7 +16307,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_TABLE_6</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -16346,7 +16338,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_TABLE_7</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -16377,7 +16369,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_TABLE_8</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -16408,7 +16400,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_TABLE_9</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -16439,7 +16431,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_TABLE_10</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -16471,7 +16463,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_EFF_DATE_1</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -16503,7 +16495,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_EFF_DATE_2</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -16535,7 +16527,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_EFF_DATE_3</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -16567,7 +16559,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_EFF_DATE_4</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -16599,7 +16591,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_EFF_DATE_5</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -16631,7 +16623,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_EFF_DATE_6</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -16663,7 +16655,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_EFF_DATE_7</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -16695,7 +16687,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_EFF_DATE_8</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -16727,7 +16719,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_EFF_DATE_9</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -16759,7 +16751,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_EFF_DATE_10</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -16791,7 +16783,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_TERM_DATE_1</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -16823,7 +16815,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_TERM_DATE_2</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -16855,7 +16847,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_TERM_DATE_3</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -16887,7 +16879,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_TERM_DATE_4</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -16919,7 +16911,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_TERM_DATE_5</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -16951,7 +16943,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_TERM_DATE_6</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -16983,7 +16975,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_TERM_DATE_7</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -17015,7 +17007,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_TERM_DATE_8</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -17047,7 +17039,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_TERM_DATE_9</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -17079,7 +17071,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DRUG_TERM_DATE_10</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -17110,7 +17102,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>OTC_COVERAGE_CODE_1</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -17141,7 +17133,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>OTC_COVERAGE_CODE_2</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -17172,7 +17164,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>OTC_COVERAGE_CODE_3</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -17203,7 +17195,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>OTC_COVERAGE_CODE_4</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -17234,7 +17226,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>OTC_COVERAGE_CODE_5</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -17265,7 +17257,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>OTC_COVERAGE_CODE_6</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -17296,7 +17288,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>OTC_COVERAGE_CODE_7</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -17327,7 +17319,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>OTC_COVERAGE_CODE_8</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -17358,7 +17350,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>OTC_COVERAGE_CODE_9</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -17389,7 +17381,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>OTC_COVERAGE_CODE_10</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -17420,7 +17412,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GENERIC_TABLE_1</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -17451,7 +17443,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GENERIC_TABLE_2</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -17482,7 +17474,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GENERIC_TABLE_3</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -17513,7 +17505,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GENERIC_TABLE_4</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -17544,7 +17536,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GENERIC_TABLE_5</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -17575,7 +17567,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GENERIC_TABLE_6</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -17606,7 +17598,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GENERIC_TABLE_7</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -17637,7 +17629,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GENERIC_TABLE_8</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -17668,7 +17660,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GENERIC_TABLE_9</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -17699,7 +17691,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GENERIC_TABLE_10</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -17730,7 +17722,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GENERIC_TABLE_11</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -17761,7 +17753,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GENERIC_TABLE_12</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -17792,7 +17784,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GENERIC_TABLE_13</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -17823,7 +17815,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GENERIC_TABLE_14</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -17854,7 +17846,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GENERIC_TABLE_15</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -17885,7 +17877,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GENERIC_TABLE_16</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -17916,7 +17908,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GENERIC_TABLE_17</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -17947,7 +17939,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GENERIC_TABLE_18</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -17978,7 +17970,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GENERIC_TABLE_19</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -18009,7 +18001,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GENERIC_TABLE_20</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -18041,7 +18033,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_EFF_DATE_1</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -18073,7 +18065,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_EFF_DATE_2</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -18105,7 +18097,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_EFF_DATE_3</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -18137,7 +18129,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_EFF_DATE_4</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -18169,7 +18161,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_EFF_DATE_5</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -18201,7 +18193,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_EFF_DATE_6</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -18233,7 +18225,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_EFF_DATE_7</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -18265,7 +18257,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_EFF_DATE_8</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -18297,7 +18289,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_EFF_DATE_9</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -18329,7 +18321,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_EFF_DATE_10</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -18361,7 +18353,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_EFF_DATE_11</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -18393,7 +18385,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_EFF_DATE_12</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -18425,7 +18417,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_EFF_DATE_13</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -18457,7 +18449,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_EFF_DATE_14</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -18489,7 +18481,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_EFF_DATE_15</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -18521,7 +18513,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_EFF_DATE_16</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -18553,7 +18545,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_EFF_DATE_17</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -18585,7 +18577,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_EFF_DATE_18</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -18617,7 +18609,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_EFF_DATE_19</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -18649,7 +18641,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_EFF_DATE_20</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -18681,7 +18673,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_TERM_DATE_1</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -18713,7 +18705,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_TERM_DATE_2</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -18745,7 +18737,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_TERM_DATE_3</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -18777,7 +18769,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_TERM_DATE_4</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -18809,7 +18801,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_TERM_DATE_5</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -18841,7 +18833,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_TERM_DATE_6</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -18873,7 +18865,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_TERM_DATE_7</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -18905,7 +18897,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_TERM_DATE_8</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -18937,7 +18929,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_TERM_DATE_9</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -18969,7 +18961,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_TERM_DATE_10</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -19001,7 +18993,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_TERM_DATE_11</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -19033,7 +19025,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_TERM_DATE_12</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -19065,7 +19057,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_TERM_DATE_13</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -19097,7 +19089,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_TERM_DATE_14</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -19129,7 +19121,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_TERM_DATE_15</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -19161,7 +19153,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_TERM_DATE_16</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -19192,7 +19184,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_TERM_DATE_17</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -19224,7 +19216,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_TERM_DATE_18</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -19256,7 +19248,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_TERM_DATE_19</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -19288,7 +19280,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>GEN_TABLE_TERM_DATE_20</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -19319,7 +19311,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DAW_FLAG_1</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -19350,7 +19342,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DAW_FLAG_2</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -19381,7 +19373,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DAW_FLAG_3</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -19412,7 +19404,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DAW_FLAG_4</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -19443,7 +19435,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DAW_FLAG_5</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -19474,7 +19466,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DAW_FLAG_6</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -19505,7 +19497,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DAW_FLAG_7</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -19536,7 +19528,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DAW_FLAG_8</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -19567,7 +19559,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DAW_FLAG_9</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -19598,7 +19590,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DAW_FLAG_10</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -19629,7 +19621,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DAW_FLAG_11</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -19660,7 +19652,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DAW_FLAG_12</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -19691,7 +19683,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DAW_FLAG_13</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -19722,7 +19714,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DAW_FLAG_14</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -19753,7 +19745,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DAW_FLAG_15</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -19784,7 +19776,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>UNIT_DOSE</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -19815,7 +19807,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>UNIT_DOSE_GL</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -19846,7 +19838,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>UNIT_DOSE_FLAG</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -19877,7 +19869,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>TOPICAL_LIMIT</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -19908,7 +19900,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>LIQUID_LIMIT</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -19939,7 +19931,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>FORM_GT_1</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -19970,7 +19962,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>FORM_GT_2</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -20001,7 +19993,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>FORM_GT_3</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -20033,7 +20025,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>FORM_DATE_1</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -20065,7 +20057,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>FORM_DATE_2</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -20097,7 +20089,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>FORM_DATE_3</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -20128,7 +20120,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>NDC_TC_1</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -20159,7 +20151,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>NDC_TC_2</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -20190,7 +20182,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>NDC_TC_3</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -20222,7 +20214,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>NDC_DATE_1</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -20254,7 +20246,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>NDC_DATE_2</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -20286,7 +20278,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>NDC_DATE_3</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -20317,7 +20309,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>STEP_NUMBER_1</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -20348,7 +20340,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>STEP_NUMBER_2</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -20379,7 +20371,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>STEP_NUMBER_3</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -20410,7 +20402,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>STEP_NUMBER_4</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -20441,7 +20433,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>STEP_NUMBER_5</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -20473,7 +20465,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>STEP_EFF_DATE_1</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -20505,7 +20497,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>STEP_EFF_DATE_2</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -20537,7 +20529,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>STEP_EFF_DATE_3</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -20569,7 +20561,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>STEP_EFF_DATE_4</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -20601,7 +20593,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>STEP_EFF_DATE_5</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -20633,7 +20625,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>STEP_TERM_DATE_1</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -20665,7 +20657,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>STEP_TERM_DATE_2</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -20697,7 +20689,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>STEP_TERM_DATE_3</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -20729,7 +20721,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>STEP_TERM_DATE_4</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -20761,7 +20753,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>STEP_TERM_DATE_5</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -20792,7 +20784,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DESCRIPTION_1</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -20823,7 +20815,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DESCRIPTION_2</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -20854,7 +20846,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DESCRIPTION_3</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -20885,7 +20877,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DESCRIPTION_4</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -20916,7 +20908,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DMR</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -20947,7 +20939,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DMR_LIMIT</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -20978,7 +20970,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>WORKERS_COMP</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -21009,7 +21001,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>REJECT_369</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -21040,7 +21032,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>COMP_MAX_AMOUNT</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -21071,7 +21063,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>TIER_3_FLAG</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -21103,7 +21095,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>MAIL_MANDATE_EFF_DATE</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -21134,7 +21126,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DIABETIC_PRG_TYPE_CODE</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -21165,7 +21157,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DEDUCT_PREFERRED_AMT</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -21196,7 +21188,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DEDUCT_NONPREFERRED_AMT</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -21227,7 +21219,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>MEDICARE_LIM_MAIL</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -21258,7 +21250,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>COB_TYPE</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -21289,7 +21281,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>PENALTY_APPLIES</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -21320,7 +21312,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>SINGLE_MAX</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -21351,7 +21343,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>FAMILY_MAX</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -21382,7 +21374,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>LIFETIME_MAX</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -21413,7 +21405,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>MAX_APPLIES</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -21445,7 +21437,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>ENTRY_DATE</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -21477,7 +21469,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>CHANGE_DATE</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -21508,7 +21500,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>INCENTIVE_MAX_DAYS</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -21539,7 +21531,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>STEP_TRIGGER_TABLE_1</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -21571,7 +21563,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>STEP_TRIGGER_EFF_DATE_1</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -21602,7 +21594,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>STEP_TRIGGER_TABLE_2</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -21634,7 +21626,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>STEP_TRIGGER_EFF_DATE_2</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -21665,7 +21657,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>STEP_TRIGGER_TABLE_3</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -21697,7 +21689,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>STEP_TRIGGER_EFF_DATE_3</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -21728,7 +21720,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>INJECTIBLE_MAX_AMOUNT</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -21759,7 +21751,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>NETWORK_90_DAY_DS</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -21790,7 +21782,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>NETWORK_90_DAY_DS1</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -21821,7 +21813,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>MAIL_BY_DAYS_FLAG</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -21852,7 +21844,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>MAX_COPAY_CAP_AMOUNT</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -21883,7 +21875,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>PREVENTATIVE_GT</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -21914,7 +21906,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>SpecialtyConfigID</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -21945,7 +21937,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>SpecialtyTableID</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -21976,7 +21968,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>PharmacySpecialtyRestrictFlag</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -22007,7 +21999,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>MaintGT1</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -22039,7 +22031,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>MaintDate1</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -22070,7 +22062,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>MaintGT2</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -22102,7 +22094,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>MaintDate2</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -22133,7 +22125,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>MaintGT3</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -22165,7 +22157,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>MaintDate3</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -22196,7 +22188,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>NoRepackNDC</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -22227,7 +22219,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>PricingFlag340B</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -22258,7 +22250,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>IncludeDeductOOP</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -22289,7 +22281,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DeductOOPFamilyFlag</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -22320,7 +22312,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>SingleSourceCopayFlag</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -22351,7 +22343,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>DESIDrugFlag</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -22382,7 +22374,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>CarryForwardOOP</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -22413,7 +22405,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>CarryForwardDED</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -22444,7 +22436,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>IndivFamilyOOPMax</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -22475,7 +22467,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>SafeHarborCopayCap</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -22506,7 +22498,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>PapMinCopay</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -22537,7 +22529,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>PatientSafetyAPAP</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -22568,7 +22560,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>PatientSafetyOPIODSoft</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -22599,7 +22591,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>PatientSafetyOPIODHard</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -22630,7 +22622,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>WarehouseLoadDate</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -22661,7 +22653,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>WarehouseChangeDate</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -22692,7 +22684,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>AltPricingFlag</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -22723,7 +22715,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>AltPricingKey</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -22754,7 +22746,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>MedFoodsFlag</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -22785,7 +22777,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>MaxAmtMult</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -22816,7 +22808,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>NDCID</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -22848,7 +22840,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>NDCIDEffDate</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -22880,7 +22872,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                           </Paragraphs>
                           <rd:DefaultName>NDCIDTermDate</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -22895,317 +22887,317 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
             </TablixBody>
             <TablixColumnHierarchy>
               <TablixMembers>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -23219,7 +23211,7 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
                     <DataElementName>Detail</DataElementName>
                   </Group>
                   <TablixMembers>
-                    <TablixMember/>
+                    <TablixMember />
                   </TablixMembers>
                   <DataElementName>Detail_Collection</DataElementName>
                   <DataElementOutput>Output</DataElementOutput>
@@ -23231,11 +23223,11 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
             <Height>0.80208in</Height>
             <Width>310.14583in</Width>
             <DataElementOutput>Output</DataElementOutput>
-            <Style/>
+            <Style />
           </Tablix>
         </ReportItems>
         <Height>0.80208in</Height>
-        <Style/>
+        <Style />
       </Body>
       <Width>310.14583in</Width>
       <Page>
@@ -23247,10 +23239,18 @@ AND PLAN_DATA.PLAN_NUMBER IS NOT NULL</CommandText>
         <RightMargin>0.4in</RightMargin>
         <TopMargin>0.5in</TopMargin>
         <BottomMargin>0.5in</BottomMargin>
-        <Style/>
+        <Style />
       </Page>
     </ReportSection>
   </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="RID">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <Prompt>RID</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+  </ReportParameters>
   <Language>en-US</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportID>dd18590d-e9e5-4e27-a63a-60c6e6534cef</rd:ReportID>

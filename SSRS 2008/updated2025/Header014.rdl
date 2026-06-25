@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition">
   <DataSources>
     <DataSource Name="claims">
@@ -62,75 +62,6 @@ WHERE     (Rpt_ID_pk = @ReportID)</CommandText>
       </Query>
     </DataSet>
   </DataSets>
-  <ReportParameters>
-    <ReportParameter Name="ReportID">
-      <DataType>String</DataType>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>ReportID</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="DateFlag">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>R</Value>
-        </Values>
-      </DefaultValue>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>Date Flag</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="BegDate">
-      <DataType>Integer</DataType>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>Beg YTD</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="EndDate">
-      <DataType>Integer</DataType>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>End YTD</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="SystemLink">
-      <DataType>String</DataType>
-      <Prompt>SystemLink</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="SystemNumber">
-      <DataType>String</DataType>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>SystemNumber</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="SponsorNumber">
-      <DataType>String</DataType>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>SponsorNumber</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="MasterGroupNumber">
-      <DataType>String</DataType>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>MasterGroupNumber</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="GroupNumber">
-      <DataType>String</DataType>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>GroupNumber</Prompt>
-    </ReportParameter>
-  </ReportParameters>
-  <Code>Function GetValue(parameter as Object) as String
-   Dim s as String 
-   Dim i as integer
-   IF parameter.IsMultiValue THEN
-      's = "Multivalue: " 
-      For i = 0 to parameter.Count-1
-         's = s &amp; RTrim(parameter.Value(i)) &amp; ": "
-         s = s  &amp; RTrim(parameter.Label(i))
-         IF i &lt; parameter.Count-1 THEN
-            s = s &amp; ", "
-         END IF 
-      Next
-   ELSE
-      's = "Single value: " + CStr(parameter.Value)
-      s  = RTrim(parameter.Value(i))
-   END IF
-   Return REPLACE(s,"","")
-End Function</Code>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -285,7 +216,7 @@ End Function</Code>
                         </Style>
                       </TextRun>
                     </TextRuns>
-                    <Style/>
+                    <Style />
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>SYS_LINK_DESCRIPTION</rd:DefaultName>
@@ -309,7 +240,7 @@ End Function</Code>
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value/>
+                        <Value />
                         <Style>
                           <FontSize>9pt</FontSize>
                         </Style>
@@ -341,15 +272,15 @@ End Function</Code>
                     <TextRuns>
                       <TextRun>
                         <Value>= Parameters!SystemNumber.Value +
-  Parameters!SponsorNumber.Value +
-  Parameters!MasterGroupNumber.Value +
-  Parameters!GroupNumber.Value</Value>
+      Parameters!SponsorNumber.Value +
+      Parameters!MasterGroupNumber.Value +
+      Parameters!GroupNumber.Value</Value>
                         <Style>
                           <FontSize>8pt</FontSize>
                         </Style>
                       </TextRun>
                     </TextRuns>
-                    <Style/>
+                    <Style />
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>textbox2</rd:DefaultName>
@@ -382,7 +313,7 @@ End Function</Code>
           </Rectangle>
         </ReportItems>
         <Height>1.2in</Height>
-        <Style/>
+        <Style />
       </Body>
       <Width>10in</Width>
       <Page>
@@ -390,10 +321,79 @@ End Function</Code>
         <RightMargin>0.4in</RightMargin>
         <TopMargin>0.5in</TopMargin>
         <BottomMargin>0.5in</BottomMargin>
-        <Style/>
+        <Style />
       </Page>
     </ReportSection>
   </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="ReportID">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportID</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DateFlag">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>R</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Date Flag</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="BegDate">
+      <DataType>Integer</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Beg YTD</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="EndDate">
+      <DataType>Integer</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>End YTD</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SystemLink">
+      <DataType>String</DataType>
+      <Prompt>SystemLink</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SystemNumber">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>SystemNumber</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SponsorNumber">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>SponsorNumber</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="MasterGroupNumber">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>MasterGroupNumber</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="GroupNumber">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>GroupNumber</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Function GetValue(parameter as Object) as String
+   Dim s as String 
+   Dim i as integer
+   IF parameter.IsMultiValue THEN
+      's = "Multivalue: " 
+      For i = 0 to parameter.Count-1
+         's = s &amp; RTrim(parameter.Value(i)) &amp; ": "
+         s = s  &amp; RTrim(parameter.Label(i))
+         IF i &lt; parameter.Count-1 THEN
+            s = s &amp; ", "
+         END IF 
+      Next
+   ELSE
+      's = "Single value: " + CStr(parameter.Value)
+      s  = RTrim(parameter.Value(i))
+   END IF
+   Return REPLACE(s,"","")
+End Function</Code>
   <Language>en-US</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportID>be1d9606-5899-4049-82e1-042d4cd6982e</rd:ReportID>

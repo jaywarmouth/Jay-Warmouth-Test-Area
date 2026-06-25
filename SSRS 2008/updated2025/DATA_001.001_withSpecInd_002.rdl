@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition">
   <DataSources>
     <DataSource Name="claims">
@@ -364,7 +364,7 @@
     <DataSet Name="dspr_ServerNameLookup">
       <Fields>
         <Field Name="ID">
-          <DataField/>
+          <DataField />
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
@@ -1045,213 +1045,6 @@
       </Query>
     </DataSet>
   </DataSets>
-  <ReportParameters>
-    <ReportParameter Name="SystemLink">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsReportUserInfo</DataSetName>
-          <ValueField>SystemLink</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>System Link</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dsSystemLinkLookUp</DataSetName>
-          <ValueField>SYSTEM_LINK</ValueField>
-          <LabelField>SystemLinkNumber</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="SystemNumber">
-      <DataType>Integer</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsReportUserInfo</DataSetName>
-          <ValueField>SystemNumber</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>System</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>pr_systemlookupAllFrSystemLink</DataSetName>
-          <ValueField>SYSTEM_NUMBER</ValueField>
-          <LabelField>SYSTEM_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="SponsorNumber">
-      <DataType>Integer</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsReportUserInfo</DataSetName>
-          <ValueField>SponsorNumber</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>Sponsor</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>pr_sponsorlookupallfrsystem</DataSetName>
-          <ValueField>SPONSOR_NUMBER</ValueField>
-          <LabelField>SPONSOR_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="MasterGroupNumber">
-      <DataType>Integer</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsReportUserInfo</DataSetName>
-          <ValueField>MasterGroupNumber</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>Master Group</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dsmastergrouplookupallfrsystem</DataSetName>
-          <ValueField>MASTER_GROUP</ValueField>
-          <LabelField>MASTER_GROUP_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="GroupNumber">
-      <DataType>Integer</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsReportUserInfo</DataSetName>
-          <ValueField>GroupNumber</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>Sub Group</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dsGroupLookupAllfrMasterGroup</DataSetName>
-          <ValueField>GROUP_NUMBER</ValueField>
-          <LabelField>GROUP_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="DateFlag">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsReportUserInfo</DataSetName>
-          <ValueField>PeriodFlag</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>Date Flag</Prompt>
-      <ValidValues>
-        <ParameterValues>
-          <ParameterValue>
-            <Value>R</Value>
-            <Label>Rx Date</Label>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>P</Value>
-            <Label>Process Date</Label>
-          </ParameterValue>
-        </ParameterValues>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="BegDate">
-      <DataType>DateTime</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsDateCall</DataSetName>
-          <ValueField>FirstOfMonth</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>BegDate</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="EndDate">
-      <DataType>DateTime</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsDateCall</DataSetName>
-          <ValueField>LastOfMonth</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>EndDate</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="TopLimit">
-      <DataType>Integer</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>999999</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>TopLimit</Prompt>
-      <Hidden>true</Hidden>
-    </ReportParameter>
-    <ReportParameter Name="SortOrder">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>="C"</Value>
-        </Values>
-      </DefaultValue>
-      <AllowBlank>true</AllowBlank>
-    </ReportParameter>
-    <ReportParameter Name="PatientData">
-      <DataType>Integer</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>0</Value>
-        </Values>
-      </DefaultValue>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>Cardholder Data</Prompt>
-      <ValidValues>
-        <ParameterValues>
-          <ParameterValue>
-            <Value>0</Value>
-            <Label>Include</Label>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>1</Value>
-            <Label>Exclude</Label>
-          </ParameterValue>
-        </ParameterValues>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="PhysicianData">
-      <DataType>Integer</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>0</Value>
-        </Values>
-      </DefaultValue>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>Physician Data</Prompt>
-      <ValidValues>
-        <ParameterValues>
-          <ParameterValue>
-            <Value>0</Value>
-            <Label>Include</Label>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>1</Value>
-            <Label>Exclude</Label>
-          </ParameterValue>
-        </ParameterValues>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="WarehouseFlag">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>ds_WarehouseCheck</DataSetName>
-          <ValueField>WAREHOUSE_STATUS</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>Report_Parameter_12</Prompt>
-      <Hidden>true</Hidden>
-    </ReportParameter>
-  </ReportParameters>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -7217,7 +7010,7 @@
                           <rd:DefaultName>METRIC_QUANTITY</rd:DefaultName>
                           <ZIndex>19</ZIndex>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -7673,7 +7466,7 @@
                           </Paragraphs>
                           <rd:DefaultName>DIFF_ING_PAID</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -7738,7 +7531,7 @@
                           </Paragraphs>
                           <rd:DefaultName>DIFF_DISP_FEE</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -7897,7 +7690,7 @@
                           </Paragraphs>
                           <rd:DefaultName>TotalDrugCost1</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -7930,7 +7723,7 @@
                           </Paragraphs>
                           <rd:DefaultName>AWP_100_PERCENT</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -8025,7 +7818,7 @@
                           </Paragraphs>
                           <rd:DefaultName>OtherPayorAmount1</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -8375,8 +8168,8 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=IIF(IsNothing(Fields!DateOfReversal.Value),
-Fields!DateOfReversal.Value,
-FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
+    Fields!DateOfReversal.Value,
+    FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -9912,7 +9705,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -9943,7 +9736,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -9974,7 +9767,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -10036,7 +9829,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -10098,7 +9891,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -10129,7 +9922,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -10161,7 +9954,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -10193,7 +9986,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -10224,7 +10017,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -10255,7 +10048,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -10286,7 +10079,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -10317,7 +10110,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -10348,7 +10141,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -10379,7 +10172,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -10410,7 +10203,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -10441,7 +10234,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -10472,7 +10265,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -10503,7 +10296,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -10534,7 +10327,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -10565,7 +10358,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -10596,7 +10389,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -10627,7 +10420,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -10659,7 +10452,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -10691,7 +10484,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -10722,7 +10515,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -10753,7 +10546,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -10784,7 +10577,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -10816,7 +10609,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -10848,7 +10641,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -10880,7 +10673,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -10912,7 +10705,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -10943,7 +10736,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -10975,7 +10768,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -11006,7 +10799,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -11037,7 +10830,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -11068,7 +10861,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -11100,7 +10893,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -11132,7 +10925,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -11163,7 +10956,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -11194,7 +10987,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -11318,7 +11111,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -11380,7 +11173,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -11411,7 +11204,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -11442,7 +11235,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -11473,7 +11266,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -11504,7 +11297,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -11536,7 +11329,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -11567,7 +11360,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -11599,7 +11392,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -11630,7 +11423,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -11662,7 +11455,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -11694,7 +11487,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -11757,7 +11550,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -11788,7 +11581,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -11819,7 +11612,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -11851,7 +11644,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -11882,7 +11675,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -11913,7 +11706,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -11944,7 +11737,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -11975,7 +11768,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -12006,7 +11799,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -12037,7 +11830,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -12068,7 +11861,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -12161,7 +11954,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -12192,7 +11985,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -12223,7 +12016,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -12254,7 +12047,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -12285,7 +12078,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -12316,7 +12109,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -12378,7 +12171,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -12409,7 +12202,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -12440,7 +12233,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -12471,7 +12264,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -12502,7 +12295,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -12533,7 +12326,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -12564,7 +12357,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -12595,7 +12388,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -12626,7 +12419,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -12657,7 +12450,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -12688,7 +12481,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -12719,7 +12512,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -12750,7 +12543,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -12781,7 +12574,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -12812,7 +12605,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -12843,7 +12636,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -12874,7 +12667,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -12905,7 +12698,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -12936,7 +12729,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -12967,7 +12760,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -12998,7 +12791,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -13029,7 +12822,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -13060,7 +12853,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -13091,7 +12884,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -13122,7 +12915,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -13153,7 +12946,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -13184,7 +12977,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -13215,7 +13008,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -13277,7 +13070,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -13308,7 +13101,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -13339,7 +13132,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -13370,7 +13163,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -13401,7 +13194,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -13432,7 +13225,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -13463,7 +13256,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -13494,7 +13287,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -13525,7 +13318,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -13556,7 +13349,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -13587,7 +13380,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -13618,7 +13411,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -13649,7 +13442,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -13680,7 +13473,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -13711,7 +13504,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -13742,7 +13535,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -13804,7 +13597,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>4pt</FontSize>
                                   </Style>
@@ -13832,26 +13625,26 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
             </TablixBody>
             <TablixColumnHierarchy>
               <TablixMembers>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
                 <TablixMember>
                   <Visibility>
                     <Hidden>=iif(Parameters!PhysicianData.Value =1,true,false)</Hidden>
@@ -13862,7 +13655,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                     <Hidden>=iif(Parameters!PhysicianData.Value =1,true,false)</Hidden>
                   </Visibility>
                 </TablixMember>
-                <TablixMember/>
+                <TablixMember />
                 <TablixMember>
                   <Visibility>
                     <Hidden>=iif(Parameters!PatientData.Value=1,true,false)</Hidden>
@@ -13873,9 +13666,9 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                     <Hidden>=iif(Parameters!PatientData.Value=1,true,false)</Hidden>
                   </Visibility>
                 </TablixMember>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
                 <TablixMember>
                   <Visibility>
                     <Hidden>=iif(Parameters!PatientData.Value=1,true,false)</Hidden>
@@ -13891,101 +13684,101 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                     <Hidden>=iif(Parameters!PatientData.Value=1,true,false)</Hidden>
                   </Visibility>
                 </TablixMember>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -13999,7 +13792,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
                     <DataElementName>Detail</DataElementName>
                   </Group>
                   <TablixMembers>
-                    <TablixMember/>
+                    <TablixMember />
                   </TablixMembers>
                   <DataElementName>Detail_Collection</DataElementName>
                   <DataElementOutput>Output</DataElementOutput>
@@ -14018,7 +13811,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
             <Visibility>
               <Hidden>=iif(Parameters!WarehouseFlag.Value = "ONLINE", FALSE, TRUE)</Hidden>
             </Visibility>
-            <Style/>
+            <Style />
           </Tablix>
           <Subreport Name="subreport1">
             <ReportName>Header11WarehouseOffline</ReportName>
@@ -14030,11 +13823,11 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
               <Hidden>=iif(Parameters!WarehouseFlag.Value = "ONLINE", TRUE, FALSE)</Hidden>
             </Visibility>
             <DataElementOutput>NoOutput</DataElementOutput>
-            <Style/>
+            <Style />
           </Subreport>
         </ReportItems>
         <Height>1.4in</Height>
-        <Style/>
+        <Style />
       </Body>
       <Width>132.25418in</Width>
       <Page>
@@ -14074,7 +13867,7 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
               </Style>
             </Textbox>
           </ReportItems>
-          <Style/>
+          <Style />
         </PageFooter>
         <PageHeight>8.5in</PageHeight>
         <PageWidth>11in</PageWidth>
@@ -14084,10 +13877,217 @@ FormatDateTime(Fields!DateOfReversal.Value,2))</Value>
         <RightMargin>0.4in</RightMargin>
         <TopMargin>0.5in</TopMargin>
         <BottomMargin>0.5in</BottomMargin>
-        <Style/>
+        <Style />
       </Page>
     </ReportSection>
   </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="SystemLink">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsReportUserInfo</DataSetName>
+          <ValueField>SystemLink</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>System Link</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dsSystemLinkLookUp</DataSetName>
+          <ValueField>SYSTEM_LINK</ValueField>
+          <LabelField>SystemLinkNumber</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="SystemNumber">
+      <DataType>Integer</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsReportUserInfo</DataSetName>
+          <ValueField>SystemNumber</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>System</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>pr_systemlookupAllFrSystemLink</DataSetName>
+          <ValueField>SYSTEM_NUMBER</ValueField>
+          <LabelField>SYSTEM_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="SponsorNumber">
+      <DataType>Integer</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsReportUserInfo</DataSetName>
+          <ValueField>SponsorNumber</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Sponsor</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>pr_sponsorlookupallfrsystem</DataSetName>
+          <ValueField>SPONSOR_NUMBER</ValueField>
+          <LabelField>SPONSOR_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="MasterGroupNumber">
+      <DataType>Integer</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsReportUserInfo</DataSetName>
+          <ValueField>MasterGroupNumber</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Master Group</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dsmastergrouplookupallfrsystem</DataSetName>
+          <ValueField>MASTER_GROUP</ValueField>
+          <LabelField>MASTER_GROUP_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="GroupNumber">
+      <DataType>Integer</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsReportUserInfo</DataSetName>
+          <ValueField>GroupNumber</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Sub Group</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dsGroupLookupAllfrMasterGroup</DataSetName>
+          <ValueField>GROUP_NUMBER</ValueField>
+          <LabelField>GROUP_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="DateFlag">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsReportUserInfo</DataSetName>
+          <ValueField>PeriodFlag</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Date Flag</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>R</Value>
+            <Label>Rx Date</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>P</Value>
+            <Label>Process Date</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="BegDate">
+      <DataType>DateTime</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsDateCall</DataSetName>
+          <ValueField>FirstOfMonth</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>BegDate</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="EndDate">
+      <DataType>DateTime</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsDateCall</DataSetName>
+          <ValueField>LastOfMonth</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>EndDate</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="TopLimit">
+      <DataType>Integer</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>999999</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>TopLimit</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="SortOrder">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>="C"</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+    </ReportParameter>
+    <ReportParameter Name="PatientData">
+      <DataType>Integer</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>0</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Cardholder Data</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>0</Value>
+            <Label>Include</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>1</Value>
+            <Label>Exclude</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="PhysicianData">
+      <DataType>Integer</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>0</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Physician Data</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>0</Value>
+            <Label>Include</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>1</Value>
+            <Label>Exclude</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="WarehouseFlag">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>ds_WarehouseCheck</DataSetName>
+          <ValueField>WAREHOUSE_STATUS</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Report_Parameter_12</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+  </ReportParameters>
   <Language>en-US</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportID>dd18590d-e9e5-4e27-a63a-60c6e6534cef</rd:ReportID>

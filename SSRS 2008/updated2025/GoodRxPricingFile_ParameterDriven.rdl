@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition">
   <DataSources>
     <DataSource Name="claims_subscriptions">
@@ -115,38 +115,6 @@
       </Query>
     </DataSet>
   </DataSets>
-  <ReportParameters>
-    <ReportParameter Name="RID">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <Prompt>RID</Prompt>
-      <Hidden>true</Hidden>
-    </ReportParameter>
-    <ReportParameter Name="PseudoSponsorNumber">
-      <DataType>Integer</DataType>
-      <Prompt>Pseudo Sponsor Number</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="FileType">
-      <DataType>String</DataType>
-      <Prompt>File Type</Prompt>
-      <ValidValues>
-        <ParameterValues>
-          <ParameterValue>
-            <Value>ASSIST</Value>
-            <Label>ASSIST</Label>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>PBM_AW</Value>
-            <Label>PBM_AW</Label>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>ASSIST, PBM_AW</Value>
-            <Label>BOTH</Label>
-          </ParameterValue>
-        </ParameterValues>
-      </ValidValues>
-    </ReportParameter>
-  </ReportParameters>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -603,7 +571,7 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!ndc.Value</Value>
-                                  <Style/>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -635,7 +603,7 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!ppu.Value</Value>
-                                  <Style/>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -667,7 +635,7 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!fee.Value</Value>
-                                  <Style/>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -699,7 +667,7 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!base_quantity.Value</Value>
-                                  <Style/>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -731,7 +699,7 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!min_quantity.Value</Value>
-                                  <Style/>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -763,7 +731,7 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!max_quantity.Value</Value>
-                                  <Style/>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -795,7 +763,7 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!price_group.Value</Value>
-                                  <Style/>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -826,7 +794,7 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!max_days_supply.Value</Value>
-                                  <Style/>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -857,7 +825,7 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!min_days_supply.Value</Value>
-                                  <Style/>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -888,7 +856,7 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!ppulogic.Value</Value>
-                                  <Style/>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -919,7 +887,7 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!file.Value</Value>
-                                  <Style/>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -947,17 +915,17 @@
             </TablixBody>
             <TablixColumnHierarchy>
               <TablixMembers>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -966,7 +934,7 @@
                   <KeepWithGroup>After</KeepWithGroup>
                 </TablixMember>
                 <TablixMember>
-                  <Group Name="Details"/>
+                  <Group Name="Details" />
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
@@ -981,7 +949,7 @@
           </Tablix>
         </ReportItems>
         <Height>0.5in</Height>
-        <Style/>
+        <Style />
       </Body>
       <Width>12.57292in</Width>
       <Page>
@@ -993,10 +961,42 @@
         <RightMargin>0.4in</RightMargin>
         <TopMargin>0.5in</TopMargin>
         <BottomMargin>0.5in</BottomMargin>
-        <Style/>
+        <Style />
       </Page>
     </ReportSection>
   </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="RID">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <Prompt>RID</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="PseudoSponsorNumber">
+      <DataType>Integer</DataType>
+      <Prompt>Pseudo Sponsor Number</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FileType">
+      <DataType>String</DataType>
+      <Prompt>File Type</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>ASSIST</Value>
+            <Label>ASSIST</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>PBM_AW</Value>
+            <Label>PBM_AW</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>ASSIST, PBM_AW</Value>
+            <Label>BOTH</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+  </ReportParameters>
   <Language>en-US</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportID>dd18590d-e9e5-4e27-a63a-60c6e6534cef</rd:ReportID>

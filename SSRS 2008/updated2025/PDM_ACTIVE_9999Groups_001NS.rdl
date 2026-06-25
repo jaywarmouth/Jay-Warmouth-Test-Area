@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition">
   <DataSources>
     <DataSource Name="claims_subscriptions">
@@ -80,50 +80,6 @@
       </Query>
     </DataSet>
   </DataSets>
-  <ReportParameters>
-    <ReportParameter Name="SystemLink">
-      <DataType>String</DataType>
-      <Prompt>System Link</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="SystemNumber">
-      <DataType>String</DataType>
-      <Prompt>System Number</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="SponsorNumber">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>-1</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>Sponsor Number</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="MasterGroupNumber">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>-1</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>Master Group</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="GroupNumber">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>-1</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>Group Number</Prompt>
-    </ReportParameter>
-  </ReportParameters>
-  <Code>function NDZ(a, b, c) 
-	if b = 0 then 
-	return c 
-	else 
-	return a/b 
-	end if
-end function</Code>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -237,10 +193,10 @@ end function</Code>
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!SYSTEM_NAME.Value</Value>
-                                  <Style/>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>SYSTEM_NAME</rd:DefaultName>
@@ -267,10 +223,10 @@ end function</Code>
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!GROUP_NUMBER.Value</Value>
-                                  <Style/>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>GROUP_NUMBER</rd:DefaultName>
@@ -293,8 +249,8 @@ end function</Code>
             </TablixBody>
             <TablixColumnHierarchy>
               <TablixMembers>
-                <TablixMember/>
-                <TablixMember/>
+                <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -320,7 +276,7 @@ end function</Code>
                           <KeepWithGroup>After</KeepWithGroup>
                         </TablixMember>
                         <TablixMember>
-                          <Group Name="Details"/>
+                          <Group Name="Details" />
                           <SortExpressions>
                             <SortExpression>
                               <Value>=Fields!SYSTEM_LINK.Value</Value>
@@ -353,7 +309,7 @@ end function</Code>
           </Tablix>
         </ReportItems>
         <Height>0.5in</Height>
-        <Style/>
+        <Style />
       </Body>
       <Width>3in</Width>
       <Page>
@@ -365,10 +321,54 @@ end function</Code>
         <RightMargin>0.4in</RightMargin>
         <TopMargin>0.5in</TopMargin>
         <BottomMargin>0.5in</BottomMargin>
-        <Style/>
+        <Style />
       </Page>
     </ReportSection>
   </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="SystemLink">
+      <DataType>String</DataType>
+      <Prompt>System Link</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SystemNumber">
+      <DataType>String</DataType>
+      <Prompt>System Number</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SponsorNumber">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>-1</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Sponsor Number</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="MasterGroupNumber">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>-1</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Master Group</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="GroupNumber">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>-1</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Group Number</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>function NDZ(a, b, c) 
+	if b = 0 then 
+	return c 
+	else 
+	return a/b 
+	end if
+end function</Code>
   <Language>en-US</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportID>dd18590d-e9e5-4e27-a63a-60c6e6534cef</rd:ReportID>

@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition">
   <DataSources>
     <DataSource Name="HelpDeskRx">
@@ -296,44 +296,6 @@
       </Query>
     </DataSet>
   </DataSets>
-  <ReportParameters>
-    <ReportParameter Name="BegDate">
-      <DataType>DateTime</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsDateCall</DataSetName>
-          <ValueField>Yesterday</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>Beg Date</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="EndDate">
-      <DataType>DateTime</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsDateCall</DataSetName>
-          <ValueField>Yesterday</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>End Date</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="RID">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
-        </Values>
-      </DefaultValue>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>Report_Parameter_6</Prompt>
-      <Hidden>true</Hidden>
-    </ReportParameter>
-    <ReportParameter Name="SystemNumber">
-      <DataType>String</DataType>
-      <Prompt>System Number</Prompt>
-    </ReportParameter>
-  </ReportParameters>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -1122,7 +1084,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>StartTime</rd:DefaultName>
@@ -1154,7 +1116,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>EndTime</rd:DefaultName>
@@ -1186,7 +1148,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>CallerIdNumber</rd:DefaultName>
@@ -1218,7 +1180,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>DNIS</rd:DefaultName>
@@ -1250,7 +1212,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>CallType</rd:DefaultName>
@@ -1282,7 +1244,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>SystemNumber</rd:DefaultName>
@@ -1314,7 +1276,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>SponsorNumber</rd:DefaultName>
@@ -1346,7 +1308,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>GroupNumber</rd:DefaultName>
@@ -1378,7 +1340,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>NABP</rd:DefaultName>
@@ -1410,7 +1372,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>NPI</rd:DefaultName>
@@ -1442,7 +1404,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>RxNumber</rd:DefaultName>
@@ -1474,7 +1436,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>RejectNumber</rd:DefaultName>
@@ -1506,7 +1468,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>CardholderNumber</rd:DefaultName>
@@ -1538,7 +1500,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>ContactName</rd:DefaultName>
@@ -1570,7 +1532,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>AgentNames</rd:DefaultName>
@@ -1602,7 +1564,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Agent_Ring_Sec</rd:DefaultName>
@@ -1634,7 +1596,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>In_Queue_Time</rd:DefaultName>
@@ -1666,7 +1628,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Agent_Connected_Sec</rd:DefaultName>
@@ -1698,7 +1660,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Abandoned</rd:DefaultName>
@@ -1730,7 +1692,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Diverted</rd:DefaultName>
@@ -1762,7 +1724,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>NumberofAgents</rd:DefaultName>
@@ -1785,27 +1747,27 @@
             </TablixBody>
             <TablixColumnHierarchy>
               <TablixMembers>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -1814,7 +1776,7 @@
                   <KeepWithGroup>After</KeepWithGroup>
                 </TablixMember>
                 <TablixMember>
-                  <Group Name="Details"/>
+                  <Group Name="Details" />
                   <KeepTogether>true</KeepTogether>
                 </TablixMember>
               </TablixMembers>
@@ -2455,7 +2417,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>SystemNumber</rd:DefaultName>
@@ -2507,7 +2469,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>SponsorNumber</rd:DefaultName>
@@ -2560,7 +2522,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox65</rd:DefaultName>
@@ -2593,7 +2555,7 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox65</rd:DefaultName>
@@ -2620,14 +2582,14 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=1.0*SUM(IIF (Fields!Agent_Ring_Sec.Value+Fields!In_Queue_Time.Value &gt; 30 AND 
-Fields!Agent_Ring_Sec.Value+Fields!In_Queue_Time.Value &lt;= 60,1,0))/SUM(1)</Value>
+    Fields!Agent_Ring_Sec.Value+Fields!In_Queue_Time.Value &lt;= 60,1,0))/SUM(1)</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <Format>0.00%</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox69</rd:DefaultName>
@@ -2654,14 +2616,14 @@ Fields!Agent_Ring_Sec.Value+Fields!In_Queue_Time.Value &lt;= 60,1,0))/SUM(1)</Va
                               <TextRuns>
                                 <TextRun>
                                   <Value>=SUM(IIF (Fields!Agent_Ring_Sec.Value+Fields!In_Queue_Time.Value &gt; 30 AND 
-Fields!Agent_Ring_Sec.Value+Fields!In_Queue_Time.Value &lt;= 60,1,0))</Value>
+    Fields!Agent_Ring_Sec.Value+Fields!In_Queue_Time.Value &lt;= 60,1,0))</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <Format>0;(0)</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox69</rd:DefaultName>
@@ -2688,14 +2650,14 @@ Fields!Agent_Ring_Sec.Value+Fields!In_Queue_Time.Value &lt;= 60,1,0))</Value>
                               <TextRuns>
                                 <TextRun>
                                   <Value>=1.0*SUM(IIF (Fields!Agent_Ring_Sec.Value+Fields!In_Queue_Time.Value &gt; 60 AND 
-Fields!Agent_Ring_Sec.Value+Fields!In_Queue_Time.Value &lt;= 120,1,0))/SUM(1)</Value>
+    Fields!Agent_Ring_Sec.Value+Fields!In_Queue_Time.Value &lt;= 120,1,0))/SUM(1)</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <Format>0.00%</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox71</rd:DefaultName>
@@ -2722,14 +2684,14 @@ Fields!Agent_Ring_Sec.Value+Fields!In_Queue_Time.Value &lt;= 120,1,0))/SUM(1)</V
                               <TextRuns>
                                 <TextRun>
                                   <Value>=SUM(IIF (Fields!Agent_Ring_Sec.Value+Fields!In_Queue_Time.Value &gt; 60 AND 
-Fields!Agent_Ring_Sec.Value+Fields!In_Queue_Time.Value &lt;= 120,1,0))</Value>
+    Fields!Agent_Ring_Sec.Value+Fields!In_Queue_Time.Value &lt;= 120,1,0))</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <Format>0;(0)</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox71</rd:DefaultName>
@@ -2762,7 +2724,7 @@ Fields!Agent_Ring_Sec.Value+Fields!In_Queue_Time.Value &lt;= 120,1,0))</Value>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox65</rd:DefaultName>
@@ -2795,7 +2757,7 @@ Fields!Agent_Ring_Sec.Value+Fields!In_Queue_Time.Value &lt;= 120,1,0))</Value>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox65</rd:DefaultName>
@@ -2828,7 +2790,7 @@ Fields!Agent_Ring_Sec.Value+Fields!In_Queue_Time.Value &lt;= 120,1,0))</Value>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox65</rd:DefaultName>
@@ -2861,7 +2823,7 @@ Fields!Agent_Ring_Sec.Value+Fields!In_Queue_Time.Value &lt;= 120,1,0))</Value>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox65</rd:DefaultName>
@@ -2894,7 +2856,7 @@ Fields!Agent_Ring_Sec.Value+Fields!In_Queue_Time.Value &lt;= 120,1,0))</Value>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox67</rd:DefaultName>
@@ -2917,19 +2879,19 @@ Fields!Agent_Ring_Sec.Value+Fields!In_Queue_Time.Value &lt;= 120,1,0))</Value>
             </TablixBody>
             <TablixColumnHierarchy>
               <TablixMembers>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -2989,7 +2951,7 @@ Fields!Agent_Ring_Sec.Value+Fields!In_Queue_Time.Value &lt;= 120,1,0))</Value>
           </Tablix>
         </ReportItems>
         <Height>1.62445in</Height>
-        <Style/>
+        <Style />
       </Body>
       <Width>27.52041in</Width>
       <Page>
@@ -3007,6 +2969,44 @@ Fields!Agent_Ring_Sec.Value+Fields!In_Queue_Time.Value &lt;= 120,1,0))</Value>
       </Page>
     </ReportSection>
   </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="BegDate">
+      <DataType>DateTime</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsDateCall</DataSetName>
+          <ValueField>Yesterday</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Beg Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="EndDate">
+      <DataType>DateTime</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsDateCall</DataSetName>
+          <ValueField>Yesterday</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>End Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="RID">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_6</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="SystemNumber">
+      <DataType>String</DataType>
+      <Prompt>System Number</Prompt>
+    </ReportParameter>
+  </ReportParameters>
   <Language>en-US</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportID>f5ee2e0f-462d-4cc7-b22c-faf0c6fcfe26</rd:ReportID>

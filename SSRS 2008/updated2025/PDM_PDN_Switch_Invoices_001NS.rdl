@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition">
   <DataSources>
     <DataSource Name="claims_subscriptions">
@@ -423,88 +423,6 @@
       </Query>
     </DataSet>
   </DataSets>
-  <ReportParameters>
-    <ReportParameter Name="SystemLink">
-      <DataType>String</DataType>
-      <Prompt>SystemLink</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>rwSystemLinkLookup</DataSetName>
-          <ValueField>SYSTEM_LINK</ValueField>
-          <LabelField>SystemLinkNumber</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="SystemNumber">
-      <DataType>Integer</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsReportUserInfo</DataSetName>
-          <ValueField>SystemNumber</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>SystemNumber</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dssystemLookUpfrSystemLink</DataSetName>
-          <ValueField>SYSTEM_NUMBER</ValueField>
-          <LabelField>SYSTEM_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="SponsorNumber">
-      <DataType>Integer</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsReportUserInfo</DataSetName>
-          <ValueField>SponsorNumber</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>SponsorNumber</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="MasterGroupNumber">
-      <DataType>Integer</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsReportUserInfo</DataSetName>
-          <ValueField>MasterGroupNumber</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>MasterGroupNumber</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dsMasterGroupLookupAllfrSponsor</DataSetName>
-          <ValueField>MASTER_GROUP</ValueField>
-          <LabelField>MASTER_GROUP_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="InvoiceDate">
-      <DataType>DateTime</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsDateCall</DataSetName>
-          <ValueField>PeriodEnding</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>InvoiceDate</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="RID">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
-        </Values>
-      </DefaultValue>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>Report_Parameter_6</Prompt>
-      <Hidden>true</Hidden>
-    </ReportParameter>
-  </ReportParameters>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -538,10 +456,10 @@
                                   <TextRuns>
                                     <TextRun>
                                       <Value>=First(Fields!BillFromCity.Value, "dspr_PDM_PDN_Switch_Invoices_001NS") + ", " +  First(Fields!BillFromState.Value, "dspr_PDM_PDN_Switch_Invoices_001NS") + "  " +  First(Fields!BillFromZIP.Value, "dspr_PDM_PDN_Switch_Invoices_001NS")</Value>
-                                      <Style/>
+                                      <Style />
                                     </TextRun>
                                   </TextRuns>
-                                  <Style/>
+                                  <Style />
                                 </Paragraph>
                               </Paragraphs>
                               <Top>0.43611in</Top>
@@ -560,10 +478,10 @@
                                   <TextRuns>
                                     <TextRun>
                                       <Value>=First(Fields!BillFromName.Value, "dspr_PDM_PDN_Switch_Invoices_001NS")</Value>
-                                      <Style/>
+                                      <Style />
                                     </TextRun>
                                   </TextRuns>
-                                  <Style/>
+                                  <Style />
                                 </Paragraph>
                               </Paragraphs>
                               <Top>0.03611in</Top>
@@ -583,10 +501,10 @@
                                   <TextRuns>
                                     <TextRun>
                                       <Value>=First(Fields!BillFromStreet1.Value, "dspr_PDM_PDN_Switch_Invoices_001NS")</Value>
-                                      <Style/>
+                                      <Style />
                                     </TextRun>
                                   </TextRuns>
-                                  <Style/>
+                                  <Style />
                                 </Paragraph>
                               </Paragraphs>
                               <Top>0.23611in</Top>
@@ -727,15 +645,15 @@
                                   <TextRuns>
                                     <TextRun>
                                       <Value>= "PDN transactions for the month of " &amp; 
-MonthName(Month(Fields!InvoiceMonthEndDate.Value))&amp;"-"&amp;
-Year(Fields!InvoiceMonthEndDate.Value)</Value>
+    MonthName(Month(Fields!InvoiceMonthEndDate.Value))&amp;"-"&amp;
+    Year(Fields!InvoiceMonthEndDate.Value)</Value>
                                       <Style>
                                         <FontSize>9pt</FontSize>
                                         <FontWeight>Bold</FontWeight>
                                       </Style>
                                     </TextRun>
                                   </TextRuns>
-                                  <Style/>
+                                  <Style />
                                 </Paragraph>
                               </Paragraphs>
                               <Top>2.125in</Top>
@@ -758,10 +676,10 @@ Year(Fields!InvoiceMonthEndDate.Value)</Value>
                                   <TextRuns>
                                     <TextRun>
                                       <Value>= First(Fields!BillToName.Value, "dspr_PDM_PDN_Switch_Invoices_001NS")</Value>
-                                      <Style/>
+                                      <Style />
                                     </TextRun>
                                   </TextRuns>
-                                  <Style/>
+                                  <Style />
                                 </Paragraph>
                               </Paragraphs>
                               <Top>1.45556in</Top>
@@ -782,10 +700,10 @@ Year(Fields!InvoiceMonthEndDate.Value)</Value>
                                   <TextRuns>
                                     <TextRun>
                                       <Value>=First(Fields!BillToStreet1.Value, "dspr_PDM_PDN_Switch_Invoices_001NS")</Value>
-                                      <Style/>
+                                      <Style />
                                     </TextRun>
                                   </TextRuns>
-                                  <Style/>
+                                  <Style />
                                 </Paragraph>
                               </Paragraphs>
                               <Top>1.65556in</Top>
@@ -806,10 +724,10 @@ Year(Fields!InvoiceMonthEndDate.Value)</Value>
                                   <TextRuns>
                                     <TextRun>
                                       <Value>=First(Fields!BillToCity.Value, "dspr_PDM_PDN_Switch_Invoices_001NS") + ", " +  First(Fields!BillToState.Value, "dspr_PDM_PDN_Switch_Invoices_001NS") + "  " +  First(Fields!BillToZIP.Value, "dspr_PDM_PDN_Switch_Invoices_001NS")</Value>
-                                      <Style/>
+                                      <Style />
                                     </TextRun>
                                   </TextRuns>
-                                  <Style/>
+                                  <Style />
                                 </Paragraph>
                               </Paragraphs>
                               <Top>1.85556in</Top>
@@ -825,13 +743,13 @@ Year(Fields!InvoiceMonthEndDate.Value)</Value>
                           </ReportItems>
                           <DataElementOutput>ContentsOnly</DataElementOutput>
                           <ZIndex>36</ZIndex>
-                          <Style/>
+                          <Style />
                         </Rectangle>
                         <ColSpan>3</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
-                    <TablixCell/>
+                    <TablixCell />
+                    <TablixCell />
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
@@ -1002,7 +920,7 @@ Year(Fields!InvoiceMonthEndDate.Value)</Value>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>SponsorName</rd:DefaultName>
@@ -1065,7 +983,7 @@ Year(Fields!InvoiceMonthEndDate.Value)</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1167,7 +1085,7 @@ Year(Fields!InvoiceMonthEndDate.Value)</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -1243,7 +1161,7 @@ Year(Fields!InvoiceMonthEndDate.Value)</Value>
                           </Paragraphs>
                           <rd:DefaultName>Textbox56</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -1268,11 +1186,11 @@ Year(Fields!InvoiceMonthEndDate.Value)</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
-                                  <Style/>
+                                  <Value />
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox7</rd:DefaultName>
@@ -1344,7 +1262,7 @@ Year(Fields!InvoiceMonthEndDate.Value)</Value>
                           </Paragraphs>
                           <ZIndex>10</ZIndex>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -1370,11 +1288,11 @@ Year(Fields!InvoiceMonthEndDate.Value)</Value>
                                 <TextRun>
                                   <Value>Save time and paper by paying via ACH, our preferred payment method.  Our bank information is below.
 
-KeyBank
-Account Name: Pharmacy Data Management, Inc.
-ABA#: 041000139
-Account#: 355781002926</Value>
-                                  <Style/>
+    KeyBank
+    Account Name: Pharmacy Data Management, Inc.
+    ABA#: 041000139
+    Account#: 355781002926</Value>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1394,17 +1312,17 @@ Account#: 355781002926</Value>
                         <ColSpan>3</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
-                    <TablixCell/>
+                    <TablixCell />
+                    <TablixCell />
                   </TablixCells>
                 </TablixRow>
               </TablixRows>
             </TablixBody>
             <TablixColumnHierarchy>
               <TablixMembers>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -1427,7 +1345,7 @@ Account#: 355781002926</Value>
                         </TablixMember>
                         <TablixMember>
                           <TablixMembers>
-                            <TablixMember/>
+                            <TablixMember />
                           </TablixMembers>
                           <DataElementName>Detail_Collection</DataElementName>
                           <DataElementOutput>Output</DataElementOutput>
@@ -1448,11 +1366,11 @@ Account#: 355781002926</Value>
             <DataSetName>dspr_PDM_PDN_Switch_Invoices_001NS</DataSetName>
             <Height>4.73674in</Height>
             <Width>7.72986in</Width>
-            <Style/>
+            <Style />
           </Tablix>
         </ReportItems>
         <Height>5in</Height>
-        <Style/>
+        <Style />
       </Body>
       <Width>7.72986in</Width>
       <Page>
@@ -1491,16 +1409,98 @@ Account#: 355781002926</Value>
               </Style>
             </Textbox>
           </ReportItems>
-          <Style/>
+          <Style />
         </PageFooter>
         <LeftMargin>0.3in</LeftMargin>
         <RightMargin>0.3in</RightMargin>
         <TopMargin>0.1in</TopMargin>
         <BottomMargin>0.3in</BottomMargin>
-        <Style/>
+        <Style />
       </Page>
     </ReportSection>
   </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="SystemLink">
+      <DataType>String</DataType>
+      <Prompt>SystemLink</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>rwSystemLinkLookup</DataSetName>
+          <ValueField>SYSTEM_LINK</ValueField>
+          <LabelField>SystemLinkNumber</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="SystemNumber">
+      <DataType>Integer</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsReportUserInfo</DataSetName>
+          <ValueField>SystemNumber</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>SystemNumber</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dssystemLookUpfrSystemLink</DataSetName>
+          <ValueField>SYSTEM_NUMBER</ValueField>
+          <LabelField>SYSTEM_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="SponsorNumber">
+      <DataType>Integer</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsReportUserInfo</DataSetName>
+          <ValueField>SponsorNumber</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>SponsorNumber</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="MasterGroupNumber">
+      <DataType>Integer</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsReportUserInfo</DataSetName>
+          <ValueField>MasterGroupNumber</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>MasterGroupNumber</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dsMasterGroupLookupAllfrSponsor</DataSetName>
+          <ValueField>MASTER_GROUP</ValueField>
+          <LabelField>MASTER_GROUP_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="InvoiceDate">
+      <DataType>DateTime</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsDateCall</DataSetName>
+          <ValueField>PeriodEnding</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>InvoiceDate</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="RID">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_6</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+  </ReportParameters>
   <Language>en-US</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportID>f5ee2e0f-462d-4cc7-b22c-faf0c6fcfe26</rd:ReportID>

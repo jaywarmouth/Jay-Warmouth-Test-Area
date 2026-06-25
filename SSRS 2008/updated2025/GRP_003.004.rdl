@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition">
   <DataSources>
     <DataSource Name="claims">
@@ -415,7 +415,7 @@
     <DataSet Name="dspr_ServerNameLookup">
       <Fields>
         <Field Name="ID">
-          <DataField/>
+          <DataField />
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
@@ -469,245 +469,6 @@
       </Query>
     </DataSet>
   </DataSets>
-  <ReportParameters>
-    <ReportParameter Name="SystemLink">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>ABC</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>Rx Program</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dsSystemLinkLookUp</DataSetName>
-          <ValueField>SYSTEM_LINK</ValueField>
-          <LabelField>SystemLinkNumber</LabelField>
-        </DataSetReference>
-      </ValidValues>
-      <MultiValue>true</MultiValue>
-    </ReportParameter>
-    <ReportParameter Name="SystemNumber">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>75</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>System</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>pr_systemlookupAllFrSystemLink</DataSetName>
-          <ValueField>SYSTEM_NUMBER</ValueField>
-          <LabelField>SYSTEM_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-      <MultiValue>true</MultiValue>
-    </ReportParameter>
-    <ReportParameter Name="SponsorNumber">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>538</Value>
-          <Value>528</Value>
-          <Value>529</Value>
-          <Value>404</Value>
-          <Value>535</Value>
-          <Value>492</Value>
-          <Value>493</Value>
-          <Value>540</Value>
-          <Value>392</Value>
-          <Value>407</Value>
-          <Value>450</Value>
-          <Value>394</Value>
-          <Value>393</Value>
-          <Value>464</Value>
-          <Value>474</Value>
-          <Value>543</Value>
-          <Value>495</Value>
-          <Value>396</Value>
-          <Value>401</Value>
-          <Value>403</Value>
-          <Value>398</Value>
-          <Value>532</Value>
-          <Value>553</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>Sponsor</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>pr_sponsorlookupallfrsystem</DataSetName>
-          <ValueField>SPONSOR_NUMBER</ValueField>
-          <LabelField>SPONSOR_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-      <MultiValue>true</MultiValue>
-    </ReportParameter>
-    <ReportParameter Name="MasterGroupNumber">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>rsReportUserInfo</DataSetName>
-          <ValueField>MasterGroupNumber</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>Master Group</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dsmastergrouplookupallfrsystem</DataSetName>
-          <ValueField>MASTER_GROUP</ValueField>
-          <LabelField>MASTER_GROUP_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-      <MultiValue>true</MultiValue>
-    </ReportParameter>
-    <ReportParameter Name="GroupNumber">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>rsReportUserInfo</DataSetName>
-          <ValueField>GroupNumber</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>Group Number</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dspr_GroupLookupfrAllMasterGroup</DataSetName>
-          <ValueField>GROUP_NUMBER</ValueField>
-          <LabelField>GROUP_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-      <MultiValue>true</MultiValue>
-    </ReportParameter>
-    <ReportParameter Name="DateFlag">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>rsReportUserInfo</DataSetName>
-          <ValueField>PeriodFlag</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>Date Flag</Prompt>
-      <ValidValues>
-        <ParameterValues>
-          <ParameterValue>
-            <Value>R</Value>
-            <Label>Rx Date</Label>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>P</Value>
-            <Label>Process Date</Label>
-          </ParameterValue>
-        </ParameterValues>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="BegDate">
-      <DataType>DateTime</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsDateCall</DataSetName>
-          <ValueField>MonthBeginningDate</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>Beg Date</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="EndDate">
-      <DataType>DateTime</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsDateCall</DataSetName>
-          <ValueField>MonthEndingDate</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>End Date</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="Calendar">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>E</Value>
-        </Values>
-      </DefaultValue>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>Months</Prompt>
-      <ValidValues>
-        <ParameterValues>
-          <ParameterValue>
-            <Value>I</Value>
-            <Label>Include</Label>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>E</Value>
-            <Label>Exclude</Label>
-          </ParameterValue>
-        </ParameterValues>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="WarehouseFlag">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>ds_WarehouseCheck</DataSetName>
-          <ValueField>WAREHOUSE_STATUS</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>Report_Parameter_8</Prompt>
-      <Hidden>true</Hidden>
-    </ReportParameter>
-  </ReportParameters>
-  <Code>Function GetValue(ByVal parameterName As String) As String
-   Dim s as String  =  " "  &amp; vbCrLf   
-   Dim i as Integer
-   IF Report.Parameters(parameterName).Label(0) = " All" THEN
-     s = s &amp;  Report.Parameters(parameterName).Label(0)
-     s = s &amp; vbCrLf &amp; vbCrLf
-     return s
-   ELSE
-    For i = 0 to Report.Parameters(parameterName).Count - 1
-       s = s  &amp; RTrim(Report.Parameters(parameterName).Label(i))
-       IF i &lt; Report.Parameters(parameterName).Count -1 THEN
-           s = s &amp; ", "
-       END IF
-
-       IF (i  Mod 3) = 2 THEN
-           s = s &amp; " "  &amp; vbCrLf  
-       ELSE 
-           s = s &amp; " "
-       END IF 
-
-       IF i = Report.Parameters(parameterName).Count -1 AND  (i  Mod 3) &lt;&gt; 2 THEN
-           s = s &amp; vbCrLf
-       END IF
-       IF i = Report.Parameters(parameterName).Count -1 THEN
-           s = s &amp; vbCrLf
-       END IF
-   Next
-   END IF
-   Return s
-End Function
-
-Function isMultipleSelectionReport() As boolean
-  Dim isMultipleSelection As boolean = false
-  IF Report.Parameters("SystemLink").Count &gt; 1 THEN
-    return true
-  ELSE IF Report.Parameters("SystemNumber").Count &gt; 1 THEN
-    return true
-  ELSE IF Report.Parameters("SponsorNumber").Count &gt; 1 THEN
-    return true
-  ELSE IF Report.Parameters("MasterGroupNumber").Count &gt; 1 THEN
-    return true
-  ELSE IF Report.Parameters("GroupNumber").Count &gt; 1 THEN
-    return true
-  END IF
-  return false
-End Function
-
-       'IF i &lt; Report.Parameters(parameterName).Count Mod 2 = 1 THEN
-       '    s = s &amp; " "  &amp; vbCrLf  
-       'ELSE 
-       '    s = s &amp; " "
-       'END IF
-</Code>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -886,7 +647,7 @@ End Function
                         <ColSpan>2</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
+                    <TablixCell />
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="textbox6">
@@ -924,7 +685,7 @@ End Function
                         <ColSpan>2</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
+                    <TablixCell />
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="textbox48">
@@ -962,7 +723,7 @@ End Function
                         <ColSpan>2</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
+                    <TablixCell />
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="textbox64">
@@ -1036,7 +797,7 @@ End Function
                         <ColSpan>2</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
+                    <TablixCell />
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="textbox4">
@@ -1074,7 +835,7 @@ End Function
                         <ColSpan>2</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
+                    <TablixCell />
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="textbox61">
@@ -1112,7 +873,7 @@ End Function
                         <ColSpan>2</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
+                    <TablixCell />
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="textbox55">
@@ -1150,7 +911,7 @@ End Function
                         <ColSpan>2</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
+                    <TablixCell />
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="textbox8">
@@ -1188,7 +949,7 @@ End Function
                         <ColSpan>2</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
+                    <TablixCell />
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
@@ -1303,12 +1064,12 @@ End Function
                         <ColSpan>7</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="textbox209">
@@ -1318,7 +1079,7 @@ End Function
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1354,7 +1115,7 @@ End Function
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1390,7 +1151,7 @@ End Function
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1426,7 +1187,7 @@ End Function
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1462,7 +1223,7 @@ End Function
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1498,7 +1259,7 @@ End Function
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1534,7 +1295,7 @@ End Function
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1570,7 +1331,7 @@ End Function
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1606,7 +1367,7 @@ End Function
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1642,7 +1403,7 @@ End Function
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -2449,7 +2210,7 @@ End Function
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <ZIndex>75</ZIndex>
@@ -2482,7 +2243,7 @@ End Function
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox15</rd:DefaultName>
@@ -2983,7 +2744,7 @@ End Function
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <ZIndex>60</ZIndex>
@@ -3016,7 +2777,7 @@ End Function
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox152</rd:DefaultName>
@@ -3181,11 +2942,11 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>= "M/F"</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            <FontWeight>Bold</FontWeight>
-                                                            </Style>
+                                                              <Value>= "M/F"</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                                <FontWeight>Bold</FontWeight>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
                                                           <Style>
@@ -3218,12 +2979,12 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>=Sum(Fields!Claims.Value)</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            <FontWeight>Bold</FontWeight>
-                                                            <Format>n0</Format>
-                                                            </Style>
+                                                              <Value>=Sum(Fields!Claims.Value)</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                                <FontWeight>Bold</FontWeight>
+                                                                <Format>n0</Format>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
                                                           <Style>
@@ -3256,15 +3017,15 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>= Sum(Fields!AmtPaid.Value) +  Sum(Fields!Copay.Value)</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            <FontWeight>Bold</FontWeight>
-                                                            <Format>c0</Format>
-                                                            </Style>
+                                                              <Value>= Sum(Fields!AmtPaid.Value) +  Sum(Fields!Copay.Value)</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                                <FontWeight>Bold</FontWeight>
+                                                                <Format>c0</Format>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
-                                                          <Style/>
+                                                          <Style />
                                                         </Paragraph>
                                                       </Paragraphs>
                                                       <ZIndex>35</ZIndex>
@@ -3292,15 +3053,15 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>=IIF((Sum(Fields!AmtPaid.Value)+Sum(Fields!Copay.Value))&lt;&gt;0 And Sum(Fields!Claims.Value)&lt;&gt;0,(Sum(Fields!AmtPaid.Value)+Sum(Fields!Copay.Value))/Sum(Fields!Claims.Value),0)</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            <FontWeight>Bold</FontWeight>
-                                                            <Format>c2</Format>
-                                                            </Style>
+                                                              <Value>=IIF((Sum(Fields!AmtPaid.Value)+Sum(Fields!Copay.Value))&lt;&gt;0 And Sum(Fields!Claims.Value)&lt;&gt;0,(Sum(Fields!AmtPaid.Value)+Sum(Fields!Copay.Value))/Sum(Fields!Claims.Value),0)</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                                <FontWeight>Bold</FontWeight>
+                                                                <Format>c2</Format>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
-                                                          <Style/>
+                                                          <Style />
                                                         </Paragraph>
                                                       </Paragraphs>
                                                       <ZIndex>34</ZIndex>
@@ -3328,12 +3089,12 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>=Sum(Fields!Copay.Value)</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            <FontWeight>Bold</FontWeight>
-                                                            <Format>c0</Format>
-                                                            </Style>
+                                                              <Value>=Sum(Fields!Copay.Value)</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                                <FontWeight>Bold</FontWeight>
+                                                                <Format>c0</Format>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
                                                           <Style>
@@ -3366,12 +3127,12 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>=IIF(Sum(Fields!Copay.Value)&lt;&gt;0 And Sum(Fields!Claims.Value)&lt;&gt;0,Sum(Fields!Copay.Value)/Sum(Fields!Claims.Value),0)</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            <FontWeight>Bold</FontWeight>
-                                                            <Format>c2</Format>
-                                                            </Style>
+                                                              <Value>=IIF(Sum(Fields!Copay.Value)&lt;&gt;0 And Sum(Fields!Claims.Value)&lt;&gt;0,Sum(Fields!Copay.Value)/Sum(Fields!Claims.Value),0)</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                                <FontWeight>Bold</FontWeight>
+                                                                <Format>c2</Format>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
                                                           <Style>
@@ -3404,12 +3165,12 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>=Sum(Fields!AmtPaid.Value)</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            <FontWeight>Bold</FontWeight>
-                                                            <Format>c0</Format>
-                                                            </Style>
+                                                              <Value>=Sum(Fields!AmtPaid.Value)</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                                <FontWeight>Bold</FontWeight>
+                                                                <Format>c0</Format>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
                                                           <Style>
@@ -3442,12 +3203,12 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>=IIF(Sum(Fields!AmtPaid.Value)&lt;&gt;0 And Sum( Fields!Claims.Value)&lt;&gt;0,Sum(Fields!AmtPaid.Value)/Sum( Fields!Claims.Value),0)</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            <FontWeight>Bold</FontWeight>
-                                                            <Format>c2</Format>
-                                                            </Style>
+                                                              <Value>=IIF(Sum(Fields!AmtPaid.Value)&lt;&gt;0 And Sum( Fields!Claims.Value)&lt;&gt;0,Sum(Fields!AmtPaid.Value)/Sum( Fields!Claims.Value),0)</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                                <FontWeight>Bold</FontWeight>
+                                                                <Format>c2</Format>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
                                                           <Style>
@@ -3480,12 +3241,12 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>=IIF(Sum(Fields!UCRAmount.Value)&lt;&gt;0 And Sum(Fields!Claims.Value)&lt;&gt;0,Sum(Fields!UCRAmount.Value)/Sum(Fields!Claims.Value),0)</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            <FontWeight>Bold</FontWeight>
-                                                            <Format>c2</Format>
-                                                            </Style>
+                                                              <Value>=IIF(Sum(Fields!UCRAmount.Value)&lt;&gt;0 And Sum(Fields!Claims.Value)&lt;&gt;0,Sum(Fields!UCRAmount.Value)/Sum(Fields!Claims.Value),0)</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                                <FontWeight>Bold</FontWeight>
+                                                                <Format>c2</Format>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
                                                           <Style>
@@ -3518,12 +3279,12 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>=Sum(Fields!GenericClaims.Value)</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            <FontWeight>Bold</FontWeight>
-                                                            <Format>##,###,##0</Format>
-                                                            </Style>
+                                                              <Value>=Sum(Fields!GenericClaims.Value)</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                                <FontWeight>Bold</FontWeight>
+                                                                <Format>##,###,##0</Format>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
                                                           <Style>
@@ -3556,12 +3317,12 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>=IIF(Sum(Fields!GenericClaims.Value)&lt;&gt;0 And Sum(Fields!Claims.Value)&lt;&gt;0,Sum(Fields!GenericClaims.Value)/Sum(Fields!Claims.Value),0)</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            <FontWeight>Bold</FontWeight>
-                                                            <Format>##0.0%</Format>
-                                                            </Style>
+                                                              <Value>=IIF(Sum(Fields!GenericClaims.Value)&lt;&gt;0 And Sum(Fields!Claims.Value)&lt;&gt;0,Sum(Fields!GenericClaims.Value)/Sum(Fields!Claims.Value),0)</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                                <FontWeight>Bold</FontWeight>
+                                                                <Format>##0.0%</Format>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
                                                           <Style>
@@ -3594,12 +3355,12 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>=Sum(Fields!MailOrderClaims.Value)</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            <FontWeight>Bold</FontWeight>
-                                                            <Format>##,###,##0</Format>
-                                                            </Style>
+                                                              <Value>=Sum(Fields!MailOrderClaims.Value)</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                                <FontWeight>Bold</FontWeight>
+                                                                <Format>##,###,##0</Format>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
                                                           <Style>
@@ -3632,12 +3393,12 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>=IIF(Sum(Fields!MailOrderClaims.Value)&lt;&gt;0 And Sum(Fields!Claims.Value)&lt;&gt;0,Sum(Fields!MailOrderClaims.Value)/Sum(Fields!Claims.Value),0)</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            <FontWeight>Bold</FontWeight>
-                                                            <Format>##0.0%</Format>
-                                                            </Style>
+                                                              <Value>=IIF(Sum(Fields!MailOrderClaims.Value)&lt;&gt;0 And Sum(Fields!Claims.Value)&lt;&gt;0,Sum(Fields!MailOrderClaims.Value)/Sum(Fields!Claims.Value),0)</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                                <FontWeight>Bold</FontWeight>
+                                                                <Format>##0.0%</Format>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
                                                           <Style>
@@ -3670,12 +3431,12 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>= Sum( Fields!NonFormularyClaims.Value)</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            <FontWeight>Bold</FontWeight>
-                                                            <Format>n0</Format>
-                                                            </Style>
+                                                              <Value>= Sum( Fields!NonFormularyClaims.Value)</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                                <FontWeight>Bold</FontWeight>
+                                                                <Format>n0</Format>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
                                                           <Style>
@@ -3708,12 +3469,12 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>=IIF(Sum(Fields!NonFormularyClaims.Value)&lt;&gt;0 And Sum(Fields!Claims.Value)&lt;&gt;0,Sum(Fields!NonFormularyClaims.Value)/Sum(Fields!Claims.Value),0)</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            <FontWeight>Bold</FontWeight>
-                                                            <Format>##0.0%</Format>
-                                                            </Style>
+                                                              <Value>=IIF(Sum(Fields!NonFormularyClaims.Value)&lt;&gt;0 And Sum(Fields!Claims.Value)&lt;&gt;0,Sum(Fields!NonFormularyClaims.Value)/Sum(Fields!Claims.Value),0)</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                                <FontWeight>Bold</FontWeight>
+                                                                <Format>##0.0%</Format>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
                                                           <Style>
@@ -3746,12 +3507,12 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>=IIF(Sum(Fields!Members.Value)&lt;&gt;0 And FIRST(Fields!Month.Value)&lt;&gt;0,Sum(Fields!Members.Value)/FIRST(Fields!Month.Value),0)</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            <FontWeight>Bold</FontWeight>
-                                                            <Format>##,###,##0</Format>
-                                                            </Style>
+                                                              <Value>=IIF(Sum(Fields!Members.Value)&lt;&gt;0 And FIRST(Fields!Month.Value)&lt;&gt;0,Sum(Fields!Members.Value)/FIRST(Fields!Month.Value),0)</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                                <FontWeight>Bold</FontWeight>
+                                                                <Format>##,###,##0</Format>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
                                                           <Style>
@@ -3784,12 +3545,12 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>=Sum(Fields!ActiveMembers.Value)</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            <FontWeight>Bold</FontWeight>
-                                                            <Format>##,###,##0</Format>
-                                                            </Style>
+                                                              <Value>=Sum(Fields!ActiveMembers.Value)</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                                <FontWeight>Bold</FontWeight>
+                                                                <Format>##,###,##0</Format>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
                                                           <Style>
@@ -3822,15 +3583,15 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>=IIF(IIF(IsNothing(Sum(Fields!Members.Value)),0,Sum(Fields!Members.Value))&lt;&gt;0 And Sum(Fields!AmtPaid.Value)&lt;&gt;0,IIF(IsNothing(Sum(Fields!Members.Value)/Sum(Fields!Members.Value)),0,Sum(Fields!Members.Value)),0)</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            <FontWeight>Bold</FontWeight>
-                                                            <Format>c2</Format>
-                                                            </Style>
+                                                              <Value>=IIF(IIF(IsNothing(Sum(Fields!Members.Value)),0,Sum(Fields!Members.Value))&lt;&gt;0 And Sum(Fields!AmtPaid.Value)&lt;&gt;0,IIF(IsNothing(Sum(Fields!Members.Value)/Sum(Fields!Members.Value)),0,Sum(Fields!Members.Value)),0)</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                                <FontWeight>Bold</FontWeight>
+                                                                <Format>c2</Format>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
-                                                          <Style/>
+                                                          <Style />
                                                         </Paragraph>
                                                       </Paragraphs>
                                                       <ZIndex>20</ZIndex>
@@ -3858,15 +3619,15 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>=IIF(Sum(Fields!Claims.Value)&lt;&gt;0 And Sum(Fields!Members.Value)&lt;&gt;0,Sum(Fields!Claims.Value)/Sum(Fields!Members.Value),0)</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            <FontWeight>Bold</FontWeight>
-                                                            <Format>n2</Format>
-                                                            </Style>
+                                                              <Value>=IIF(Sum(Fields!Claims.Value)&lt;&gt;0 And Sum(Fields!Members.Value)&lt;&gt;0,Sum(Fields!Claims.Value)/Sum(Fields!Members.Value),0)</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                                <FontWeight>Bold</FontWeight>
+                                                                <Format>n2</Format>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
-                                                          <Style/>
+                                                          <Style />
                                                         </Paragraph>
                                                       </Paragraphs>
                                                       <ZIndex>19</ZIndex>
@@ -3899,10 +3660,10 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>=Left(Fields!AgeRange.Value, 2) + " thru " + Right(Fields!AgeRange.Value, 2)</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            </Style>
+                                                              <Value>=Left(Fields!AgeRange.Value, 2) + " thru " + Right(Fields!AgeRange.Value, 2)</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
                                                           <Style>
@@ -3933,11 +3694,11 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>=Sum(Fields!Claims.Value)</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            <Format>n0</Format>
-                                                            </Style>
+                                                              <Value>=Sum(Fields!Claims.Value)</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                                <Format>n0</Format>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
                                                           <Style>
@@ -3964,11 +3725,11 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>= Sum(Fields!AmtPaid.Value) +  Sum(Fields!Copay.Value)</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            <Format>c0</Format>
-                                                            </Style>
+                                                              <Value>= Sum(Fields!AmtPaid.Value) +  Sum(Fields!Copay.Value)</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                                <Format>c0</Format>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
                                                           <Style>
@@ -3995,11 +3756,11 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>=IIF((Sum(Fields!AmtPaid.Value)+Sum(Fields!Copay.Value))&lt;&gt;0 And Sum(Fields!Claims.Value)&lt;&gt;0,(Sum(Fields!AmtPaid.Value)+Sum(Fields!Copay.Value))/Sum(Fields!Claims.Value),0)</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            <Format>c2</Format>
-                                                            </Style>
+                                                              <Value>=IIF((Sum(Fields!AmtPaid.Value)+Sum(Fields!Copay.Value))&lt;&gt;0 And Sum(Fields!Claims.Value)&lt;&gt;0,(Sum(Fields!AmtPaid.Value)+Sum(Fields!Copay.Value))/Sum(Fields!Claims.Value),0)</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                                <Format>c2</Format>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
                                                           <Style>
@@ -4026,11 +3787,11 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>=Sum(Fields!Copay.Value)</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            <Format>c0</Format>
-                                                            </Style>
+                                                              <Value>=Sum(Fields!Copay.Value)</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                                <Format>c0</Format>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
                                                           <Style>
@@ -4057,11 +3818,11 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>=IIF(Sum(Fields!Copay.Value)&lt;&gt;0 And Sum(Fields!Claims.Value)&lt;&gt;0,Sum(Fields!Copay.Value)/Sum(Fields!Claims.Value),0)</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            <Format>c2</Format>
-                                                            </Style>
+                                                              <Value>=IIF(Sum(Fields!Copay.Value)&lt;&gt;0 And Sum(Fields!Claims.Value)&lt;&gt;0,Sum(Fields!Copay.Value)/Sum(Fields!Claims.Value),0)</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                                <Format>c2</Format>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
                                                           <Style>
@@ -4088,11 +3849,11 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>=Sum(Fields!AmtPaid.Value)</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            <Format>c0</Format>
-                                                            </Style>
+                                                              <Value>=Sum(Fields!AmtPaid.Value)</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                                <Format>c0</Format>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
                                                           <Style>
@@ -4119,11 +3880,11 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>=IIF(Sum(Fields!AmtPaid.Value)&lt;&gt;0 And Sum( Fields!Claims.Value)&lt;&gt;0,Sum(Fields!AmtPaid.Value)/Sum( Fields!Claims.Value),0)</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            <Format>c2</Format>
-                                                            </Style>
+                                                              <Value>=IIF(Sum(Fields!AmtPaid.Value)&lt;&gt;0 And Sum( Fields!Claims.Value)&lt;&gt;0,Sum(Fields!AmtPaid.Value)/Sum( Fields!Claims.Value),0)</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                                <Format>c2</Format>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
                                                           <Style>
@@ -4150,11 +3911,11 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>=IIF(Sum(Fields!UCRAmount.Value)&lt;&gt;0 And Sum(Fields!Claims.Value)&lt;&gt;0,Sum(Fields!UCRAmount.Value)/Sum(Fields!Claims.Value),0)</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            <Format>c2</Format>
-                                                            </Style>
+                                                              <Value>=IIF(Sum(Fields!UCRAmount.Value)&lt;&gt;0 And Sum(Fields!Claims.Value)&lt;&gt;0,Sum(Fields!UCRAmount.Value)/Sum(Fields!Claims.Value),0)</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                                <Format>c2</Format>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
                                                           <Style>
@@ -4181,11 +3942,11 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>=Sum(Fields!GenericClaims.Value)</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            <Format>##,###,##0</Format>
-                                                            </Style>
+                                                              <Value>=Sum(Fields!GenericClaims.Value)</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                                <Format>##,###,##0</Format>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
                                                           <Style>
@@ -4212,11 +3973,11 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>=IIF(Sum(Fields!GenericClaims.Value)&lt;&gt;0 And Sum(Fields!Claims.Value)&lt;&gt;0,Sum(Fields!GenericClaims.Value)/Sum(Fields!Claims.Value),0)</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            <Format>##0.0%</Format>
-                                                            </Style>
+                                                              <Value>=IIF(Sum(Fields!GenericClaims.Value)&lt;&gt;0 And Sum(Fields!Claims.Value)&lt;&gt;0,Sum(Fields!GenericClaims.Value)/Sum(Fields!Claims.Value),0)</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                                <Format>##0.0%</Format>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
                                                           <Style>
@@ -4243,11 +4004,11 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>=Sum(Fields!MailOrderClaims.Value)</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            <Format>##,###,##0</Format>
-                                                            </Style>
+                                                              <Value>=Sum(Fields!MailOrderClaims.Value)</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                                <Format>##,###,##0</Format>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
                                                           <Style>
@@ -4274,11 +4035,11 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>=IIF(Sum(Fields!MailOrderClaims.Value)&lt;&gt;0 And Sum(Fields!Claims.Value)&lt;&gt;0,Sum(Fields!MailOrderClaims.Value)/Sum(Fields!Claims.Value),0)</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            <Format>##0.0%</Format>
-                                                            </Style>
+                                                              <Value>=IIF(Sum(Fields!MailOrderClaims.Value)&lt;&gt;0 And Sum(Fields!Claims.Value)&lt;&gt;0,Sum(Fields!MailOrderClaims.Value)/Sum(Fields!Claims.Value),0)</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                                <Format>##0.0%</Format>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
                                                           <Style>
@@ -4305,11 +4066,11 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>= Sum( Fields!NonFormularyClaims.Value)</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            <Format>n0</Format>
-                                                            </Style>
+                                                              <Value>= Sum( Fields!NonFormularyClaims.Value)</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                                <Format>n0</Format>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
                                                           <Style>
@@ -4336,11 +4097,11 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>=IIF(Sum(Fields!NonFormularyClaims.Value)&lt;&gt;0 And Sum(Fields!Claims.Value)&lt;&gt;0,Sum(Fields!NonFormularyClaims.Value)/Sum(Fields!Claims.Value),0)</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            <Format>##0.0%</Format>
-                                                            </Style>
+                                                              <Value>=IIF(Sum(Fields!NonFormularyClaims.Value)&lt;&gt;0 And Sum(Fields!Claims.Value)&lt;&gt;0,Sum(Fields!NonFormularyClaims.Value)/Sum(Fields!Claims.Value),0)</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                                <Format>##0.0%</Format>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
                                                           <Style>
@@ -4367,11 +4128,11 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>=IIF(Sum(Fields!Members.Value)&lt;&gt;0 And FIRST(Fields!Month.Value)&lt;&gt;0,Sum(Fields!Members.Value)/FIRST(Fields!Month.Value),0)</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            <Format>##,###,##0</Format>
-                                                            </Style>
+                                                              <Value>=IIF(Sum(Fields!Members.Value)&lt;&gt;0 And FIRST(Fields!Month.Value)&lt;&gt;0,Sum(Fields!Members.Value)/FIRST(Fields!Month.Value),0)</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                                <Format>##,###,##0</Format>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
                                                           <Style>
@@ -4398,11 +4159,11 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>=Sum(Fields!ActiveMembers.Value)</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            <Format>##,###,##0</Format>
-                                                            </Style>
+                                                              <Value>=Sum(Fields!ActiveMembers.Value)</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                                <Format>##,###,##0</Format>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
                                                           <Style>
@@ -4429,11 +4190,11 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>=IIF(IIF(IsNothing(Sum(Fields!Members.Value)),0,Sum(Fields!Members.Value))&lt;&gt;0 And Sum(Fields!AmtPaid.Value)&lt;&gt;0,IIF(IsNothing(Sum(Fields!Members.Value)/Sum(Fields!Members.Value)),0,Sum(Fields!Members.Value)),0)</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            <Format>c2</Format>
-                                                            </Style>
+                                                              <Value>=IIF(IIF(IsNothing(Sum(Fields!Members.Value)),0,Sum(Fields!Members.Value))&lt;&gt;0 And Sum(Fields!AmtPaid.Value)&lt;&gt;0,IIF(IsNothing(Sum(Fields!Members.Value)/Sum(Fields!Members.Value)),0,Sum(Fields!Members.Value)),0)</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                                <Format>c2</Format>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
                                                           <Style>
@@ -4460,11 +4221,11 @@ End Function
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                            <Value>=IIF(Sum(Fields!Claims.Value)&lt;&gt;0 And Sum(Fields!Members.Value)&lt;&gt;0,Sum(Fields!Claims.Value)/Sum(Fields!Members.Value),0)</Value>
-                                                            <Style>
-                                                            <FontSize>7pt</FontSize>
-                                                            <Format>n2</Format>
-                                                            </Style>
+                                                              <Value>=IIF(Sum(Fields!Claims.Value)&lt;&gt;0 And Sum(Fields!Members.Value)&lt;&gt;0,Sum(Fields!Claims.Value)/Sum(Fields!Members.Value),0)</Value>
+                                                              <Style>
+                                                                <FontSize>7pt</FontSize>
+                                                                <Format>n2</Format>
+                                                              </Style>
                                                             </TextRun>
                                                           </TextRuns>
                                                           <Style>
@@ -4487,25 +4248,25 @@ End Function
                                         </TablixBody>
                                         <TablixColumnHierarchy>
                                           <TablixMembers>
-                                            <TablixMember/>
-                                            <TablixMember/>
-                                            <TablixMember/>
-                                            <TablixMember/>
-                                            <TablixMember/>
-                                            <TablixMember/>
-                                            <TablixMember/>
-                                            <TablixMember/>
-                                            <TablixMember/>
-                                            <TablixMember/>
-                                            <TablixMember/>
-                                            <TablixMember/>
-                                            <TablixMember/>
-                                            <TablixMember/>
-                                            <TablixMember/>
-                                            <TablixMember/>
-                                            <TablixMember/>
-                                            <TablixMember/>
-                                            <TablixMember/>
+                                            <TablixMember />
+                                            <TablixMember />
+                                            <TablixMember />
+                                            <TablixMember />
+                                            <TablixMember />
+                                            <TablixMember />
+                                            <TablixMember />
+                                            <TablixMember />
+                                            <TablixMember />
+                                            <TablixMember />
+                                            <TablixMember />
+                                            <TablixMember />
+                                            <TablixMember />
+                                            <TablixMember />
+                                            <TablixMember />
+                                            <TablixMember />
+                                            <TablixMember />
+                                            <TablixMember />
+                                            <TablixMember />
                                           </TablixMembers>
                                         </TablixColumnHierarchy>
                                         <TablixRowHierarchy>
@@ -4559,24 +4320,24 @@ End Function
                                       <ColSpan>19</ColSpan>
                                     </CellContents>
                                   </TablixCell>
-                                  <TablixCell/>
-                                  <TablixCell/>
-                                  <TablixCell/>
-                                  <TablixCell/>
-                                  <TablixCell/>
-                                  <TablixCell/>
-                                  <TablixCell/>
-                                  <TablixCell/>
-                                  <TablixCell/>
-                                  <TablixCell/>
-                                  <TablixCell/>
-                                  <TablixCell/>
-                                  <TablixCell/>
-                                  <TablixCell/>
-                                  <TablixCell/>
-                                  <TablixCell/>
-                                  <TablixCell/>
-                                  <TablixCell/>
+                                  <TablixCell />
+                                  <TablixCell />
+                                  <TablixCell />
+                                  <TablixCell />
+                                  <TablixCell />
+                                  <TablixCell />
+                                  <TablixCell />
+                                  <TablixCell />
+                                  <TablixCell />
+                                  <TablixCell />
+                                  <TablixCell />
+                                  <TablixCell />
+                                  <TablixCell />
+                                  <TablixCell />
+                                  <TablixCell />
+                                  <TablixCell />
+                                  <TablixCell />
+                                  <TablixCell />
                                 </TablixCells>
                               </TablixRow>
                               <TablixRow>
@@ -4671,7 +4432,7 @@ End Function
                                                 </Style>
                                               </TextRun>
                                             </TextRuns>
-                                            <Style/>
+                                            <Style />
                                           </Paragraph>
                                         </Paragraphs>
                                         <ZIndex>35</ZIndex>
@@ -4706,7 +4467,7 @@ End Function
                                                 </Style>
                                               </TextRun>
                                             </TextRuns>
-                                            <Style/>
+                                            <Style />
                                           </Paragraph>
                                         </Paragraphs>
                                         <ZIndex>34</ZIndex>
@@ -5222,7 +4983,7 @@ End Function
                                                 </Style>
                                               </TextRun>
                                             </TextRuns>
-                                            <Style/>
+                                            <Style />
                                           </Paragraph>
                                         </Paragraphs>
                                         <ZIndex>20</ZIndex>
@@ -5257,7 +5018,7 @@ End Function
                                                 </Style>
                                               </TextRun>
                                             </TextRuns>
-                                            <Style/>
+                                            <Style />
                                           </Paragraph>
                                         </Paragraphs>
                                         <ZIndex>19</ZIndex>
@@ -5874,25 +5635,25 @@ End Function
                           </TablixBody>
                           <TablixColumnHierarchy>
                             <TablixMembers>
-                              <TablixMember/>
-                              <TablixMember/>
-                              <TablixMember/>
-                              <TablixMember/>
-                              <TablixMember/>
-                              <TablixMember/>
-                              <TablixMember/>
-                              <TablixMember/>
-                              <TablixMember/>
-                              <TablixMember/>
-                              <TablixMember/>
-                              <TablixMember/>
-                              <TablixMember/>
-                              <TablixMember/>
-                              <TablixMember/>
-                              <TablixMember/>
-                              <TablixMember/>
-                              <TablixMember/>
-                              <TablixMember/>
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
                             </TablixMembers>
                           </TablixColumnHierarchy>
                           <TablixRowHierarchy>
@@ -5962,24 +5723,24 @@ End Function
                         <ColSpan>19</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
@@ -6080,7 +5841,7 @@ End Function
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <ZIndex>55</ZIndex>
@@ -6117,7 +5878,7 @@ End Function
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox26</rd:DefaultName>
@@ -6666,7 +6427,7 @@ End Function
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <ZIndex>40</ZIndex>
@@ -6703,7 +6464,7 @@ End Function
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox154</rd:DefaultName>
@@ -6888,7 +6649,7 @@ End Function
                                                 </Style>
                                               </TextRun>
                                             </TextRuns>
-                                            <Style/>
+                                            <Style />
                                           </Paragraph>
                                         </Paragraphs>
                                         <ZIndex>35</ZIndex>
@@ -6924,7 +6685,7 @@ End Function
                                                 </Style>
                                               </TextRun>
                                             </TextRuns>
-                                            <Style/>
+                                            <Style />
                                           </Paragraph>
                                         </Paragraphs>
                                         <ZIndex>34</ZIndex>
@@ -7454,7 +7215,7 @@ End Function
                                                 </Style>
                                               </TextRun>
                                             </TextRuns>
-                                            <Style/>
+                                            <Style />
                                           </Paragraph>
                                         </Paragraphs>
                                         <ZIndex>20</ZIndex>
@@ -7490,7 +7251,7 @@ End Function
                                                 </Style>
                                               </TextRun>
                                             </TextRuns>
-                                            <Style/>
+                                            <Style />
                                           </Paragraph>
                                         </Paragraphs>
                                         <ZIndex>19</ZIndex>
@@ -8107,25 +7868,25 @@ End Function
                           </TablixBody>
                           <TablixColumnHierarchy>
                             <TablixMembers>
-                              <TablixMember/>
-                              <TablixMember/>
-                              <TablixMember/>
-                              <TablixMember/>
-                              <TablixMember/>
-                              <TablixMember/>
-                              <TablixMember/>
-                              <TablixMember/>
-                              <TablixMember/>
-                              <TablixMember/>
-                              <TablixMember/>
-                              <TablixMember/>
-                              <TablixMember/>
-                              <TablixMember/>
-                              <TablixMember/>
-                              <TablixMember/>
-                              <TablixMember/>
-                              <TablixMember/>
-                              <TablixMember/>
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
                             </TablixMembers>
                           </TablixColumnHierarchy>
                           <TablixRowHierarchy>
@@ -8154,7 +7915,7 @@ End Function
                                       </SortExpression>
                                     </SortExpressions>
                                     <TablixMembers>
-                                      <TablixMember/>
+                                      <TablixMember />
                                     </TablixMembers>
                                     <DataElementName>Detail_Collection</DataElementName>
                                     <DataElementOutput>Output</DataElementOutput>
@@ -8177,24 +7938,24 @@ End Function
                         <ColSpan>19</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
@@ -8292,7 +8053,7 @@ End Function
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <ZIndex>35</ZIndex>
@@ -8328,7 +8089,7 @@ End Function
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox27</rd:DefaultName>
@@ -8864,7 +8625,7 @@ End Function
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <ZIndex>20</ZIndex>
@@ -8900,7 +8661,7 @@ End Function
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox156</rd:DefaultName>
@@ -9535,25 +9296,25 @@ End Function
             </TablixBody>
             <TablixColumnHierarchy>
               <TablixMembers>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -9666,7 +9427,7 @@ End Function
                                             </SortExpression>
                                           </SortExpressions>
                                           <TablixMembers>
-                                            <TablixMember/>
+                                            <TablixMember />
                                           </TablixMembers>
                                           <DataElementName>Detail_Collection</DataElementName>
                                           <DataElementOutput>Output</DataElementOutput>
@@ -9694,7 +9455,7 @@ End Function
               <Hidden>=iif(Parameters!WarehouseFlag.Value = "ONLINE", FALSE, TRUE)</Hidden>
             </Visibility>
             <DataElementOutput>NoOutput</DataElementOutput>
-            <Style/>
+            <Style />
           </Tablix>
           <Subreport Name="subreport1">
             <ReportName>Header02</ReportName>
@@ -9724,7 +9485,7 @@ End Function
               <Hidden>=iif(Parameters!WarehouseFlag.Value = "ONLINE", FALSE, TRUE)</Hidden>
             </Visibility>
             <DataElementOutput>NoOutput</DataElementOutput>
-            <Style/>
+            <Style />
           </Subreport>
           <Subreport Name="subreport2">
             <ReportName>Header11WarehouseOffline</ReportName>
@@ -9736,11 +9497,11 @@ End Function
               <Hidden>=iif(Parameters!WarehouseFlag.Value = "ONLINE", TRUE, FALSE)</Hidden>
             </Visibility>
             <DataElementOutput>NoOutput</DataElementOutput>
-            <Style/>
+            <Style />
           </Subreport>
         </ReportItems>
         <Height>3.50333in</Height>
-        <Style/>
+        <Style />
       </Body>
       <Width>10in</Width>
       <Page>
@@ -9778,7 +9539,7 @@ End Function
               </Style>
             </Textbox>
           </ReportItems>
-          <Style/>
+          <Style />
         </PageFooter>
         <PageHeight>8.5in</PageHeight>
         <PageWidth>11in</PageWidth>
@@ -9788,10 +9549,249 @@ End Function
         <RightMargin>0.3in</RightMargin>
         <TopMargin>0.4in</TopMargin>
         <BottomMargin>0.5in</BottomMargin>
-        <Style/>
+        <Style />
       </Page>
     </ReportSection>
   </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="SystemLink">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ABC</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Rx Program</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dsSystemLinkLookUp</DataSetName>
+          <ValueField>SYSTEM_LINK</ValueField>
+          <LabelField>SystemLinkNumber</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="SystemNumber">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>75</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>System</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>pr_systemlookupAllFrSystemLink</DataSetName>
+          <ValueField>SYSTEM_NUMBER</ValueField>
+          <LabelField>SYSTEM_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="SponsorNumber">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>538</Value>
+          <Value>528</Value>
+          <Value>529</Value>
+          <Value>404</Value>
+          <Value>535</Value>
+          <Value>492</Value>
+          <Value>493</Value>
+          <Value>540</Value>
+          <Value>392</Value>
+          <Value>407</Value>
+          <Value>450</Value>
+          <Value>394</Value>
+          <Value>393</Value>
+          <Value>464</Value>
+          <Value>474</Value>
+          <Value>543</Value>
+          <Value>495</Value>
+          <Value>396</Value>
+          <Value>401</Value>
+          <Value>403</Value>
+          <Value>398</Value>
+          <Value>532</Value>
+          <Value>553</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Sponsor</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>pr_sponsorlookupallfrsystem</DataSetName>
+          <ValueField>SPONSOR_NUMBER</ValueField>
+          <LabelField>SPONSOR_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="MasterGroupNumber">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>rsReportUserInfo</DataSetName>
+          <ValueField>MasterGroupNumber</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Master Group</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dsmastergrouplookupallfrsystem</DataSetName>
+          <ValueField>MASTER_GROUP</ValueField>
+          <LabelField>MASTER_GROUP_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="GroupNumber">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>rsReportUserInfo</DataSetName>
+          <ValueField>GroupNumber</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Group Number</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dspr_GroupLookupfrAllMasterGroup</DataSetName>
+          <ValueField>GROUP_NUMBER</ValueField>
+          <LabelField>GROUP_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="DateFlag">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>rsReportUserInfo</DataSetName>
+          <ValueField>PeriodFlag</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Date Flag</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>R</Value>
+            <Label>Rx Date</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>P</Value>
+            <Label>Process Date</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="BegDate">
+      <DataType>DateTime</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsDateCall</DataSetName>
+          <ValueField>MonthBeginningDate</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Beg Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="EndDate">
+      <DataType>DateTime</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsDateCall</DataSetName>
+          <ValueField>MonthEndingDate</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>End Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Calendar">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>E</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Months</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>I</Value>
+            <Label>Include</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>E</Value>
+            <Label>Exclude</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="WarehouseFlag">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>ds_WarehouseCheck</DataSetName>
+          <ValueField>WAREHOUSE_STATUS</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Report_Parameter_8</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Function GetValue(ByVal parameterName As String) As String
+   Dim s as String  =  " "  &amp; vbCrLf   
+   Dim i as Integer
+   IF Report.Parameters(parameterName).Label(0) = " All" THEN
+     s = s &amp;  Report.Parameters(parameterName).Label(0)
+     s = s &amp; vbCrLf &amp; vbCrLf
+     return s
+   ELSE
+    For i = 0 to Report.Parameters(parameterName).Count - 1
+       s = s  &amp; RTrim(Report.Parameters(parameterName).Label(i))
+       IF i &lt; Report.Parameters(parameterName).Count -1 THEN
+           s = s &amp; ", "
+       END IF
+
+       IF (i  Mod 3) = 2 THEN
+           s = s &amp; " "  &amp; vbCrLf  
+       ELSE 
+           s = s &amp; " "
+       END IF 
+
+       IF i = Report.Parameters(parameterName).Count -1 AND  (i  Mod 3) &lt;&gt; 2 THEN
+           s = s &amp; vbCrLf
+       END IF
+       IF i = Report.Parameters(parameterName).Count -1 THEN
+           s = s &amp; vbCrLf
+       END IF
+   Next
+   END IF
+   Return s
+End Function
+
+Function isMultipleSelectionReport() As boolean
+  Dim isMultipleSelection As boolean = false
+  IF Report.Parameters("SystemLink").Count &gt; 1 THEN
+    return true
+  ELSE IF Report.Parameters("SystemNumber").Count &gt; 1 THEN
+    return true
+  ELSE IF Report.Parameters("SponsorNumber").Count &gt; 1 THEN
+    return true
+  ELSE IF Report.Parameters("MasterGroupNumber").Count &gt; 1 THEN
+    return true
+  ELSE IF Report.Parameters("GroupNumber").Count &gt; 1 THEN
+    return true
+  END IF
+  return false
+End Function
+
+       'IF i &lt; Report.Parameters(parameterName).Count Mod 2 = 1 THEN
+       '    s = s &amp; " "  &amp; vbCrLf  
+       'ELSE 
+       '    s = s &amp; " "
+       'END IF
+</Code>
   <Language>en-US</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportID>dd18590d-e9e5-4e27-a63a-60c6e6534cef</rd:ReportID>

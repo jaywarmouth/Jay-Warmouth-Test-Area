@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition">
   <DataSources>
     <DataSource Name="claims_subscriptions">
@@ -415,78 +415,6 @@
       </Query>
     </DataSet>
   </DataSets>
-  <ReportParameters>
-    <ReportParameter Name="SystemLink">
-      <DataType>String</DataType>
-      <Prompt>SystemLink</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>rwSystemLinkLookup</DataSetName>
-          <ValueField>SYSTEM_LINK</ValueField>
-          <LabelField>SystemLinkNumber</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="SystemNumber">
-      <DataType>Integer</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsReportUserInfo</DataSetName>
-          <ValueField>SystemNumber</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>SystemNumber</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="SponsorNumber">
-      <DataType>Integer</DataType>
-      <Prompt>SponsorNumber</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="MasterGroupNumber">
-      <DataType>Integer</DataType>
-      <Nullable>true</Nullable>
-      <Prompt>MasterGroupNumber</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dsMasterGroupLookupAllfrSponsor</DataSetName>
-          <ValueField>MASTER_GROUP</ValueField>
-          <LabelField>MASTER_GROUP_NUMBER_NAME</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="InvoiceDate">
-      <DataType>DateTime</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsDateCall</DataSetName>
-          <ValueField>PeriodEnding</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>InvoiceDate</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="RID">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
-        </Values>
-      </DefaultValue>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>Report_Parameter_6</Prompt>
-      <Hidden>true</Hidden>
-    </ReportParameter>
-  </ReportParameters>
-  <Code>Function AddBusinessDays(startDate As DateTime, daysToAdd As Integer) As DateTime
-    Dim count As Integer = 0
-    Dim currentDate As DateTime = startDate
-    While count &lt; daysToAdd
-        currentDate = currentDate.AddDays(1)
-        If currentDate.DayOfWeek &lt;&gt; DayOfWeek.Saturday And currentDate.DayOfWeek &lt;&gt; DayOfWeek.Sunday Then
-            count += 1
-        End If
-    End While
-    Return currentDate
-End Function</Code>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -538,10 +466,10 @@ End Function</Code>
                                   <TextRuns>
                                     <TextRun>
                                       <Value>= "Poland, OH 44514"</Value>
-                                      <Style/>
+                                      <Style />
                                     </TextRun>
                                   </TextRuns>
-                                  <Style/>
+                                  <Style />
                                 </Paragraph>
                               </Paragraphs>
                               <Top>0.85in</Top>
@@ -560,10 +488,10 @@ End Function</Code>
                                   <TextRuns>
                                     <TextRun>
                                       <Value>="Pharmacy Data Management, Inc."</Value>
-                                      <Style/>
+                                      <Style />
                                     </TextRun>
                                   </TextRuns>
-                                  <Style/>
+                                  <Style />
                                 </Paragraph>
                               </Paragraphs>
                               <Top>0.45in</Top>
@@ -583,10 +511,10 @@ End Function</Code>
                                   <TextRuns>
                                     <TextRun>
                                       <Value>="8530 Crossroads Dr"</Value>
-                                      <Style/>
+                                      <Style />
                                     </TextRun>
                                   </TextRuns>
-                                  <Style/>
+                                  <Style />
                                 </Paragraph>
                               </Paragraphs>
                               <Top>0.65in</Top>
@@ -763,7 +691,7 @@ End Function</Code>
                                       </Style>
                                     </TextRun>
                                   </TextRuns>
-                                  <Style/>
+                                  <Style />
                                 </Paragraph>
                               </Paragraphs>
                               <Top>2.65in</Top>
@@ -813,14 +741,14 @@ End Function</Code>
                                   <TextRuns>
                                     <TextRun>
                                       <Value>=IIF(
-    IsNothing(Parameters!SponsorNumber.Value) OR Parameters!SponsorNumber.Value = -1,
-    First(Fields!LinkDescription.Value, "dsclas031_006"),
-    First(Fields!BillFromName.Value, "dsclas031_006")
-)</Value>
-                                      <Style/>
+        IsNothing(Parameters!SponsorNumber.Value) OR Parameters!SponsorNumber.Value = -1,
+        First(Fields!LinkDescription.Value, "dsclas031_006"),
+        First(Fields!BillFromName.Value, "dsclas031_006")
+    )</Value>
+                                      <Style />
                                     </TextRun>
                                   </TextRuns>
-                                  <Style/>
+                                  <Style />
                                 </Paragraph>
                               </Paragraphs>
                               <Top>1.9in</Top>
@@ -841,13 +769,13 @@ End Function</Code>
                                   <TextRuns>
                                     <TextRun>
                                       <Value>=IIF(
-    IsNothing(Parameters!SponsorNumber.Value) OR Parameters!SponsorNumber.Value = -1,
-    First(Fields!BillToStreet1.Value, "dsclas031_006"),
-    First(Fields!BillFromStreet1.Value, "dsclas031_006"))</Value>
-                                      <Style/>
+        IsNothing(Parameters!SponsorNumber.Value) OR Parameters!SponsorNumber.Value = -1,
+        First(Fields!BillToStreet1.Value, "dsclas031_006"),
+        First(Fields!BillFromStreet1.Value, "dsclas031_006"))</Value>
+                                      <Style />
                                     </TextRun>
                                   </TextRuns>
-                                  <Style/>
+                                  <Style />
                                 </Paragraph>
                               </Paragraphs>
                               <Top>2.11389in</Top>
@@ -868,14 +796,14 @@ End Function</Code>
                                   <TextRuns>
                                     <TextRun>
                                       <Value>=IIF(
-    IsNothing(Parameters!SponsorNumber.Value) OR Parameters!SponsorNumber.Value = -1,
-    First(Fields!BillToCity.Value, "dsclas031_006") + ", " + First(Fields!BillToState.Value, "dsclas031_006") + " " + First(Fields!BillToZIP.Value, "dsclas031_006"),
-    First(Fields!BillFromCity.Value, "dsclas031_006") + ", " + First(Fields!BillFromState.Value, "dsclas031_006") + " " + First(Fields!BillFromZIP.Value, "dsclas031_006")
-)</Value>
-                                      <Style/>
+        IsNothing(Parameters!SponsorNumber.Value) OR Parameters!SponsorNumber.Value = -1,
+        First(Fields!BillToCity.Value, "dsclas031_006") + ", " + First(Fields!BillToState.Value, "dsclas031_006") + " " + First(Fields!BillToZIP.Value, "dsclas031_006"),
+        First(Fields!BillFromCity.Value, "dsclas031_006") + ", " + First(Fields!BillFromState.Value, "dsclas031_006") + " " + First(Fields!BillFromZIP.Value, "dsclas031_006")
+    )</Value>
+                                      <Style />
                                     </TextRun>
                                   </TextRuns>
-                                  <Style/>
+                                  <Style />
                                 </Paragraph>
                               </Paragraphs>
                               <Top>2.3in</Top>
@@ -891,19 +819,19 @@ End Function</Code>
                           </ReportItems>
                           <DataElementOutput>ContentsOnly</DataElementOutput>
                           <ZIndex>36</ZIndex>
-                          <Style/>
+                          <Style />
                         </Rectangle>
                         <ColSpan>9</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
@@ -1305,7 +1233,7 @@ End Function</Code>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>SponsorName</rd:DefaultName>
@@ -1330,14 +1258,14 @@ End Function</Code>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox9</rd:DefaultName>
@@ -1478,7 +1406,7 @@ End Function</Code>
                           </Paragraphs>
                           <rd:DefaultName>Textbox42</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>LightSteelBlue</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1535,8 +1463,8 @@ End Function</Code>
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Sum(Fields!ClaimsPaid.Value) 
- + (Sum(Fields!Paper_Claims.Value) * Avg(Fields!DMR_Fee.Value)) 
- + (Sum(Fields!Electronic_Claims.Value) * Avg(Fields!Switch_Fee.Value))</Value>
+     + (Sum(Fields!Paper_Claims.Value) * Avg(Fields!DMR_Fee.Value)) 
+     + (Sum(Fields!Electronic_Claims.Value) * Avg(Fields!Switch_Fee.Value))</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1616,7 +1544,7 @@ End Function</Code>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>MasterGroupName</rd:DefaultName>
@@ -1641,14 +1569,14 @@ End Function</Code>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox10</rd:DefaultName>
@@ -1789,7 +1717,7 @@ End Function</Code>
                           </Paragraphs>
                           <rd:DefaultName>Textbox43</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <BackgroundColor>LightGrey</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1846,8 +1774,8 @@ End Function</Code>
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Sum(Fields!ClaimsPaid.Value) 
- + (Sum(Fields!Paper_Claims.Value) * Sum(Fields!DMR_Fee.Value)) 
- + (Sum(Fields!Electronic_Claims.Value) * Sum(Fields!Switch_Fee.Value))</Value>
+     + (Sum(Fields!Paper_Claims.Value) * Sum(Fields!DMR_Fee.Value)) 
+     + (Sum(Fields!Electronic_Claims.Value) * Sum(Fields!Switch_Fee.Value))</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1925,7 +1853,7 @@ End Function</Code>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>GroupName</rd:DefaultName>
@@ -1955,7 +1883,7 @@ End Function</Code>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>AltGroupNumber</rd:DefaultName>
@@ -2088,7 +2016,7 @@ End Function</Code>
                           </Paragraphs>
                           <rd:DefaultName>Textbox44</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -2178,11 +2106,11 @@ End Function</Code>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
-                                  <Style/>
+                                  <Value />
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style/>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox7</rd:DefaultName>
@@ -2206,7 +2134,7 @@ End Function</Code>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value/>
+                                  <Value />
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -2381,7 +2309,7 @@ End Function</Code>
                           </Paragraphs>
                           <rd:DefaultName>Textbox45</rd:DefaultName>
                           <Style>
-                            <Border/>
+                            <Border />
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -2435,14 +2363,14 @@ End Function</Code>
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Round(
-  Sum(Fields!ClaimsPaid.Value)
-  + (Sum(Fields!Paper_Claims.Value) 
-     * (Sum(Fields!Paper_Claims.Value * Fields!DMR_Fee.Value) 
-        / IIF(Sum(Fields!Paper_Claims.Value) = 0, 1, Sum(Fields!Paper_Claims.Value))))
-  + (Sum(Fields!Electronic_Claims.Value) 
-     * (Sum(Fields!Electronic_Claims.Value * Fields!Switch_Fee.Value) 
-        / IIF(Sum(Fields!Electronic_Claims.Value) = 0, 1, Sum(Fields!Electronic_Claims.Value))))
-, 2)</Value>
+      Sum(Fields!ClaimsPaid.Value)
+      + (Sum(Fields!Paper_Claims.Value) 
+         * (Sum(Fields!Paper_Claims.Value * Fields!DMR_Fee.Value) 
+            / IIF(Sum(Fields!Paper_Claims.Value) = 0, 1, Sum(Fields!Paper_Claims.Value))))
+      + (Sum(Fields!Electronic_Claims.Value) 
+         * (Sum(Fields!Electronic_Claims.Value * Fields!Switch_Fee.Value) 
+            / IIF(Sum(Fields!Electronic_Claims.Value) = 0, 1, Sum(Fields!Electronic_Claims.Value))))
+    , 2)</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -2503,29 +2431,29 @@ End Function</Code>
                         <ColSpan>9</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
-                    <TablixCell/>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
                   </TablixCells>
                 </TablixRow>
               </TablixRows>
             </TablixBody>
             <TablixColumnHierarchy>
               <TablixMembers>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
-                <TablixMember/>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -2567,7 +2495,7 @@ End Function</Code>
                             <DataElementName>Detail</DataElementName>
                           </Group>
                           <TablixMembers>
-                            <TablixMember/>
+                            <TablixMember />
                           </TablixMembers>
                           <DataElementName>Detail_Collection</DataElementName>
                           <DataElementOutput>Output</DataElementOutput>
@@ -2590,11 +2518,11 @@ End Function</Code>
             <DataSetName>dsclas031_006</DataSetName>
             <Height>3.96779in</Height>
             <Width>10.28541in</Width>
-            <Style/>
+            <Style />
           </Tablix>
         </ReportItems>
         <Height>3.96779in</Height>
-        <Style/>
+        <Style />
       </Body>
       <Width>10.28541in</Width>
       <Page>
@@ -2631,16 +2559,88 @@ End Function</Code>
               </Style>
             </Textbox>
           </ReportItems>
-          <Style/>
+          <Style />
         </PageFooter>
         <LeftMargin>0.3in</LeftMargin>
         <RightMargin>0.3in</RightMargin>
         <TopMargin>0.1in</TopMargin>
         <BottomMargin>0.3in</BottomMargin>
-        <Style/>
+        <Style />
       </Page>
     </ReportSection>
   </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="SystemLink">
+      <DataType>String</DataType>
+      <Prompt>SystemLink</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>rwSystemLinkLookup</DataSetName>
+          <ValueField>SYSTEM_LINK</ValueField>
+          <LabelField>SystemLinkNumber</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="SystemNumber">
+      <DataType>Integer</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsReportUserInfo</DataSetName>
+          <ValueField>SystemNumber</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>SystemNumber</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SponsorNumber">
+      <DataType>Integer</DataType>
+      <Prompt>SponsorNumber</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="MasterGroupNumber">
+      <DataType>Integer</DataType>
+      <Nullable>true</Nullable>
+      <Prompt>MasterGroupNumber</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dsMasterGroupLookupAllfrSponsor</DataSetName>
+          <ValueField>MASTER_GROUP</ValueField>
+          <LabelField>MASTER_GROUP_NUMBER_NAME</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="InvoiceDate">
+      <DataType>DateTime</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsDateCall</DataSetName>
+          <ValueField>PeriodEnding</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>InvoiceDate</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="RID">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_6</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Function AddBusinessDays(startDate As DateTime, daysToAdd As Integer) As DateTime
+    Dim count As Integer = 0
+    Dim currentDate As DateTime = startDate
+    While count &lt; daysToAdd
+        currentDate = currentDate.AddDays(1)
+        If currentDate.DayOfWeek &lt;&gt; DayOfWeek.Saturday And currentDate.DayOfWeek &lt;&gt; DayOfWeek.Sunday Then
+            count += 1
+        End If
+    End While
+    Return currentDate
+End Function</Code>
   <Language>en-US</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportID>f5ee2e0f-462d-4cc7-b22c-faf0c6fcfe26</rd:ReportID>
