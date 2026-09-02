@@ -1,0 +1,151 @@
+#!/bin/sh
+#
+#Program Name	: rmdevmenu.sh
+#Description	: Script for Development source code from SCM compiler menu 
+#Author		: Linda Jefferis
+#Date		: 08/3/2015
+#
+#
+# Variables :
+#
+COB_DIR=/usr/lnk/tst/$USER
+NUM="1"
+#
+#called functions
+#
+
+#
+#Used with menu choice settings
+#Display menu choice
+proj_menu()
+{
+clear
+
+echo "Please choose the project with source to compile:"
+cat ${COB_DIR}/wrk_proj_${USER}
+echo "Enter Number Choice and press Enter:"
+
+}
+
+#
+#Read source to be compiled
+src_read ()
+{
+	clear
+         echo "*********************************************"
+         echo -n "Enter Source name:"
+         read SRC_NAME
+}
+
+#
+#Menu to check Sourcename
+src_name()
+{
+         echo "*************************************************************"
+         echo "You have entered ${SRC_NAME} for your source."
+         echo "Is this Correct? (Y/N)"
+         echo "*************************************************************"
+        read ans
+}
+
+#
+# Used with no menu choice for project
+chk_src()
+{
+        proj_name=ProductionCodeVersion1
+	
+	while [ "${ans}" != "y" ] && [ "${ans}" != "Y" ]
+        do
+		src_read
+ 		src_name
+       done
+                echo "Running Compile on Source."
+                rmcompiledevnewcpy ${SRC_NAME} ${proj_name}
+
+                exit 0
+}
+
+#
+#Use when giving menu choices comes into play
+#Check to see if input is correct for Source and Project
+chk_src_menu()
+{
+         Project=$(cat ${COB_DIR}/wrk_proj_${USER} | awk '{print $3}')
+         proj_name=$(echo ${Project} | cut -d " " -f $proj_num)
+	 echo "*************************************************************"
+	 echo "You have chose ${proj_num}) ---> ${proj_name} and have entered ${SRC_NAME} for your source."
+         echo "Is this Correct? (Y/N)"
+	 echo "*************************************************************"
+	while [ "${ans}" != "y" ] && [ "${ans}" != "Y" ];
+	do
+		 proj_menu
+	done
+        
+	echo "Running Compile on Source."
+	rmcompiledevnewcpy ${SRC_NAME} ${proj_name}
+
+
+        	exit 0
+}
+
+#
+# To remove wrk_proj_${USER} file when given project choice
+rm_wrk_proj()
+{
+if [ -f ${COB_DIR}/wrk_proj_${USER} ];
+then 
+	rm -f ${COB_DIR}/wrk_proj_${USER}
+fi
+
+for WORK_PROJ in $(ls -1 /media/cobol/users/$WUSER/workspace);
+do
+	echo "${NUM})	----> 	${WORK_PROJ}" >> $COB_DIR/wrk_proj_${USER}
+	NUM=$((NUM +1))
+done
+}
+
+#
+# Used to Display project choice
+proj_choice()
+{
+proj_menu
+
+while read proj_num
+do
+if [[ ${proj_num}>0 && ${proj_num}<=100 ]];
+then
+	chk_src_menu
+else
+	proj_menu
+fi
+
+done
+}
+
+#
+# Main routine
+#
+
+echo "**** NEWCPY compiling ***"
+
+# Calls used for project choices
+#rm_wrk_proj
+#proj_choice
+
+
+
+#Check for commandline SRC_NAME
+#Used for no project choice default ProductionCodeVersion1
+
+SRC_NAME=$1
+
+while [ $# != 1 ];
+do
+	src_read
+	src_name
+	chk_src
+done
+	src_name
+	chk_src
+
+

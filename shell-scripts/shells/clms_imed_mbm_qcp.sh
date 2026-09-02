@@ -1,0 +1,161 @@
+#!/bin/sh
+#
+# Program Name	: clms_imed_mbm_qcp.sh
+# Description	: Procedure to setup MBM claims file for Informed-QCP
+#		  Groups:  23515, 92508
+#		  Command Line Arguments:
+#		  -p <mmddccyy>  P/E date
+# Author	: Linda S. Jefferis
+# Date		: 12/28/2010
+# Modifications : 11/28/2012 - billzavislak@informed-llc.com changed to kgray@informed-llc.com (DME)  
+#		: 08/07/2015 - change emails provided on ticket task. (DME TT:13915-4)
+#               : 03/01/2017 - TT13915-44; add requested email address.
+#		: 12/04/2018 - YY13915-79; remove inactive email addresses.
+#
+#
+# Variables Used:
+FILE_LOC="/usr/lnk/tapes"
+TMP_LOC="/tmp"
+TAPE_FILE="???CL130-P-MBM"
+LOG_FILE="???CL130-P-MBMTEXT"
+ZIP_PROG="/usr/bin/zip"
+MAIL_PROG="/usr/bin/mutt"
+MAIL_TO="DL-VBC-ANNAPOLISPRODUCTION@coniferhealth.com, Katherine.Al-Banna@coniferhealth.com"
+MAIL_CC="operations@pdmi.com"
+TR_PROG="/usr/lnk/shell/secure_transfer.sh"
+TR_ID="IMED"
+
+#
+# Usage routine
+usage()
+{  cat << ENDOFUSAGE
+
+usage: clms_imed_mbm_qcp.sh -p <p/e date>
+	<p/e date> is period ending date in mmddccyy format  (required)
+
+ENDOFUSAGE
+  exit 1
+}
+
+
+#
+# Split out p/e date
+conv_date()
+{
+	MON=`echo ${PE_DATE} | cut -c1-2`
+	DAY=`echo ${PE_DATE} | cut -c3-4`
+	YEAR=`echo ${PE_DATE} | cut -c5-8`
+}
+
+#
+# Set Filenames
+set_filenames()
+{
+	CLM_FILE="imed_mbm_qcp${MON}${DAY}.txt"
+	ZIP_FILE="imed_mbm_qcp${MON}${DAY}.zip"
+	NEW_LOG="totals.txt"
+}
+
+#
+rename_files()
+{
+	if test -s ${FILE_LOC}/${TAPE_FILE}
+	then
+	  cp ${FILE_LOC}/${TAPE_FILE} ${TMP_LOC}/${CLM_FILE}
+	  cp ${FILE_LOC}/${LOG_FILE} ${TMP_LOC}/${NEW_LOG}
+	else
+	  echo "-*> Claims file does not exist..."
+	  exit 1
+	fi
+}
+
+#
+# Zip files
+zip_files()
+{
+	${ZIP_PROG} -mj ${TMP_LOC}/${ZIP_FILE} ${TMP_LOC}/${CLM_FILE} ${TMP_LOC}/${NEW_LOG}
+}
+
+#
+# Copy files
+copy_files()
+{
+	if test -f ${TMP_LOC}/${ZIP_FILE}
+	then
+	   ${TR_PROG} ${TR_ID} ${TMP_LOC}/${ZIP_FILE}
+	   if test $? -ne 0
+	   then
+		echo "*-> Transfer of file failed"
+		clean_up
+		exit 1
+	   fi
+	   echo "The file, ${ZIP_FILE}.pgp for P/E ${PE_DATE}, is now available. Please delete the file once you have downloaded it." | ${MAIL_PROG} -s "INFORMED CLAIMS FILE NOTIFICATION" -c ${MAIL_CC} ${MAIL_TO}
+	else
+	   echo "--*> File not copied..."
+	fi
+}
+
+#
+# Cleanup
+clean_up()
+{
+	rm -f ${TMP_LOC}/${ZIP_FILE}
+}
+
+#
+# Main routine
+#
+
+# Check command line validity, call usage if incorrect
+if [ $# -lt 2 ]
+then
+   usage
+   exit 2
+fi
+
+while [ $# -gt 0 ]
+do
+  case "$1"
+  in
+    -p) shift
+	if [ $# -le 0 ]
+        then
+          usage
+        fi
+	PE_DATE=$1
+	conv_date
+	;;
+  esac
+  shift
+done
+
+
+set_filenames
+
+echo
+echo "--> Renaming files for archival..."
+echo
+
+rename_files
+
+echo
+echo "--> Zipping current files..."
+echo
+
+zip_files
+
+echo 
+echo "--> Copying file..."
+echo
+
+copy_files
+
+echo
+echo "--> Cleaning up..."
+echo
+
+clean_up
+
+echo "-=> Finished."
+
+exit 0
