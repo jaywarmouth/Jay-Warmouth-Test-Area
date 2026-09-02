@@ -1,0 +1,142 @@
+#!/bin/ksh
+#
+# Program Name	: daily_trx_pba.sh
+# Description	: Procedure to setup daily claims file for TrueRx (130-1129,1139,1143)
+# Author	: Linda S. Jefferis
+# Date		: 06/29/2012
+# Modifications : 03/10/2016 - TT13309-6
+#
+# Variables Used:
+ENV_FILE=/usr/lnk/shell/env_var
+CR="
+"
+EQUAL="="
+FILE_LOC="/usr/lnk/tapes"
+TMP_LOC="/tmp"
+TAPE_FILE="???CL111DAYD0-W-PBA"
+ZIP_PROG="/usr/bin/zip"
+CONV_PROG="/usr/local/bin/addlf"
+REC_LEN="500"
+MAIL_PROG="/bin/mail"
+MAIL_TO="SCarlson@pbaclaims.com DClark@pbaclaims.com"
+MAIL_CC="operations@pdmi.com"
+TR_PROG="/usr/lnk/shell/secure_transfer.sh"
+TR_ID="PRBA-FROMPDMI"
+DATE=`date -d "yesterday 0800" +%Y%m%d`
+ARCH_DIR="/usr/lnk/rptarch/daily"
+
+#
+# Usage routine
+usage()
+{  cat << ENDOFUSAGE
+
+usage: daily_trx_pba.sh 
+
+ENDOFUSAGE
+  exit 1
+}
+
+#
+# Parse environment variables file 
+parse_env()
+{
+    echo
+    echo "--> Parsing environment file..."
+
+    OLDIFS=${IFS}
+    IFS=${CR}
+    for VAR in `cat ${ENV_FILE}`
+    do
+        eval ${VAR} 2> /dev/null
+	IFS=${EQUAL}
+	set $VAR
+	NVAR=$1
+	export ${NVAR}
+        if [ $? -ne 0 ]
+        then
+	  echo "-*> Parse Error on Line: "${VAR}
+        fi
+      IFS=${CR}
+    done
+    IFS=${OLDIFS}
+
+    echo "-=> Finished."
+
+}
+
+# Set File names
+set_filenames()
+{
+	CLM_FILE="trx_daily_${DATE}.txt"
+}
+	
+
+#
+rename_files()
+{
+	if test -s ${FILE_LOC}/${TAPE_FILE}
+	then
+	  ${CONV_PROG} ${REC_LEN} ${FILE_LOC}/${TAPE_FILE} ${TMP_LOC}/${CLM_FILE}
+	else
+	  echo "-*> Claims file does not exist..."
+	  exit 1
+	fi
+}
+
+#
+# Copy files
+copy_files()
+{
+	if test -f ${TMP_LOC}/${CLM_FILE}
+	then
+	   ${TR_PROG} ${TR_ID} ${TMP_LOC}/${CLM_FILE}
+	   if test $? -ne 0
+	     then
+		echo "*-> Transfer of file failed"
+		clean_up
+		exit 1
+	   fi
+	   cat ${FILE_LOC}/${LOG_FILE} | ${MAIL_PROG} -s "TRX-PBA DAILY CLAIMS FILE NOTIFICATION" -c ${MAIL_CC} ${MAIL_TO}
+	   #echo "The files for P/E ${PE_DATE}, are now available." | ${MAIL_PROG} -s "TRX-PBA WEEKLY CLAIMS FILE NOTIFICATION" -c ${MAIL_CC} ${MAIL_TO}
+	else
+	   echo "--*> File not copied..."
+	fi
+}
+
+#
+# Cleanup
+clean_up()
+{
+	mv ${TMP_LOC}/${CLM_FILE} ${ARCH_DIR}
+}
+
+#
+# Main routine
+#
+
+# Parse environment variables
+parse_env
+
+set_filenames
+
+echo
+echo "--> Renaming files for archival..."
+echo
+
+rename_files
+
+echo 
+echo "--> Copying file ..."
+echo
+
+copy_files
+
+echo
+echo "--> Cleaning up..."
+echo
+
+clean_up
+
+echo "-=> Finished."
+
+exit 0
